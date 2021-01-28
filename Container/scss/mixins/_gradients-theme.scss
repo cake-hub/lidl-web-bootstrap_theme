@@ -1,0 +1,9 @@
+@mixin cake-gradient-diagonal-line($line-color: $danger, $line-width: 1px, $line-blur: .25px) {
+  $color-start: calc(50% - #{$line-blur});
+  $full-color-end: calc(50% + #{$line-width});
+  $color-end: calc(50% + #{$line-width + $line-blur});
+  @if ($line-blur == 0 or $line-blur == 0) {
+    $color-start: 50%;
+  }
+  background-image: linear-gradient(to bottom right, transparent $color-start, $line-color 50%, $line-color $full-color-end, transparent $color-end);
+}

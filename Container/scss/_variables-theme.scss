@@ -1,0 +1,479 @@
+// stylelint-disable value-keyword-case, scss/dollar-variable-default
+
+
+
+// #########################
+// Update root variables
+// #########################
+
+
+// Remove "wrong" theme-colors
+$theme-colors: map-remove($theme-colors, "light", "dark", "secondary");
+
+
+
+// #########################
+// Variables with dependants
+// #########################
+
+
+// Pricebox
+
+$pricebox-price-font-size:                calculateRem(20px);
+$pricebox-price-font-weight:              800;
+
+
+
+
+// ###################
+// Boostrap Components
+// ###################
+
+
+// Accordions
+
+$accordion-border-color:             cake-color("gray");
+$accordion-border-radius:            $border-radius;
+$accordion-border-width:             $border-width;
+$accordion-padding-x:                2 * $spacer - calculateRem($accordion-border-width);
+$accordion-padding-y:                $spacer;
+$accordion-max-height:               8000px; // must be greater than users screen height
+$accordion-collapse-transition:      all .35s ease, max-height .35s cubic-bezier(0, 1, 0, 1);
+$accordion-focus-border-color:       cake-color("primary");
+$accordion-hover-border-color:       cake-color("primary");
+$accordion-active-border-color:      cake-color("primary");
+$accordion-icon-color:               cake-color("gray", "darker");
+$accordion-icon-dimension:           $input-icon-size;
+$accordion-icon-transition:          all .35s linear;
+$accordion-label-height:             $input-btn-height;
+$accordion-label-height-at-lg:       $input-btn-height-at-lg;
+$accordion-label-color:              cake-color("gray", "darker");
+$accordion-label-focus-color:        cake-color("primary");
+$accordion-label-focus-box-shadow:   $input-btn-focus-box-shadow;
+$accordion-label-active-color:       cake-color("primary");
+$accordion-disabled-color:           cake-color("gray", "base");
+$accordion-disabled-border-color:    cake-color("gray", "light");
+$accordion-disabled-bg-color:        cake-color("gray", "background");
+
+
+// Alert
+
+$alert-icon-margin-right:             $spacer * 2;
+$alert-margin-top-content-with-icon:  calculateRem(4px);
+$alert-close-focus-box-shadow:        $input-btn-focus-box-shadow;
+
+
+// Badge
+
+$badge-line-height:                   1.2;
+$badge-border:                        $badge-border-width solid $white;
+
+$badge-addon-padding-x:              calculateRem(4px) - calculateRem($badge-border-width);
+$badge-addon-padding-y:              calculateRem(2px);
+$badge-addon-padding-x-lg:           calculateRem(6px) - calculateRem($badge-border-width);
+$badge-addon-padding-y-lg:           calculateRem(3px);
+$badge-addon-border-radius:          $badge-pill-border-radius;
+$badge-addon-size:                   calculateRem(16px);
+$badge-addon-size-lg:                calculateRem(20px);
+$badge-addon-font-size:              calculateRem(10px);
+
+
+// Breadcrumb
+
+$breadcrumb-item-margin-x:            $spacer;
+$breadcrumb-item-space-new-line:      .25rem;
+
+$breadcrumb-link-color:               cake-color("gray", "darker");
+$breadcrumb-link-text-decoration:     none;
+
+$breadcrumb-icon-margin-top:          -$breadcrumb-item-space-new-line;
+
+
+// Button
+
+$btn-font-size-at-lg:         $btn-font-size + $font-grow;
+$btn-height:                  $input-btn-height;
+$btn-height-at-lg:            $input-btn-height-at-lg;
+$btn-font-size:               $font-size-base + $font-grow;
+
+
+// Card
+
+$card-title-line-height:            $headings-line-height;
+$card-subtitle-line-height:         $headings-line-height;
+$card-link-color:                   $body-color;
+$card-hover-color:                  $card-color;
+
+
+// Close
+
+$close-size:                        1rem;
+
+
+// Pagination
+
+$pagination-line-height-lg:         calculateRem(48px);
+$pagination-line-height-md:         calculateRem(40px);
+$pagination-min-width-lg:           $pagination-line-height-lg;
+$pagination-min-width-md:           $pagination-line-height-md;
+$pagination-box-shadow:             $box-shadow;
+
+
+// Slider Button
+
+$btn-slider-color:            $body-color;
+$btn-slider-bg:               $white;
+$btn-slider-box-shadow:       $box-shadow;
+$btn-slider-padding:          0 $spacer;
+
+$btn-slider-hover-color:      $white;
+$btn-slider-hover-bg:         $primary;
+
+
+// Typography
+
+$link-negative-color:                              $white;
+$link-negative-hover-color:                        cake-color("gray", "light");
+$link-negative-active-color:                       cake-color("gray", "light");
+
+
+
+
+// ################
+// Theme Components
+// ################
+
+
+// Banner
+
+$banner-max-width:                            calculateRem(1920px);
+$banner-height:                               calculateRem(184px);
+$banner-height-desktop:                       calculateRem(200px);
+$banner-width-cols:                           3;
+$banner-bar-bg:                               cake-color("gray", "darker");
+$banner-bar-bg-opacity:                       .9;
+$banner-bar-color:                            $white;
+
+$banner-bar-padding:                          $spacer * 2;
+
+$banner-title-font-size:                      calculateRem(20px);
+$banner-title-font-weight:                    $font-weight-bold;
+
+$banner-subhead-font-size:                    calculateRem(12px);
+$banner-subhead-font-weight:                  $font-weight-normal;
+$banner-subhead-margin-bottom:                calculateRem(2px);
+
+
+// Cookie Alert
+
+$cookie-alert-overlay-background:                   rgba($black, .72);
+$cookie-alert-modal-background:                     $white;
+$cookie-alert-modal-padding:                        calculateRem(16px);
+$cookie-alert-modal-max-width:                      calculateRem(624px);
+$cookie-alert-modal-color:                          cake-color("gray", "darker");
+$cookie-alert-modal-font-size:                      calculateRem(12px);
+$cookie-alert-modal-seperator:                      1px solid cake-color("gray", "lighter");
+$cookie-alert-modal-checkbox-discrepancy:           calculateRem(3px);
+$cookie-alert-modal-detail-link-icon-size:          calculateRem(16px);
+
+
+// Coupon
+
+$coupon-border-radius:          $border-radius;
+$coupon-bg:                     $primary;
+$coupon-cutout-width:           1rem;
+$coupon-cutout-width-sm:        2rem;
+$coupon-cutout-height:          ($coupon-cutout-width / 2);
+$coupon-cutout-height-sm:       ($coupon-cutout-width-sm / 2);
+$coupon-cutout-bg-size:         10rem;
+$coupon-content-padding:        ($coupon-cutout-height + calculateRem(2px)) calculateRem(4px) calculateRem(2px);
+$coupon-content-padding-sm:     ($coupon-cutout-height-sm + calculateRem(2px)) calculateRem(4px) calculateRem(2px);
+$coupon-content-font-size:      $pricebox-price-font-size;
+$coupon-content-font-size-sm:   ($coupon-content-font-size + .5rem);
+$coupon-content-font-size-lg:   ($coupon-content-font-size + 1rem);
+$coupon-content-font-weight:    $pricebox-price-font-weight;
+$coupon-content-line-height:    1;
+$coupon-content-color:          $white;
+$coupon-text-padding:           0 calculateRem(4px);
+$coupon-text-height:            calculateRem(24px);
+$coupon-text-bg:                $mark;
+$coupon-text-font-size:         $font-size-sm;
+$coupon-text-color:             cake-color("gray", "darker");
+
+
+// Flap
+
+$flap-border-radius:                $border-radius;
+$flap-box-shadow:                   $box-shadow;
+$flap-max-width:                    50%;
+$flap-left-space:                   .5rem;
+$flap-nose-bg:                      $primary;
+$flap-nose-bar-height:              .5rem;
+$flap-nose-semicircle-height:       .5rem;
+$flap-nose-semicircle-height-lg:    .75rem;
+$flap-font-size:                    calculateRem(12px);
+$flap-font-weight:                  $font-weight-bold;
+$flap-line-height:                  100%;
+$flap-text-align:                   center;
+$flap-text-padding:                 .25rem .25rem .5rem;
+$flap-text-padding-lg:              .25rem .5rem .5rem;
+
+
+// Floating action button
+
+$fab-btn-padding:       1rem;
+$fab-btn-line-height:   calculateRem(24px); // equal to icon size
+$fab-btn-border-radius: 50%;
+$fab-btn-box-shadow:    $box-shadow;
+
+
+// Footer
+
+$footer-bg:                               cake-color("gray");
+$footer-color:                            $white;
+$footer-padding-y:                        $spacer * 4;
+$footer-list-item-link-hover-bg:          cake-color("gray", "darker");
+$footer-seperator-border-width:           $border-width;
+$footer-seperator-border-color:           cake-color("gray", "lighter");
+$footer-list-item-link-padding:           $spacer;
+$footer-list-item-link-text-discrepancy:  .1rem;
+
+
+// Header
+
+$header-bg:                                   $white;
+$header-mobile-height:                        calculateRem(56px);
+
+$header-preheader-font-size:                  calculateRem(12px);
+$header-brand-padding-y:                      calculateRem(6px);
+
+$header-wrapper-height-md:                    calculateRem(80px);
+$header-wrapper-height-lg:                    calculateRem(88px);
+$header-wrapper-padding-x:                    .5rem;
+$header-wrapper-divider-color:                cake-color("gray", "lighter");
+$header-wrapper-divider-height:               calculateRem(1px);
+
+$header-claim-margin-left:                    calculateRem(24px);
+$header-claim-color:                          cake-color("primary");
+$header-claim-line-height:                    1.2;
+
+$header-list-item-link-padding-y:             calculateRem(6px);
+$header-list-item-link-hover-color:           cake-color("gray", "lighter");
+
+$header-brandnav-link-padding:                .5rem;
+
+$header-language-margin-left:                 calculateRem(24px);
+$header-language-link-padding-x:              1rem;
+$header-language-link-divider-color:          cake-color("gray", "lighter");
+$header-language-link-divider-width:          calculateRem(1px);
+$header-language-link-divider-height:         calculateRem(12px);
+
+$header-usernavigation-link-padding-top:      1rem;
+$header-usernavigation-link-padding-y:        $header-usernavigation-link-padding-top; // deprecated. Use $header-usernavigation-link-padding-top instead
+$header-usernavigation-link-padding-top-md:   $header-usernavigation-link-padding-top;
+$header-usernavigation-link-hover-color:      cake-color("primary");
+$header-usernavigation-link-width:            calculateRem(40px);
+$header-usernavigation-link-width-md:         calculateRem(56px);
+$header-usernavigation-link-width-lg:         calculateRem(64px);
+$header-usernavigation-badge-offset:          .5rem;
+
+$header-mobile-overlay-color:                 rgba(0, 0, 0, .72);
+$header-mobile-overlay-transition:            all .15s linear;
+$header-mobile-overlay-width-percentpoints:   80;
+$header-mobile-overlay-width:                 $header-mobile-overlay-width-percentpoints * 1%;
+
+// Header navigation
+$header-navigation-burgermenu-font-size:      calculateRem(12px);
+$header-navigation-burgermenu-line-height:    1;
+$header-navigation-margin-top-mobile:         calculateRem(56px);
+$header-navigation-list-margin-top-mobile:    calculateRem(40px);
+
+$header-navigation-back-color:                cake-color("gray", "darker");
+$header-navigation-back-bg-color:             cake-color("gray", "lightest");
+$header-navigation-back-border-color:         cake-color("gray", "lighter");
+$header-navigation-back-border-width:         $border-width;
+$header-navigation-back-padding-x:            $spacer;
+$header-navigation-back-padding-y:            calculateRem(12px);
+$header-navigation-back-icon-discrepancy:     calculateRem(-2px); // -(icon-height - font-size) / 2
+
+$header-navigation-link-line-height:              1.2;
+$header-navigation-link-padding-x:                1rem;
+$header-navigation-link-padding-y:                calculateRem(11px);
+$header-navigation-link-padding-y-md:             calculateRem(8px);
+$header-navigation-link-font-size:                $font-size-lg;
+$header-navigation-link-indicator-height:         calculateRem(1px);
+$header-navigation-link-indicator-height-desktop: calculateRem(3px);
+$header-navigation-link-divider-color:            cake-color("gray", "lighter");
+$header-navigation-link-hover-color:              cake-color("gray");
+$header-navigation-link-active-color:             cake-color("primary");
+
+$header-navigation-link-icon-size:                1rem;
+
+$header-navigation-burgermenu-text-color:         cake-color("gray", "darker");
+$header-navigation-burgermenu-text-hover-color:   cake-color("primary");
+
+$header-subnavigation-link-line-height:           1.2;
+$header-subnavigation-seperator:                  1px solid cake-color("gray", "lighter");
+$header-subnavigation-link-padding-x:             1rem;
+$header-subnavigation-link-padding-x-md:          .5rem;
+$header-subnavigation-link-padding-y:             calculateRem(14px);
+$header-subnavigation-link-padding-y-md:          calculateRem(6px);
+$header-subnavigation-link-padding-y-lg:          calculateRem(9px);
+$header-subnavigation-link-font-size:             $font-size-base;
+$header-subnavigation-link-indicator-height-desktop: calculateRem(2px);
+
+$header-subnavigation-link-head-item-padding-y:   calculateRem(12px);
+
+// 3rd party configuration of hamburger menu
+// https://github.com/jonsuh/hamburgers
+$hamburger-padding-x:                         calculateRem(4px) 0;
+$hamburger-padding-y:                         calculateRem(16px);
+$hamburger-layer-width:                       calculateRem(24px);
+$hamburger-layer-height:                      calculateRem(1px);
+$hamburger-layer-spacing:                     calculateRem(4px);
+$hamburger-layer-color:                       $header-navigation-burgermenu-text-color;
+$hamburger-layer-border-radius:               0;
+$hamburger-hover-opacity:                     1;
+$hamburger-types:                             (squeeze);
+
+
+// Popover
+
+$popover-font-size:                           $font-size-sm;
+$popover-padding:                             $spacer * 2;
+$popover-box-shadow:                          $box-shadow;
+$popover-font-weight:                         $font-weight-normal;
+$popover-bg-color:                            cake-color("gray", "background");
+$popover-color:                               color-yiq($popover-bg-color, $body-color, $white);
+$popover-border-color:                        cake-color("gray", "lighter");
+$popover-border-radius:                       $border-radius;
+$popover-arrow-color:                         $popover-bg-color;
+$popover-svg-arrow-color:                     $popover-arrow-color;
+$popover-backdrop-bg-color:                   $popover-bg-color;
+
+
+// Pricebox
+
+$pricebox-bg:                             $white;
+$pricebox-border:                         $border-width solid cake-color("gray", "light");
+$pricebox-font-size:                      calculateRem(12px);
+$pricebox-font-color:                     cake-color("gray", "darker");
+$pricebox-font-color-negative:            $white;
+$pricebox-padding:                        .25rem - calculateRem($border-width);
+$pricebox-padding-sm:                     .5rem - calculateRem($border-width);
+
+$pricebox-price-baseline-factor:          -.16;
+$pricebox-price-medium-font-size:         calculateRem(28px);
+
+$pricebox-prefix-margin-right:            calculateRem(2px);
+$pricebox-currency-margin-left:           calculateRem(4px);
+$pricebox-basic-quantity-margin-top:      calculateRem(2px);
+$pricebox-basic-quantity-line-height:     1.2;
+$pricebox-highlight-font-weight:          $font-weight-bold;
+
+
+// Product tile
+
+$product-tile-shadow:                     $box-shadow;
+
+
+// Ribbon
+
+$ribbon-margin-top:                       $spacer;
+$ribbon-border-radius:                    $border-radius;
+$ribbon-max-width:                        50%;
+$ribbon-triangle-size-sm:                 calculateRem(4px);
+$ribbon-triangle-size-lg:                 calculateRem(8px);
+$ribbon-content-padding-sm:               $spacer / 2;
+$ribbon-content-padding-lg:               $spacer;
+
+
+// Section-Head
+
+$section-head-font-size:                    calculateRem(20px);
+$section-head-line-height:                  $headings-line-height;
+$section-head-font-weight:                  $font-weight-bold;
+$section-head-padding:                      $spacer * 2;
+$section-head-max-width:                    60%;
+$section-head-border-width:                 2px;
+$section-head-border-color:                 cake-color("gray", "lighter");
+$section-head-horizontal-rule-bottom-space: calculateRem(5px);
+$section-head-min-height:                   calculateRem(24px);
+$section-head-min-height-lg:                calculateRem(32px);
+
+
+// Tab
+
+$tab-background-color:                cake-color("gray", "lightest");
+$tab-background-hover-color:          $primary;
+$tab-background-active-color:         $white;
+$tab-border-color:                    cake-color("gray", "light");
+$tab-border-hover-color:              $primary;
+$tab-border-active-color:             cake-color("gray", "light");
+$tab-color:                           cake-color("gray", "darker");
+$tab-color-hover:                     color-yiq($tab-background-hover-color);
+$tab-btn-padding:                     1rem;
+$tab-mobile-btn-padding-x:            .5rem;
+$tab-slider-btn-width:                2rem;
+$tab-icon-size:                       1rem;
+$tab-icon-path-previous:              $navigation-icon-path + "arrow-left.svg";
+$tab-icon-path-next:                  $navigation-icon-path + "arrow-right.svg";
+
+
+// Teaser
+
+$teaser-bar-bg:                               cake-color("gray", "darker");
+$teaser-bar-bg-opacity:                       .9;
+$teaser-bar-color:                            $white;
+$teaser-bar-padding:                          1rem;
+$teaser-bar-line-height:                      $line-height-base;
+$teaser-bar-margin-bottom:                    $teaser-bar-padding;
+
+$teaser-img-hover-opacity:                    .5;
+
+$teaser-title-font-weight:                    $font-weight-bold;
+$teaser-title-font-size:                      calculateRem(20px);
+
+$teaser-subhead-font-weight:                  $font-weight-normal;
+$teaser-subhead-font-size:                    calculateRem(12px);
+$teaser-subhead-margin-bottom:                calculateRem(2px);
+
+
+// Theme slider
+
+$theme-slider-bg:                         $white;
+$theme-slider-outer-gutter:               .5rem;
+$theme-slider-shadow:                     $box-shadow;
+$theme-slider-border-radius:              $card-border-radius;
+$theme-slider-width:                      calculateRem(120px);
+$theme-slider-width-md:                   calculateRem(160px);
+
+$theme-slider-active-color:               $white;
+$theme-slider-active-card-body-bg:        $primary;
+$theme-slider-active-hover-color:         $white;
+
+$theme-slider-card-bg:                    $white;
+$theme-slider-card-inner-border-radius:   $theme-slider-border-radius;
+$theme-slider-card-body-padding:          $spacer;
+$theme-slider-card-body-bg:               cake-color("gray", "lightest");
+$theme-slider-card-line-height:           1.2;
+
+$theme-slider-subhead-font-weight:        $font-weight-normal;
+
+$theme-slider-title-font-size:            $font-size-base;
+$theme-slider-title-font-weight:          $font-weight-bold;
+$theme-slider-title-margin-bottom:        calculateRem(4px);
+
+
+// To-Top
+
+$to-top-right:                      $spacer;
+
+
+// Trustbar
+
+$trustbar-bg:                             cake-color("gray", "lighter");
+$trustbar-color:                          $body-color;
+$trustbar-icon-margin-right:              $spacer;
+$trustbar-item-height-sm:                 calculateRem(56px);
+$trustbar-item-height-lg:                 calculateRem(64px);

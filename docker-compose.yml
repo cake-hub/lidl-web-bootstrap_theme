@@ -1,0 +1,16 @@
+version: '3'
+services:
+  lidl-web-bootstrap_theme:
+    container_name: lidl-web-bootstrap_theme
+    env_file:
+      - .env
+    image: node:10
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports: ['2021:2021']
+    expose: ['2021']
+    volumes:
+        - ./Container:/var/www/html
+        - ./Container/.npm/_logs/:/root/.npm/_logs/
+    tty: true
