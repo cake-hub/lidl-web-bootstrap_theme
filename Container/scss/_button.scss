@@ -68,23 +68,23 @@ fieldset:disabled a.btn {
 // Primary
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include cake-button-variant($value, $value);
+    @include cake-button-variant($value, $value, $disabled-color: $btn-color-disabled, $disabled-background: $btn-background-disabled);
   }
 }
 
 // Primary negative / inverted
 .btn-primary-negative {
-  @include cake-button-variant($white, $white, mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%));
+  @include cake-button-variant($white, $white, mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), $btn-negative-color-disabled, $btn-negative-background-disabled);
 }
 
 // Secondary
 .btn-secondary {
-  @include cake-button-outline-variant($primary);
+  @include cake-button-outline-variant($primary, $disabled-color: $btn-color-disabled, $disabled-border: $btn-border-disabled);
 }
 
 // Secondary negative / inverted
 .btn-secondary-negative {
-  @include cake-button-outline-variant($white, cake-color("primary"), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%));
+  @include cake-button-outline-variant($white, cake-color("primary"), mix($white, cake-color("gray"), 68%), mix($white, cake-color("gray"), 68%), $btn-negative-color-disabled, $btn-negative-border-disabled);
 }
 
 // slider buttons

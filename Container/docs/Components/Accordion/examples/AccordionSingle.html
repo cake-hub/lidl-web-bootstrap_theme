@@ -2,28 +2,18 @@
         <!DOCTYPE html>
         <html lang="en-GB">
         <head>
-            <base href="../../../_assets/themes/Cake/">
-            <script>
-                /* Create and adjust base-path to set correct theme-location */
-                if (typeof defaultTheme === "undefined") {
-                    var defaultTheme = "Cake";
-                }
-                var theme = localStorage.getItem ("theme") || defaultTheme;
-                var baseElement = document.getElementsByTagName ("base") [0];
-                var baseElementHref = baseElement.getAttribute ('href');
-                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
-            </script>
-
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title data-react-helmet="true">AccordionSingle</title>
             
-            <link rel="stylesheet" type="text/css" href="css/cake.css">
+            <link rel="stylesheet" type="text/css" href="../../../_assets/css/cake.css">
         </head>
 
         <body>
-            <div id="app"><div class="cake-example-cutted-border-fix" id="showBox" data-reactroot=""><div class="accordion" id="accordion2"><div class="accordion-item"><input type="radio" data-toggle="accrodion-collapse" class="accordion-check sr-only" id="TuJlUnp91b" name="accordion2_input" checked=""/><label type="button" class="accordion-label" for="TuJlUnp91b" id="Ixioi1Ubo5" data-target="#2KX-v3qySv" aria-expanded="false" aria-controls="2KX-v3qySv"><h5 class="accordion-item-header">Collapsible Group Item #1</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="images/icon__sprite.svg#arrow-down"></use></svg></label><div id="2KX-v3qySv" class="accordion-collapse" aria-labelledby="Ixioi1Ubo5" data-parent="#accordion2">Lorem ipsum</div></div><div class="accordion-item"><input type="radio" data-toggle="accrodion-collapse" class="accordion-check sr-only" id="x9iv1MEwGf" name="accordion2_input"/><label type="button" class="accordion-label" for="x9iv1MEwGf" id="nNuETi9llb" data-target="#EWw4raJ4yv" aria-expanded="false" aria-controls="EWw4raJ4yv"><h5 class="accordion-item-header">Collapsible Group Item #2</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="images/icon__sprite.svg#arrow-down"></use></svg></label><div id="EWw4raJ4yv" class="accordion-collapse" aria-labelledby="nNuETi9llb" data-parent="#accordion2">Lorem ipsum</div></div><div class="accordion-item"><input type="radio" data-toggle="accrodion-collapse" class="accordion-check sr-only" id="AhruNqa35y" name="accordion2_input" disabled=""/><label type="button" class="accordion-label" for="AhruNqa35y" id="5TdLHYVG7C8" data-target="#4rPmYmSCseS" aria-expanded="false" aria-controls="4rPmYmSCseS"><h5 class="accordion-item-header">Collapsible Group Item #3</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="images/icon__sprite.svg#arrow-down"></use></svg></label><div id="4rPmYmSCseS" class="accordion-collapse" aria-labelledby="5TdLHYVG7C8" data-parent="#accordion2">Lorem ipsum</div></div></div></div></div>
-            <script src="js/cake.js"></script>
-            <script src="../../example.js"></script>
+            <div id="app"><div class="cake-example-cutted-border-fix" id="showBox" data-reactroot=""><div class="accordion" id="accordion2"><div class="accordion-item"><input type="radio" data-controller="accordion/input" class="accordion-check sr-only" id="xTdB5B82A7" name="accordion2_input" checked=""/><label type="button" class="accordion-label" for="xTdB5B82A7" id="zINfiE07QH" data-target="#kgCD8IkU8V" aria-expanded="false" aria-controls="kgCD8IkU8V"><h5 class="accordion-item-header">Collapsible Group Item #1</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="../../.././_assets/images/icon__sprite.svg#arrow-down"></use></svg></label><div id="kgCD8IkU8V" class="accordion-collapse" aria-labelledby="zINfiE07QH" data-parent="#accordion2">Lorem ipsum</div></div><div class="accordion-item"><input type="radio" data-controller="accordion/input" class="accordion-check sr-only" id="p2fUJ6k1yD" name="accordion2_input"/><label type="button" class="accordion-label" for="p2fUJ6k1yD" id="Mhmpt6dnel" data-target="#dZyJ6XhEZ-" aria-expanded="false" aria-controls="dZyJ6XhEZ-"><h5 class="accordion-item-header">Collapsible Group Item #2</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="../../.././_assets/images/icon__sprite.svg#arrow-down"></use></svg></label><div id="dZyJ6XhEZ-" class="accordion-collapse" aria-labelledby="Mhmpt6dnel" data-parent="#accordion2">Lorem ipsum</div></div><div class="accordion-item"><input type="radio" data-controller="accordion/input" class="accordion-check sr-only" id="UZSgpEflvB" name="accordion2_input" disabled=""/><label type="button" class="accordion-label" for="UZSgpEflvB" id="YjNBIspdgmR" data-target="#oaIfnH2Jwin" aria-expanded="false" aria-controls="oaIfnH2Jwin"><h5 class="accordion-item-header">Collapsible Group Item #3</h5><svg class="icon accordion-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Expand</title><use xlink:href="../../.././_assets/images/icon__sprite.svg#arrow-down"></use></svg></label><div id="oaIfnH2Jwin" class="accordion-collapse" aria-labelledby="YjNBIspdgmR" data-parent="#accordion2">Lorem ipsum</div></div></div></div></div>
+            <script src="../../../_assets/js/cake.js"></script>
+            <script src="../../../_assets/example.js"></script>
+            
         </body>
         </html>
+    

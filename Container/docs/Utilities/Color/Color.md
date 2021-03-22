@@ -107,7 +107,18 @@ You’ll be able to use `.bg-gradient-*` utility classes.
 >
 > Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.sr-only` class.
 
-## Special color "mark"
+## Additional colors
+
+In order to meet all requirements and to be able to map further use-cases, we have defined a few more colors.
+
+### Disabled colors
+
+In order to be able to depict disabled states without affecting the accessibility, there are two additional shades of gray for the specific use with disabled elements:
+
+* `$disabled`
+* `$disabled-lighter`
+
+### Special color "mark"
 
 Beside the `$theme-colors` there is another color name **mark** which can be used for special highlighting like with a marker pen.
 The color can be used with variables defined in `_variables.scss`. There are three variables available for usage.

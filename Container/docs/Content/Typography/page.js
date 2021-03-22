@@ -10,6 +10,16 @@ const TypographyHeadlines = () => (
     </React.Fragment>
 );
 
+const TypographyDisplayHeadlines = () => (
+    <React.Fragment>
+        <div class="display-1">Display 1</div>
+        <div class="display-2">Display 2</div>
+        <div class="display-3">Display 3</div>
+        <div class="display-4">Display 4</div>
+        <div class="display-5">Display 5</div>
+    </React.Fragment>
+);
+
 const TypographyLinks = () => (
     <a href="#">This is a Link</a>
 );
@@ -62,6 +72,7 @@ const TypographyListsUnstyled = () => (
 
 export default {
     TypographyHeadlines,
+    TypographyDisplayHeadlines,
     TypographyLinks,
     TypographyLinksNegative,
     TypographyLists,

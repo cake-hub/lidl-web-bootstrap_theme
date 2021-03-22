@@ -1,5 +1,18 @@
 # Change log
 
+## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
+
+### Added
+
+* `SCSS`: "Accordion" | added `margin-left` to the icon, to match the design requirements
+* `SCSS`: Added `overflow: hidden` and `text-overflow: ellipsis` to the accordion label to hide too much content.
+
+
+### Fixed
+
+* `SCSS`: "Accordion" | fixed `margin-top` between accordion elements to be exact 8px
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Changed

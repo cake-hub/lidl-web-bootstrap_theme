@@ -1,5 +1,12 @@
 # Change log
 
+## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
+
+### Changed
+
+* `SCSS`: "Button" | Updated styling of disabled buttons to achieve better contrast ratios and accessibility
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Changed

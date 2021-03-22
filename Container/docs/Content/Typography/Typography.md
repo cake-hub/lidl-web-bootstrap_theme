@@ -29,6 +29,27 @@ All HTML headings, `<h1>` through `<h5>`, are available.
 
 ![TypographyHeadlines](examples/TypographyHeadlines.html)
 
+
+## Display
+
+If you need a heading to stand out, we recommend the `.display-1` to `.display-5` classes.
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/TypographyDisplayHeadlines.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/TypographyDisplayHeadlines.html",
+            "type": "content",
+            "selector": "#app"
+        }
+    '
+ />
+
+![TypographyDisplayHeadlines](examples/TypographyDisplayHeadlines.html)
+
 ### Links
 
 <ContentRack

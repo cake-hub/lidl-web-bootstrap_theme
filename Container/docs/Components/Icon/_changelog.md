@@ -1,5 +1,12 @@
 # Change log
 
+## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
+
+### Changed
+
+* `Assets`: "Icon" | updated `interaction/house.svg` icon
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Changed

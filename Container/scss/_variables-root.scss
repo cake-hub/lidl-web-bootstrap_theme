@@ -20,6 +20,9 @@ $mark:        #fff000;
 $mark-light:  #fffaad;
 $mark-darker: #f7a606;
 
+$disabled:          #7e868f;
+$disabled-lighter:  #eaebec;
+
 // Customize the light and dark text colors for use in our cake-colors contrast function.
 $cake-color-mix-dark:   $black;
 $cake-color-mix-light:  $white;
@@ -212,8 +215,34 @@ $h5-font-size:                $font-size-base;
 $heading-h1-margin-bottom:    ($spacer * 4);
 $heading-h2-margin-bottom:    ($spacer * 2);
 $headings-margin-bottom:      $spacer;
+$headings-font-weight:        $font-weight-bold;
+$headings-line-height:        1.2;
 
-$headings-font-weight:        700;
+$display-sizes: (
+  1: (
+    "xs": calculateRem(32px),
+    "lg": calculateRem(56px)
+  ),
+  2: (
+    "xs": calculateRem(28px),
+    "lg": calculateRem(52px)
+  ),
+  3: (
+    "xs": calculateRem(24px),
+    "lg": calculateRem(48px)
+  ),
+  4: (
+    "xs": calculateRem(20px),
+    "lg": calculateRem(44px)
+  ),
+  5: (
+    "xs": calculateRem(16px),
+    "lg": calculateRem(40px)
+  )
+);
+$display-weight:              600;
+$display-line-height:         $headings-line-height;
+
 $text-disabled:               cake-color("gray", "light"); // deprecated. No longer used.
 
 $hr-margin-y:                 $paragraph-margin-bottom;

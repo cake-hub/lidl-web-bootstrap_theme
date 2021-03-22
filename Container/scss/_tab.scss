@@ -43,6 +43,12 @@
         }
       }
     }
+
+    @include media-breakpoint-up(md) {
+      &:focus {
+        z-index: 2;
+      }
+    }
   }
 
   @include media-breakpoint-down(sm) {

@@ -37,6 +37,7 @@ $accordion-border-radius:            $border-radius;
 $accordion-border-width:             $border-width;
 $accordion-padding-x:                2 * $spacer - calculateRem($accordion-border-width);
 $accordion-padding-y:                $spacer;
+$accordion-margin-top:               $spacer;
 $accordion-max-height:               8000px; // must be greater than users screen height
 $accordion-collapse-transition:      all .35s ease, max-height .35s cubic-bezier(0, 1, 0, 1);
 $accordion-focus-border-color:       cake-color("primary");
@@ -45,6 +46,7 @@ $accordion-active-border-color:      cake-color("primary");
 $accordion-icon-color:               cake-color("gray", "darker");
 $accordion-icon-dimension:           $input-icon-size;
 $accordion-icon-transition:          all .35s linear;
+$accordion-icon-margin:              2 * $spacer;
 $accordion-label-height:             $input-btn-height;
 $accordion-label-height-at-lg:       $input-btn-height-at-lg;
 $accordion-label-color:              cake-color("gray", "darker");
@@ -95,6 +97,15 @@ $btn-font-size-at-lg:         $btn-font-size + $font-grow;
 $btn-height:                  $input-btn-height;
 $btn-height-at-lg:            $input-btn-height-at-lg;
 $btn-font-size:               $font-size-base + $font-grow;
+
+$btn-color-disabled:          $disabled;
+$btn-link-disabled-color:     $btn-color-disabled;
+$btn-background-disabled:     rgba($disabled, .16);
+$btn-border-disabled:         $btn-background-disabled;
+
+$btn-negative-color-disabled:       rgba($white, .32);
+$btn-negative-background-disabled:  rgba($white, .16);
+$btn-negative-border-disabled:      $btn-negative-background-disabled;
 
 
 // Card

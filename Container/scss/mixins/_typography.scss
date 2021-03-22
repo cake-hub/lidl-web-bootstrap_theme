@@ -1,0 +1,20 @@
+@mixin cake-display($display-sizes: $display-sizes) {
+
+  @each $display-type, $sizes in $display-sizes {
+    .display-#{$display-type} {
+      font-weight: $display-weight;
+      line-height: $display-line-height;
+
+      @each $key, $value in $sizes {
+        @if $key == "xs" {
+          font-size: $value;
+        }
+        @else {
+          @include media-breakpoint-up($key) {
+            font-size: $value;
+          }
+        }
+      }
+    }
+  }
+}
