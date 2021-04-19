@@ -163,7 +163,6 @@
 
 .pricebox-with-highlight-action,
 .pricebox-with-highlight-offer,
-.pricebox-with-highlight-info,
 .pricebox-lidl-plus {
   .pricebox-container,
   .pricebox-basic-quantity {
@@ -181,10 +180,6 @@
 .pricebox-with-highlight-offer .pricebox-highlight {
   color: $pricebox-font-color;
   background-color: $mark;
-}
-
-.pricebox-with-highlight-info .pricebox-highlight {
-  background-color: $info;
 }
 
 .pricebox-lidl-plus {

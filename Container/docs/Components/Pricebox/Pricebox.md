@@ -184,7 +184,6 @@ You can choose different colors by adding one of the following classes to the ro
 
 * action (`.pricebox-with-highlight-action`)
 * offer (`.pricebox-with-highlight-offer`)
-* info (`.pricebox-with-highlight-info`)
 
 ### theme action
 
@@ -221,24 +220,6 @@ You can choose different colors by adding one of the following classes to the ro
  />
 
 ![PriceboxHightlightOffer](examples/PriceboxHightlightOffer.html)
-
-### theme info
-
-<ContentRack
-    fields='
-        "preview": {
-            "src": "examples/PriceboxHightlightInfo.html",
-            "type": "link"
-        },
-        "<html>":{
-            "src": "examples/PriceboxHightlightInfo.html",
-            "type": "content",
-            "selector": "#app"
-        }
-    '
- />
-
-![PriceboxHightlightInfo](examples/PriceboxHightlightInfo.html)
 
 ## Discount
 

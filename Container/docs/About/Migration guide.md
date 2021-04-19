@@ -1,5 +1,9 @@
 # Migration guide
 
+## From version 5.x to 6.x
+
+With this major release we are irrevocably removing the pricebox in the **theme info**. It has been decided that this pricebox variant may no longer be used to communicate prices. To implement this requirement, it has been removed from the framework. If this pricebox is still in use in your project, please change it as soon as possible. If you have any questions or problems, [please contact us](mailto:cake@lidl.com).
+
 ## From version 4.x to 5.x
 
 ### IE Support drop

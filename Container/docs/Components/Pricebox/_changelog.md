@@ -1,5 +1,12 @@
 # Change log
 
+## [6.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.0) - 2021-04-19
+
+### Removed
+
+* `SCSS`, `Doc`, `HTML`: "Pricebox" | removed pricebox theme `.pricebox-with-highlight-info` completely
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Fixed

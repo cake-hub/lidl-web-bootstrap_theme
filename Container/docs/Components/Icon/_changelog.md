@@ -1,5 +1,29 @@
 # Change log
 
+## [6.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.0) - 2021-04-19
+
+### Added
+
+* `Assets`: "Icon" | added new icons
+  * `expression/conversation-ballons-chat.svg`
+  * `expression/lightbulb-off.svg`
+  * `expression/piggy-bank.svg`
+  * `food & beverage/beer-glass.svg`
+  * `food & beverage/bottle.svg`
+  * `food & beverage/piece-of-cake.svg`
+  * `interaction/invoice.svg`
+  * `nature/ecology-2.svg`
+  * `payment/voucher-euro.svg`
+  * `payment/voucher-gift.svg`
+  * `technology/e-charging-station.svg`
+  * `technology/keyboard.svg`
+  * `technology/power.svg`
+  * `transport & logistic/box-multiple.svg`
+  * `transport & logistic/box-return-30-days.svg`
+  * `transport & logistic/box-return-90-days.svg`
+  * `transport & logistic/express-delivery.svg`
+  * `transport & logistic/packstation.svg`
+
 ## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
 
 ### Changed
