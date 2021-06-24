@@ -17,6 +17,10 @@ CAKE sets basic global display, typography, and link styles. When more control i
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
+## Font family
+
+The `$font-family-sans-serif` variable is used to set the general `font-family`. By default we set this to our own font `LidlFontCondPro`. Additionally we set the two fallback fonts `Calibri` followed by `Arial`. This is in accordance with the design guidelines that must be applied to every Lidl project. Subsequently, further browser and operating system specific fallback fonts are defined.
+
 ## Font weight
 
 The regular `font weight: 400` uses LidlFontCondPro-Regular. We use semi-bold font variant for bold styling. Please use `font-weight: 600` for bold style. To be able to use also `font-weight: bold`, we match the semi-bold font variant also to the `font-weight: 700` value. We prefere to use the `600` value instead of `bold`. If you use Sass you can use the `$font-weight-bold` variable which also has a value of `600`.
@@ -28,7 +32,6 @@ The LidlFontCondPro-Bold is available in `font-weight: 800` extra-bold styling f
 All HTML headings, `<h1>` through `<h5>`, are available.
 
 ![TypographyHeadlines](examples/TypographyHeadlines.html)
-
 
 ## Display
 
@@ -121,7 +124,6 @@ To place links on darker backgrounds simply use the `.negative` variant of our l
  />
 
 ![TypographyListsUnstyled](examples/TypographyListsUnstyled.html)
-
 
 ## Responsive font sizes
 

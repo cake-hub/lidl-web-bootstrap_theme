@@ -1,5 +1,12 @@
 # Change log
 
+## [6.0.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.1) - 2021-06-24
+
+### Changed
+
+* `Assets`: "Icon" | updated box icon in `transport & logistic/box.svg`
+
+
 ## [6.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.0) - 2021-04-19
 
 ### Added
@@ -23,6 +30,7 @@
   * `transport & logistic/box-return-90-days.svg`
   * `transport & logistic/express-delivery.svg`
   * `transport & logistic/packstation.svg`
+
 
 ## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
 

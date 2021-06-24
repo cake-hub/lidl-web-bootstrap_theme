@@ -1,6 +1,6 @@
 # Download
 
-Include it with your favorite package manager npm or download CAKE CSS-Framework to get the compiled CSS, JavaScript and source code.
+Include it with your favorite package manager npm or download CAKE Lidl Web Bootstrap theme to get the compiled CSS, JavaScript and source code.
 
 ## Package managers
 
@@ -54,7 +54,7 @@ If you use already any special npm-registry in your project, you can also change
 
 ## Compiled CSS and JS
 
-Download ready-to-use compiled code for CAKE CSS-Framework to easily drop into your project, which includes:
+Download ready-to-use compiled code for CAKE Lidl Web Bootstrap theme to easily drop into your project, which includes:
 
 - Compiled and minified **CSS** bundles (`Container/dist/css`)
 - Compiled and minified **JavaScript plugins** (`Container/dist/js`)
@@ -62,7 +62,7 @@ Download ready-to-use compiled code for CAKE CSS-Framework to easily drop into y
 - **documentation** (`Container/docs`)
 - and all the source files including a docker image
 
-<a href="{{ variables.bundleDownloadUrl }}#v{{ version }}&format=zip" className="btn btn-primary">Download CSS-Framework v{{ version }} as ZIP file</a>
+<a href="{{ variables.bundleDownloadUrl }}#v{{ version }}&format=zip" className="btn btn-primary">Download Lidl Web Bootstrap theme v{{ version }} as ZIP file</a>
 
 ## Source files
 

@@ -1,5 +1,12 @@
 # Change log
 
+## [6.0.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.1) - 2021-06-24
+
+### Changed
+
+* `Doc`, `SCSS`: "Typography" | Update `font-family` definition (`$font-family-sans-serif`) by adding additional fallback-fonts `Calibri, Arial` directly after the default font-family `LidlFontCondPro`
+
+
 ## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
 
 ### Added

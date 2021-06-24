@@ -38,13 +38,17 @@
 
 .pricebox-container {
   display: block;
-  padding: $pricebox-padding;
+  padding: calc(#{$pricebox-padding} - #{$border-width});
+  padding-top: calc(#{$pricebox-padding-top} - #{$border-width});
+  padding-bottom: calc(#{$pricebox-padding-bottom} - #{$border-width});
   font-weight: $pricebox-price-font-weight;
   background-color: $pricebox-bg;
   border: $pricebox-border;
 
   @include media-breakpoint-up(sm) {
-    padding: $pricebox-padding-sm;
+    padding: calc(#{$pricebox-padding-sm} - #{$border-width});
+    padding-top: calc(#{$pricebox-padding-sm-top} - #{$border-width});
+    padding-bottom: calc(#{$pricebox-padding-sm-bottom} - #{$border-width});
   }
 }
 
@@ -159,6 +163,7 @@
   display: block;
   margin-top: $pricebox-basic-quantity-margin-top;
   line-height: $pricebox-basic-quantity-line-height;
+  @include cake-font-size($pricebox-basic-quantity-font-size);
 }
 
 .pricebox-with-highlight-action,
@@ -197,6 +202,7 @@
   padding: calculateRem(2px) calculateRem(4px) calculateRem(10px) calculateRem(4px);
   margin-bottom: calculateRem(-8px);
   margin-left: calculateRem(4px);
+  font-size: $pricebox-highlight-font-size;
   font-weight: $pricebox-highlight-font-weight;
   color: $pricebox-font-color-negative;
   text-align: center;
@@ -205,5 +211,10 @@
   @include media-breakpoint-up(sm) {
     padding: calculateRem(4px) calculateRem(8px) calculateRem(12px) calculateRem(8px);
     margin-left: .5rem;
+    font-size: $pricebox-highlight-font-size-sm;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $pricebox-highlight-font-size-lg;
   }
 }

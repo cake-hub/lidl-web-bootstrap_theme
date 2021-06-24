@@ -368,19 +368,29 @@ $popover-backdrop-bg-color:                   $popover-bg-color;
 $pricebox-bg:                             $white;
 $pricebox-border:                         $border-width solid cake-color("gray", "light");
 $pricebox-font-size:                      calculateRem(12px);
-$pricebox-font-color:                     cake-color("gray", "darker");
+$pricebox-font-color:                     $black;
 $pricebox-font-color-negative:            $white;
-$pricebox-padding:                        .25rem - calculateRem($border-width);
-$pricebox-padding-sm:                     .5rem - calculateRem($border-width);
+$pricebox-padding:                        calculateRem(4px);
+$pricebox-padding-top:                    calculateRem(4px);
+$pricebox-padding-bottom:                 calculateRem(3px); // we deviate from the design to get the same visual appearance
+$pricebox-padding-sm:                     calculateRem(8px);
+$pricebox-padding-sm-top:                 calculateRem(6px);
+$pricebox-padding-sm-bottom:              calculateRem(6px); // we deviate from the design to get the same visual appearance
 
 $pricebox-price-baseline-factor:          -.16;
 $pricebox-price-medium-font-size:         calculateRem(28px);
 
-$pricebox-prefix-margin-right:            calculateRem(2px);
-$pricebox-currency-margin-left:           calculateRem(4px);
+$pricebox-prefix-margin-right:            calculateRem(4px);
+$pricebox-currency-margin-left:           $pricebox-prefix-margin-right;
+
 $pricebox-basic-quantity-margin-top:      calculateRem(2px);
+$pricebox-basic-quantity-font-size:       calculateRem(10px);
 $pricebox-basic-quantity-line-height:     1.2;
+
 $pricebox-highlight-font-weight:          $font-weight-bold;
+$pricebox-highlight-font-size:            calculateRem(14px);
+$pricebox-highlight-font-size-sm:         calculateRem(16px);
+$pricebox-highlight-font-size-lg:         calculateRem(18px);
 
 
 // Product tile

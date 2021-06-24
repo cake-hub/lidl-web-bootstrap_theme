@@ -1,5 +1,15 @@
 # Change log
 
+## [6.0.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.1) - 2021-06-24
+
+### Changed
+
+* `SCSS`: "Pricebox" | Update pricebox stylings to bring the appearance more in line with the print definitions
+  * Update text color of the component
+  * Update label and basic quantity font size
+  * Update margins of price container (`.pricebox-container`)
+
+
 ## [6.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.0) - 2021-04-19
 
 ### Removed
