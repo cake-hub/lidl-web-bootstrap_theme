@@ -1,5 +1,12 @@
 # Change log
 
+## [6.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.1.0) - 2021-07-22
+
+### Added
+
+* `CSS`, `Doc`: "Shadow" | Added `.shadow`, `.shadow-strong` and `.shadow-flyout` to the new **Utilities->Shadow** documentation page.
+
+
 ## [6.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.0) - 2021-04-19
 
 ### Highlights

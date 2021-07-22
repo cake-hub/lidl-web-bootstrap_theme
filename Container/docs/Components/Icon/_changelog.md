@@ -1,5 +1,18 @@
 # Change log
 
+## [6.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.1.0) - 2021-07-22
+
+### Changed
+
+* `Assets`: "Icon" | added new solid versions of the smiley icons
+  * `smiley/smiley-bad-solid.svg`
+  * `smiley/smiley-best-solid.svg`
+  * `smiley/smiley-better-solid.svg`
+  * `smiley/smiley-good-solid.svg`
+  * `smiley/smiley-neutral-solid.svg`
+  * `smiley/smiley-worst-solid.svg`
+
+
 ## [6.0.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.1) - 2021-06-24
 
 ### Changed

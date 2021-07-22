@@ -174,7 +174,12 @@ $grid-gutter-width:           16px;
 $border-width:                1px;
 $border-radius:               calculateRem(2px);
 $border-radius-lg:            calculateRem(10px);
+
 $box-shadow:                  0 .125rem .25rem rgba($black, .15);
+$box-shadow-strong:           0 .25rem .375rem .1875rem rgba($black, .35);
+$box-shadow-flyout:           0 .1875rem .1875rem rgba($black, .15);
+$box-shadow-lg:               $box-shadow-strong;
+$box-shadow-sm:               $box-shadow-flyout;
 
 $component-active-bg:         theme-color("primary");
 $component-active-color:      $white;
@@ -417,9 +422,9 @@ $card-columns-margin:               $card-spacer-y * 2;
 // Badges
 
 $badge-border-width:                $border-width;
-$badge-pill-padding-x:              ($spacer * 2) - calculateRem($badge-border-width);
+$badge-pill-padding-x:              ($spacer * 2);
 $badge-pill-border-radius:          10rem;
-$badge-padding-y:                   .25rem - calculateRem($badge-border-width);
+$badge-padding-y:                   .25rem;
 $badge-padding-x:                   $badge-pill-padding-x;
 $badge-border-radius:               $badge-pill-border-radius;
 

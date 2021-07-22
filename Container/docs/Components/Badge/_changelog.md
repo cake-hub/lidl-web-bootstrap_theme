@@ -1,5 +1,12 @@
 # Change log
 
+## [6.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.1.0) - 2021-07-22
+
+### Changed
+
+* `SCSS`: "Badge" | move calculation subtraction of border-width from paddings into the component SCSS instead of the configuration variables
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Fixed

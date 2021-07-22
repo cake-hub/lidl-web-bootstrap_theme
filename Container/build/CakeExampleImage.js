@@ -17,13 +17,12 @@ let cakeImages = Object.values (
 ).map (cakeImage => path.basename (cakeImage));
 const cakeImagesNr = cakeImages.length;
 
-const CakeExampleImage = ( { callFilePath, ...props } ) => {
+const CakeExampleImage = ( { callFilePath, className="", ...props } ) => {
     const relativePath = path.relative(callFilePath + "/" + config.pageExamplePath, config.exampleImagesPath);
 
     return (
-        <img src={relativePath + '/' + cakeImages [Math.floor (Math.random() * 100000) % cakeImagesNr]} alt="A beautiful cake image *_*" {...props} />
+        <img is="rnd-img" src={relativePath + '/' + "Apfel-Karamell-Kuchen.jpg"} alt="A beautiful cake image *_*" class={className} folder={relativePath} images={(cakeImages.join())} {...props} />
     );
 }
-
 
 export default CakeExampleImage;

@@ -70,9 +70,9 @@ $alert-close-focus-box-shadow:        $input-btn-focus-box-shadow;
 $badge-line-height:                   1.2;
 $badge-border:                        $badge-border-width solid $white;
 
-$badge-addon-padding-x:              calculateRem(4px) - calculateRem($badge-border-width);
+$badge-addon-padding-x:              calculateRem(4px);
 $badge-addon-padding-y:              calculateRem(2px);
-$badge-addon-padding-x-lg:           calculateRem(6px) - calculateRem($badge-border-width);
+$badge-addon-padding-x-lg:           calculateRem(6px);
 $badge-addon-padding-y-lg:           calculateRem(3px);
 $badge-addon-border-radius:          $badge-pill-border-radius;
 $badge-addon-size:                   calculateRem(16px);
