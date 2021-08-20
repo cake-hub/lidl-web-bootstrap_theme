@@ -148,6 +148,42 @@ export default {
                         source: './assets/images/examples',
                         destination: path.resolve (__dirname, './docs/_assets/images/examples')
                     },
+                    {
+                        source: './js/accordion.js',
+                        destination: path.resolve (__dirname, './docs/Components/Accordion/examples')
+                    },
+                    {
+                        source: './js/alert.js',
+                        destination: path.resolve (__dirname, './docs/Components/Alert/examples')
+                    },
+                    {
+                        source: './js/cookieAlert.js',
+                        destination: path.resolve (__dirname, './docs/Components/Cookie alert/examples')
+                    },
+                    {
+                        source: './js/form.js',
+                        destination: path.resolve (__dirname, './docs/Components/Form/examples')
+                    },
+                    {
+                        source: './js/header.js',
+                        destination: path.resolve (__dirname, './docs/Components/Header/examples')
+                    },
+                    {
+                        source: './js/popover.js',
+                        destination: path.resolve (__dirname, './docs/Components/Popover/examples')
+                    },
+                    {
+                        source: './js/tab.js',
+                        destination: path.resolve (__dirname, './docs/Components/Tab/examples')
+                    },
+                    {
+                        source: './js/themeSlider.js',
+                        destination: path.resolve (__dirname, './docs/Components/Theme slider/examples')
+                    },
+                    {
+                        source: './js/toTop.js',
+                        destination: path.resolve (__dirname, './docs/Components/To top/examples')
+                    },
                 ],
             }
         }),

@@ -18,6 +18,10 @@ To create an tab you have to apply the classes `.btn-group` and `.tab` to any el
             "src": "examples/TabDefault.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/tab.js",
+            "type": "content"
         }
     '
  />
@@ -55,10 +59,10 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `tabElements [Array]` - provide the tab elements as HTMLElement (optional)
-* `tabQuerySelector [String]` - provide a query-selector to select all tab elements. (optional, default: `[data-controller="tab"]`)
-* `tabButtonElements [Array]` - provide the tab button elements as HTMLElement. For each tab element you should provide an array with all tab-buttons (optional)
-* `tabButtonQuerySelector [String]` - provide a query-selector to select all tab button elements. (optional, default: `[data-controller="tab/button"]`)
+* `tabElements [Array]` – provide the tab elements as HTMLElement (optional)
+* `tabQuerySelector [String]` – provide a query-selector to select all tab elements. (optional, default: `[data-controller="tab"]`)
+* `tabButtonElements [Array]` – provide the tab button elements as HTMLElement. For each tab element you should provide an array with all tab-buttons (optional)
+* `tabButtonQuerySelector [String]` – provide a query-selector to select all tab button elements. (optional, default: `[data-controller="tab/button"]`)
 
 If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` option gets ignored. If you do not provide any `options.[...]Elements` always the `options.[...]QuerySelector` is used!
 

@@ -1,7 +1,6 @@
 // stylelint-disable value-keyword-case, scss/dollar-variable-default
 
 
-
 // #########################
 // Update root variables
 // #########################
@@ -9,7 +8,6 @@
 
 // Remove "wrong" theme-colors
 $theme-colors: map-remove($theme-colors, "light", "dark", "secondary");
-
 
 
 // #########################
@@ -21,8 +19,6 @@ $theme-colors: map-remove($theme-colors, "light", "dark", "secondary");
 
 $pricebox-price-font-size:                calculateRem(20px);
 $pricebox-price-font-weight:              800;
-
-
 
 
 // ###################
@@ -387,7 +383,7 @@ $pricebox-basic-quantity-margin-top:      calculateRem(2px);
 $pricebox-basic-quantity-font-size:       calculateRem(10px);
 $pricebox-basic-quantity-line-height:     1.2;
 
-$pricebox-highlight-font-weight:          $font-weight-bold;
+$pricebox-highlight-font-weight:          $pricebox-price-font-weight;
 $pricebox-highlight-font-size:            calculateRem(14px);
 $pricebox-highlight-font-size-sm:         calculateRem(16px);
 $pricebox-highlight-font-size-lg:         calculateRem(18px);

@@ -30,6 +30,8 @@ We use the Lidl house typeface LidlFontCondPro as primary font family. “Native
 $font-family-sans-serif:
     // Lidl house typeface
     LidlFontCondPro,
+    // Fallback fonts
+    Calibri, Arial,
     // Safari for macOS and iOS (San Francisco)
     -apple-system,
     // Chrome < 56 for macOS (San Francisco)

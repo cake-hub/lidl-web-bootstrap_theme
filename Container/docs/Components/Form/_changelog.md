@@ -1,5 +1,12 @@
 # Change log
 
+## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
+
+### Added
+
+* `Doc`: "Form" | added javaScript file content as "JS" tab
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Changed

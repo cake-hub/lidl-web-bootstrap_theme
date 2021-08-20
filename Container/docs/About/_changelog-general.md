@@ -11,7 +11,7 @@
 
 ### Highlights
 
-* `SCSS`, `Doc`, `HTML`: "Pricebox" | The pricebox with the theme **info** has been completely removed from our framework and documentation. With this we follow the internal guidelines. Read more about this in our [Migration guide](Migration%20guide.md#from-version-5x-to-6x).
+* `SCSS`, `Doc`, `HTML`: "Pricebox" | The pricebox with the theme **info** has been completely removed from our framework and documentation. With this we follow the internal guidelines. Read more about this in our [Migration guide](./Migration%20guide/Migration%20guide.md#from-version-5x-to-6x).
 
 
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28

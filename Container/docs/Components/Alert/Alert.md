@@ -94,10 +94,10 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
-- Be sure you've loaded the alert plugin, or the compiled CAKE JavaScript.
-- Add a dismiss button and the `.alert-dismissible` class, which positions the `.close` button.
-- On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it and place it as the first child of the alert for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+* Be sure you've loaded the alert plugin, or the compiled CAKE JavaScript.
+* Add a dismiss button and the `.alert-dismissible` class, which positions the `.close` button.
+* On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it and place it as the first child of the alert for proper behavior across all devices.
+* To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
 
 You can see this in action with a live demo:
 
@@ -111,6 +111,10 @@ You can see this in action with a live demo:
             "src": "examples/AlertDismissing.html",
             "type": "content",
             "selector": "#showbox"
+        },
+        "JS":{
+            "src": "examples/alert.js",
+            "type": "content"
         }
     '
  />
@@ -129,6 +133,10 @@ You can see this in action with a live demo:
             "src": "examples/AlertDismissingIconAside.html",
             "type": "content",
             "selector": "#showbox"
+        },
+        "JS":{
+            "src": "examples/alert.js",
+            "type": "content"
         }
     '
  />
@@ -163,8 +171,8 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `elements [Array]` - provide the specific closing-button element of the alert (optional)
-* `querySelector [String]` - provide a query-selector to select all closing-button elements of the alert. (optional, default: `button[data-controller="alert/close"]`)
+* `elements [Array]` – provide the specific closing-button element of the alert (optional)
+* `querySelector [String]` – provide a query-selector to select all closing-button elements of the alert (optional, default: `button[data-controller="alert/close"]`)
 
 If you do provide the `options.elements` the `options.querySelector` option gets ignored. If you do not provide any `options.elements` always the `options.querySelector` is used!
 

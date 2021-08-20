@@ -6,7 +6,7 @@ It is mandatory to maintain the appearance and behavior of these components.
 
 As an addition to the [default pricebox](../../Components/Pricebox/Pricebox.md) there is a special variant for usage in the lidl plus context.
 
-## Highlight Pricebox
+## Highlight pricebox
 
 There is an additional color for Lidl Plus you can choose by adding the following class to the root element `.pricebox`:
 

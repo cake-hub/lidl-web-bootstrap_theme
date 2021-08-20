@@ -1,5 +1,13 @@
 # Change log
 
+## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
+
+### Added
+
+* `SCSS`: "Alert" | added font-size to alert-close button to match the icon size
+* `Doc`: "Alert" | added javaScript file content as "JS" tab
+
+
 ## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
 
 ### Changed

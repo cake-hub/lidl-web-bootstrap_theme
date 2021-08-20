@@ -6,7 +6,7 @@
 
 A price field contains information about the price of a product and may vary according to content, styling and context.
 
-## Standard Pricebox
+## Standard pricebox
 
 A default pricebox can contain any informations that are legally and organizational required like the **price** itself, a **prefix**, **asterisk**, **currency** and **additional informations** like the basic quantity.
 
@@ -46,7 +46,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxStandard](examples/PriceboxStandard.html)
 
-### minimum variant
+### Minimum variant
 
 <ContentRack
     fields='
@@ -64,7 +64,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxMinimum](examples/PriceboxMinimum.html)
 
-### prefix
+### Prefix
 
 <ContentRack
     fields='
@@ -82,7 +82,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxPrefix](examples/PriceboxPrefix.html)
 
-### asterisk
+### Asterisk
 
 <ContentRack
     fields='
@@ -100,7 +100,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxAsterisk](examples/PriceboxAsterisk.html)
 
-### currency
+### Currency
 
 <ContentRack
     fields='
@@ -118,7 +118,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxCurrency](examples/PriceboxCurrency.html)
 
-### basic quantitiy
+### Basic quantitiy
 
 <ContentRack
     fields='
@@ -136,7 +136,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxBasicQuantity](examples/PriceboxBasicQuantity.html)
 
-### custom values
+### Custom values
 
 <ContentRack
     fields='
@@ -154,7 +154,7 @@ For more information, see the [WAI-ARIA Authoring Practices](https://www.w3.org/
 
 ![PriceboxCustom](examples/PriceboxCustom.html)
 
-### pricebox in product-tile
+### Pricebox in product-tile
 
 Such a pricebox fits perfectly into an product tile like in the following example. To align the pricebox to the right of the element, simply the attribute `text-align: right` can be set.
 
@@ -176,7 +176,7 @@ Such a pricebox fits perfectly into an product tile like in the following exampl
 
 Of course the pricebox has a modular structure which gives you the possibility to remove or add any element with any combination possible.
 
-## Highlight Pricebox
+## Highlight pricebox
 
 To highlight promotions or discounts, you can place a element with the class `.pricebox-highlight` before the `.pricebox-price-wrapper` as an child of the `.pricebox-wrapper`.
 
@@ -185,7 +185,7 @@ You can choose different colors by adding one of the following classes to the ro
 * action (`.pricebox-with-highlight-action`)
 * offer (`.pricebox-with-highlight-offer`)
 
-### theme action
+### Theme action
 
 <ContentRack
     fields='
@@ -203,7 +203,7 @@ You can choose different colors by adding one of the following classes to the ro
 
 ![PriceboxHightlightAction](examples/PriceboxHightlightAction.html)
 
-### theme offer
+### Theme offer
 
 <ContentRack
     fields='

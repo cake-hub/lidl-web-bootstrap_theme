@@ -1,11 +1,18 @@
 # Change log
 
+## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
+
+### Added
+
+* `Doc`: "Accordion" | added javaScript file content as "JS" tab
+
+
 ## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
 
 ### Added
 
 * `SCSS`: "Accordion" | added `margin-left` to the icon, to match the design requirements
-* `SCSS`: Added `overflow: hidden` and `text-overflow: ellipsis` to the accordion label to hide too much content.
+* `SCSS`: "Accordion" | Added `overflow: hidden` and `text-overflow: ellipsis` to the accordion label to hide too much content.
 
 
 ### Fixed

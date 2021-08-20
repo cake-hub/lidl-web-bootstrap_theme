@@ -1,5 +1,12 @@
 # Change log
 
+## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
+
+### Changed
+
+* `SCSS`: "Pricebox" | changed `.pricebox-highlight` font-weight to 800
+
+
 ## [6.0.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.0.1) - 2021-06-24
 
 ### Changed

@@ -13,7 +13,7 @@ Display utility classes that apply to all [breakpoints](../../Layout/Overview/Ov
 As such, the classes are named using the format:
 
 * `.d-{value}` for `xs`
-* `.d-{breakpoint}-{value}` for `sm`, `md` and `lg`.
+* `.d-{breakpoint}-{value}` for `sm`, `md` and `lg`
 
 Where *value* is one of:
 

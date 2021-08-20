@@ -11,7 +11,7 @@ To create an teaser you have to apply the classes `.card` and `.teaser-card` to 
 The teaser component **depends on the [Card](../Card/Card.md) component** and uses `.card`, `.card-img` and `.card-img-overlay`. So you have to include the Card component Sass to use the teaser component.
 
 
-## Default Teaser
+## Default teaser
 
 Only the image is obligatory which means all the other parts of a teaser can optionally be added or removed. The image can be any image with preferably a 4:3 ratio. To apply the correct styling to the image use the `.card-img` class.
 
@@ -32,7 +32,7 @@ Only the image is obligatory which means all the other parts of a teaser can opt
 ![TeaserDefault](examples/TeaserDefault.html)
 
 
-## Linked Teaser
+## Linked teaser
 
 To link the teaser, you have to add a `<a>` tag with the class `.teaser-card-link` as a child to the teaser-element.
 

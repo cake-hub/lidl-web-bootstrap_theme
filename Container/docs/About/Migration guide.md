@@ -88,14 +88,14 @@ To make it clear again: The `cake.js` is still a simple to use package that runs
 
 We added a couple of new SCSS variables. Make sure you don't use some of these already.
 
-* $accordion-max-height
-* $accordion-padding-y
-* $breadcrumb-icon-margin-top
-* $header-mobile-height
-* $section-head-min-height
-* $section-head-min-height-lg-up
-* $theme-slider-width
-* $theme-slider-width-md-up
+* `$accordion-max-height`
+* `$accordion-padding-y`
+* `$breadcrumb-icon-margin-top`
+* `$header-mobile-height`
+* `$section-head-min-height`
+* `$section-head-min-height-lg-up`
+* `$theme-slider-width`
+* `$theme-slider-width-md-up`
 
 #### Renaming of mixins
 

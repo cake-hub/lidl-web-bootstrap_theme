@@ -34,6 +34,10 @@ To define the content of the popover set the `data-tippy-content="…"` property
             "src": "examples/PopoverDefault.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -58,6 +62,10 @@ The popovers can be placed on any side of the dependent element. Therefore you s
             "src": "examples/PopoverPlacement.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -78,6 +86,10 @@ In addition to the `data-tippy-placement="{position}"` you can add a suffix to t
             "src": "examples/PopoverPlacementExtended.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -106,6 +118,10 @@ You can for example also add html-content to the popover. As default the popover
             "src": "examples/PopoverCustomContent.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -126,6 +142,10 @@ As already mentioned above, you can add a popover to any valid html element. The
             "src": "examples/PopoverCustomElement.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -152,6 +172,10 @@ Nevertheless you can use any `$theme-color` as theme for the popover. To get the
             "src": "examples/PopoverColors.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/popover.js",
+            "type": "content"
         }
     '
  />
@@ -210,9 +234,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `popoverElements [Array]` - provide the popover elements as HTMLElement (optional)
-* `popoverQuerySelector [String]` - provide a query-selector to select all popover elements. (optional, default: `*[data-tippy-content]`)
-* `tippyProps [String]` - provide custom [tippy.js configuration](https://atomiks.github.io/tippyjs/v6/all-props/) properties. (optional)
+* `popoverElements [Array]` – provide the popover elements as HTMLElement (optional)
+* `popoverQuerySelector [String]` – provide a query-selector to select all popover elements. (optional, default: `*[data-tippy-content]`)
+* `tippyProps [String]` – provide custom [tippy.js configuration](https://atomiks.github.io/tippyjs/v6/all-props/) properties. (optional)
 
 If you do provide the `options.popoverElements` the `options.popoverQuerySelector` option gets ignored. If you do not provide any `options.popoverElements` always the `options.popoverQuerySelector` is used!
 

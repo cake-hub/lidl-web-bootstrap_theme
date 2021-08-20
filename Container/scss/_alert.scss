@@ -50,6 +50,7 @@
     float: right;
     padding: $alert-padding-y $alert-padding-x;
     margin: #{-$alert-padding-y} #{-$alert-padding-x} 0 0;
+    font-size: $close-size;
     color: inherit;
 
     &:not(:disabled):not(.disabled):hover,

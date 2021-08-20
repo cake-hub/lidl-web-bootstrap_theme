@@ -109,10 +109,10 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `buttonElements [Array]` - provide the specific to top button HTMLElements. (optional)
-* `buttonQuerySelector [String]` - provide a query-selector to select all to top button elements. (optional, default: `[data-controller="totop"]`)
-* `offset [Number]` - number of pixels to use as offset like explained below. (optional, default: `20`).
-* `enableSmoothScrolling [Boolean]` - set to `true` to enable the smooth-scrolling for modern browsers or disable it with `false`. More about the scroll behavior can be read below. (optional, default: `true`).
+* `buttonElements [Array]` – provide the specific to top button HTMLElements. (optional)
+* `buttonQuerySelector [String]` – provide a query-selector to select all to top button elements. (optional, default: `[data-controller="totop"]`)
+* `offset [Number]` – number of pixels to use as offset like explained below. (optional, default: `20`).
+* `enableSmoothScrolling [Boolean]` – set to `true` to enable the smooth-scrolling for modern browsers or disable it with `false`. More about the scroll behavior can be read below. (optional, default: `true`).
 
 If you do provide the `options.buttonElements` the `options.buttonQuerySelector` option gets ignored. If you do not provide any `options.buttonElements` always the `options.buttonQuerySelector` is used!
 
@@ -146,6 +146,10 @@ With this initialization the smooth scrolling will be disabled and therefore the
             "src": "examples/ToTopScroll.html",
             "type": "content",
             "selector": "#app"
+        },
+        "JS":{
+            "src": "examples/toTop.js",
+            "type": "content"
         }
     '
  />

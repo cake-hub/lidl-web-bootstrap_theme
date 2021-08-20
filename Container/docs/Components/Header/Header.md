@@ -16,6 +16,10 @@ The header is a component for creating brand awareness and providing important o
             "src": "examples/HeaderDefault.html",
             "type": "content",
             "selector": "#app"
+        },
+        "JS":{
+            "src": "examples/header.js",
+            "type": "content"
         }
     '
  />
@@ -52,6 +56,10 @@ The header provides also the option to display a second level navigation. Theref
             "src": "examples/HeaderSubnavigation.html",
             "type": "content",
             "selector": "#app"
+        },
+        "JS":{
+            "src": "examples/header.js",
+            "type": "content"
         }
     '
  />
@@ -202,23 +210,23 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `closeMobileMenuBreakpoint [Number]` - provide the mobile breakpoint to close the mobile menu on resizing (optional, default: `960`)
-* `headerElements [Array]` - the header elements in your DOM (optional)
-* `headerQuerySelector [String]` - the query-selector of your header elements (optional, default: `*[data-controller="header"]`)
-* `burgerMenuElement [HTMLElement]` - the burger-menu element inside your header's DOM (optional)
-* `burgerMenuQuerySelector [String]` - the query-selector of the burger-menu element inside your header's DOM (optional, default: `*[data-controller="header/burgermenu"]`)
-* `navigationElement [HTMLElement]` - the navigation element inside your header's DOM (optional)
-* `navigationQuerySelector [String]` - the query-selector of the navigation element inside your header's DOM (optional, default: `*[data-controller="header/navigation"]`)
-* `sliderMainNavButtonPreviousElement [HTMLElement]` - the slider main-navigation previous button element inside your header's DOM (optional)
-* `sliderMainNavButtonPreviousQuerySelector [String]` - the query-selector of the slider main-navigation previous button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/main/slider/prev"]`)
+* `closeMobileMenuBreakpoint [Number]` – provide the mobile breakpoint to close the mobile menu on resizing (optional, default: `960`)
+* `headerElements [Array]` – the header elements in your DOM (optional)
+* `headerQuerySelector [String]` – the query-selector of your header elements (optional, default: `*[data-controller="header"]`)
+* `burgerMenuElement [HTMLElement]` – the burger-menu element inside your header's DOM (optional)
+* `burgerMenuQuerySelector [String]` – the query-selector of the burger-menu element inside your header's DOM (optional, default: `*[data-controller="header/burgermenu"]`)
+* `navigationElement [HTMLElement]` – the navigation element inside your header's DOM (optional)
+* `navigationQuerySelector [String]` – the query-selector of the navigation element inside your header's DOM (optional, default: `*[data-controller="header/navigation"]`)
+* `sliderMainNavButtonPreviousElement [HTMLElement]` – the slider main-navigation previous button element inside your header's DOM (optional)
+* `sliderMainNavButtonPreviousQuerySelector [String]` – the query-selector of the slider main-navigation previous button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/main/slider/prev"]`)
 
-* `sliderMainNavButtonNextElement [HTMLElement]` - the slider main-navigation next button element inside your header's DOM (optional)
-* `sliderMainNavButtonNextQuerySelector [String]` - the query-selector of the slider main-navigation next button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/main/slider/next"]`)
-* `sliderSubNavButtonPreviousElement [HTMLElement]` - the slider subnavigation previous button element inside your header's DOM (optional)
-* `sliderSubNavButtonPreviousQuerySelector [String]` - the query-selector of the slider subnavigation previous button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/sub/slider/prev"]`)
-* `sliderSubNavButtonNextElement [HTMLElement]` - the slider subnavigation next button element inside your header's DOM (optional)
-* `sliderSubNavButtonNextQuerySelector [String]` - the query-selector of the slider subnavigation next button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/sub/slider/next"]`)
-* `hasSubNavElementQuerySelector [String]` - the query-selector of the slider subnavigation next button inside your header's DOM (optional, default: `*.header-subnavigation-list:not(.d-none)`)
+* `sliderMainNavButtonNextElement [HTMLElement]` – the slider main-navigation next button element inside your header's DOM (optional)
+* `sliderMainNavButtonNextQuerySelector [String]` – the query-selector of the slider main-navigation next button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/main/slider/next"]`)
+* `sliderSubNavButtonPreviousElement [HTMLElement]` – the slider subnavigation previous button element inside your header's DOM (optional)
+* `sliderSubNavButtonPreviousQuerySelector [String]` – the query-selector of the slider subnavigation previous button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/sub/slider/prev"]`)
+* `sliderSubNavButtonNextElement [HTMLElement]` – the slider subnavigation next button element inside your header's DOM (optional)
+* `sliderSubNavButtonNextQuerySelector [String]` – the query-selector of the slider subnavigation next button inside your header's DOM (optional, default: `*[data-toggle="header/navigation/menu/sub/slider/next"]`)
+* `hasSubNavElementQuerySelector [String]` – the query-selector of the slider subnavigation next button inside your header's DOM (optional, default: `*.header-subnavigation-list:not(.d-none)`)
 
 ```javascript
 document.addEventListener ('DOMContentLoaded', () => {
@@ -238,17 +246,17 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `navigationHistoryIdentifiers [Array]` - the previous navigation history as a list of paths (optional, default: `[]`)
-* `headerElement [HTMLElement]` - the header elements in your DOM (optional)
-* `headerQuerySelector [String]` - the query-selector of your header element (optional, default: `*[data-controller="header"]`)
-* `headerNavigationContainerElement [HTMLElement]` - the header navigation container element inside your header's DOM (optional)
-* `headerNavigationContainerQuerySelector [String]` - the query-selector of the header navigation container element inside your header's DOM (optional, default: `[data-controller="header/navigation"]`)
-* `headerBackButtonElement [HTMLElement]` - the header subnavigation button element inside your header's DOM (optional)
-* `headerBackButtonQuerySelector [String]` - the query-selector of the header subnavigation button element inside your header's DOM (optional, default: `[data-controller="header/navigation/back"]`)
-* `headerNavigationsElement [HTMLElement]` - the header subnavigation elements inside your header's DOM (optional)
-* `headerNavigationsQuerySelector [String]` - the query-selector of the header subnavigation elements inside your header's DOM (optional, default: `[data-controller="header/navigation/menu"]`)
-* `headerNavigationLinksElement [HTMLElement]` - the header subnavigation link elements inside your header's DOM (optional)
-* `headerNavigationLinksQuerySelector [String]` - the query-selector of the header subnavigation link elements inside your header's DOM (optional, default: `[data-controller="header/navigation/link"]`)
+* `navigationHistoryIdentifiers [Array]` – the previous navigation history as a list of paths (optional, default: `[]`)
+* `headerElement [HTMLElement]` – the header elements in your DOM (optional)
+* `headerQuerySelector [String]` – the query-selector of your header element (optional, default: `*[data-controller="header"]`)
+* `headerNavigationContainerElement [HTMLElement]` – the header navigation container element inside your header's DOM (optional)
+* `headerNavigationContainerQuerySelector [String]` – the query-selector of the header navigation container element inside your header's DOM (optional, default: `[data-controller="header/navigation"]`)
+* `headerBackButtonElement [HTMLElement]` – the header subnavigation button element inside your header's DOM (optional)
+* `headerBackButtonQuerySelector [String]` – the query-selector of the header subnavigation button element inside your header's DOM (optional, default: `[data-controller="header/navigation/back"]`)
+* `headerNavigationsElement [HTMLElement]` – the header subnavigation elements inside your header's DOM (optional)
+* `headerNavigationsQuerySelector [String]` – the query-selector of the header subnavigation elements inside your header's DOM (optional, default: `[data-controller="header/navigation/menu"]`)
+* `headerNavigationLinksElement [HTMLElement]` – the header subnavigation link elements inside your header's DOM (optional)
+* `headerNavigationLinksQuerySelector [String]` – the query-selector of the header subnavigation link elements inside your header's DOM (optional, default: `[data-controller="header/navigation/link"]`)
 
 If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` option gets ignored. If you do not provide any `options.[...]Elements` always the `options.[...]QuerySelector` is used!
 
@@ -265,6 +273,10 @@ If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` o
             "src": "examples/HeaderSubnavigationLarge.html",
             "type": "content",
             "selector": "#app"
+        },
+        "JS":{
+            "src": "examples/header.js",
+            "type": "content"
         }
     '
  />

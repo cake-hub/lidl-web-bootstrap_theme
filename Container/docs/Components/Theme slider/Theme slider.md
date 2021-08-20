@@ -35,6 +35,10 @@ Using the following syntax, you can create a theme slider with button controls a
             "src": "examples/ThemesliderDefault.html",
             "type": "content",
             "selector": "#showbox"
+        },
+        "JS":{
+            "src": "examples/themeSlider.js",
+            "type": "content"
         }
     '
  />
@@ -105,16 +109,16 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `sliderElements [Array]` - provide the wrapper element(s) of your theme sliders (optional)
-* `sliderQuerySelector [String]` - provide a query-selector to select theme slider wrapper elements. (optional, default: `*[data-controller="theme-slider"]`)
-* `sliderListElements [Array]` - provide the list (`<ul>`) element(s) of your theme sliders (optional)
-* `sliderListQuerySelector [String]` - provide a query-selector to select theme slider list elements. (optional, default: `*[data-controller="theme-slider-slides"]`)
-* `sliderPreviousButtonElements [Array]` - provide the previous button element(s) of your theme sliders (optional)
-* `sliderPreviousButtonuerySelector [String]` - provide a query-selector to select theme slider previous button elements. (optional, default: `*[data-controller="theme-slider-previous"]`)
-* `sliderNextButtonElements [Array]` - provide the next button element(s) of your theme sliders (optional)
-* `sliderNextButtonuerySelector [String]` - provide a query-selector to select theme slider next button elements. (optional, default: `*[data-controller="theme-slider-next"]`)
-* `tinySliderOptions [Object]` - provide your custom [tiny-slider options](https://github.com/ganlanyuan/tiny-slider#options) (optional, default: `{}`)
-* `autoInitialize [Boolean]` - configure if the slider should be initialized on method call (`true`) or if you want to manually call the `slider.initialize ()` method (`false`)
+* `sliderElements [Array]` – provide the wrapper element(s) of your theme sliders (optional)
+* `sliderQuerySelector [String]` – provide a query-selector to select theme slider wrapper elements. (optional, default: `*[data-controller="theme-slider"]`)
+* `sliderListElements [Array]` – provide the list (`<ul>`) element(s) of your theme sliders (optional)
+* `sliderListQuerySelector [String]` – provide a query-selector to select theme slider list elements. (optional, default: `*[data-controller="theme-slider-slides"]`)
+* `sliderPreviousButtonElements [Array]` – provide the previous button element(s) of your theme sliders (optional)
+* `sliderPreviousButtonuerySelector [String]` – provide a query-selector to select theme slider previous button elements. (optional, default: `*[data-controller="theme-slider-previous"]`)
+* `sliderNextButtonElements [Array]` – provide the next button element(s) of your theme sliders (optional)
+* `sliderNextButtonuerySelector [String]` – provide a query-selector to select theme slider next button elements. (optional, default: `*[data-controller="theme-slider-next"]`)
+* `tinySliderOptions [Object]` – provide your custom [tiny-slider options](https://github.com/ganlanyuan/tiny-slider#options) (optional, default: `{}`)
+* `autoInitialize [Boolean]` – configure if the slider should be initialized on method call (`true`) or if you want to manually call the `slider.initialize ()` method (`false`)
 
 If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` option gets ignored. If you do not provide any `options.[...]Elements` always the `options.[...]QuerySelector` is used!
 
@@ -184,6 +188,10 @@ To only use the no-js variant as a fallback, when there is no JavaScript availab
             "src": "examples/ThemesliderWithFallback.html",
             "type": "content",
             "selector": "#showbox"
+        },
+        "JS":{
+            "src": "examples/themeSlider.js",
+            "type": "content"
         }
     '
  />

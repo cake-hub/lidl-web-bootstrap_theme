@@ -37,7 +37,7 @@ Every base-color has different color-levels specified in `$gradations`. As the d
 * darkest (`(-)64%` base-color with black overlay)
 
 With positive percentuage values, the base-color will be mixed with a white color. The number defines how much the base color shines through. The same will work with negative numbers, but the color mixed with will be black instead of white!
-[Learn more about our Sass functions options.](../../Getting started/Theming.md#functions)
+[Learn more about our Sass functions options.](../../Getting%20started/Theming.md#functions)
 
 ## Color
 
@@ -80,7 +80,7 @@ Similar to the contextual text color classes, easily set the background of an el
 ## Background gradient
 
 You’ll be able to use `.bg-gradient-*` utility classes.
-`$enable-gradients` will have no affect on these colors, so the gradients can be used even if the gradients are disabled in `_variables.scss`! [Learn about our Sass options](../Getting started/Theming.md#sass-options) to enable gradients for all elements and more.
+`$enable-gradients` will have no affect on these colors, so the gradients can be used even if the gradients are disabled in `_variables.scss`! [Learn about our Sass options](../Getting%20started/Theming.md#sass-options) to enable gradients for all elements and more.
 
 <ContentRack
     fields='

@@ -26,6 +26,10 @@ Using the following syntax, you can use a collapse behavior to create the accord
             "src": "examples/AccordionMultiple.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/accordion.js",
+            "type": "content"
         }
     '
  />
@@ -47,6 +51,10 @@ If you wantan accordion-item to be extended on page load, simply set the `input`
             "src": "examples/AccordionSingle.html",
             "type": "content",
             "selector": "#showBox"
+        },
+        "JS":{
+            "src": "examples/accordion.js",
+            "type": "content"
         }
     '
  />
@@ -87,7 +95,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 });
 ```
 
-* `elements [Array]` - provide the specific input elements of your accordion (optional)
-* `querySelector [String]` - provide a query-selector to select all accordion input elements in your DOM. (optional, default: `*[data-controller="accordion/input"]`)
+* `elements [Array]` – provide the specific input elements of your accordion (optional)
+* `querySelector [String]` – provide a query-selector to select all accordion input elements in your DOM (optional, default: `*[data-controller="accordion/input"]`)
 
 If you do provide the `options.elements` the `options.querySelector` option gets ignored. If you do not provide any `options.elements` always the `options.querySelector` is used!

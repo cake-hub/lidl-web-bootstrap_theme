@@ -25,7 +25,7 @@ Here’s an example that changes the `background-color` and `color` for the `<bo
     $body-color: #111;
 
     // CAKE and its default variables
-    @import "../themes/Cake/scss/cake";
+    @import "~{{ variables.npmPackageName }}/scss/cake";
 
 Repeat as necessary for any variable in CAKE, including the global options below.
 

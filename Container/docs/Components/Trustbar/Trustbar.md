@@ -48,7 +48,7 @@ The Trustbar is intended for three to four items. On `xs` the items are always a
 
 ![TrustbarThreeItems](examples/TrustbarThreeItems.html)
 
-## Inactive Trustbars
+## Inactive trustbars
 
 If you do not want to link a trustbar item to another resource, you can simply swap the `<a>` element with a `<span>` element. Accordingly there will be no `cursor: pointer` event and the element is not click- or focusable at all.
 

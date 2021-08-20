@@ -24,8 +24,8 @@ npm install --registry {{ variables.npmRegistryUrl }} --save {{ variables.npmPac
 
 CAKE's `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to CAKE's main [Sass](https://sass-lang.com/) source file
-- `style` - path to CAKE's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` – path to CAKE's main [Sass](https://sass-lang.com/) source file
+- `style` – path to CAKE's non-minified CSS that's been precompiled using the default settings (no customization)
 
 #### registry settings and proxies
 

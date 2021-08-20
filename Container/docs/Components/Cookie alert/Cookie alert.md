@@ -18,6 +18,10 @@ This component uses the [button component](../Button/Button.md) and the checkbox
             "src": "examples/CookieAlertExample.html",
             "type": "content",
             "selector": "#app"
+        },
+        "JS":{
+            "src": "examples/cookieAlert.js",
+            "type": "content"
         }
     '
  />

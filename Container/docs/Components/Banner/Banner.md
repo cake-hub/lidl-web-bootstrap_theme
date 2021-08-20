@@ -11,7 +11,7 @@ To create an banner you have to apply the classes `.card` and `.banner-card` to 
 The banner component **depends on the [Card](../Card/Card.md) component** and uses `.card`, `.card-img` and `.card-img-overlay`. So you have to include the Card component Sass to use the banner component.
 
 
-## Simple Banner
+## Simple banner
 
 Only the image is obligatory which means all the other parts of a banner can optionally be added or removed. To apply the correct styling to the image use the `.card-img` class.
 
