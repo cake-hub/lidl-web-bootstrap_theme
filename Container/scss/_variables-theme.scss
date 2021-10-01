@@ -61,6 +61,28 @@ $alert-margin-top-content-with-icon:  calculateRem(4px);
 $alert-close-focus-box-shadow:        $input-btn-focus-box-shadow;
 
 
+// Availability Badges
+
+$avb-height: calculateRem(24px);
+$avb-color: cake-color("gray", "darker");
+$avb-bg-color: cake-color("gray", "lighter");
+$avb-border-radius: calculateRem(12px);
+$avb-padding-x: $spacer;
+$avb-line-height: 1.2;
+$avb-base-font-size: calculateRem(12px);
+
+$avb-calculated-line-height: calculateRem(14px);
+$avb-calculated-line-height-lg: calculateRem(16px);
+
+$avb-indicator-size: calculateRem(12px);
+$avb-bg-color-success: cake-color("success", "lighter");
+$avb-indicator-bg-color-success: cake-color("success");
+$avb-bg-color-attention: $mark-light;
+$avb-indicator-bg-color-attention: $mark-darker;
+$avb-bg-color-danger: cake-color("danger", "lighter");
+$avb-indicator-bg-color-danger: cake-color("danger", "dark");
+
+
 // Badge
 
 $badge-line-height:                   1.2;
@@ -92,7 +114,6 @@ $breadcrumb-icon-margin-top:          -$breadcrumb-item-space-new-line;
 $btn-font-size-at-lg:         $btn-font-size + $font-grow;
 $btn-height:                  $input-btn-height;
 $btn-height-at-lg:            $input-btn-height-at-lg;
-$btn-font-size:               $font-size-base + $font-grow;
 
 $btn-color-disabled:          $disabled;
 $btn-link-disabled-color:     $btn-color-disabled;

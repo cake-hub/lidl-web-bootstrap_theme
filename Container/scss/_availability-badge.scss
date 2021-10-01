@@ -1,0 +1,57 @@
+.av-badge {
+  $padding-y: ($avb-height - $avb-calculated-line-height) / 2;
+  $padding-y-lg: ($avb-height - $avb-calculated-line-height-lg) / 2;
+
+  @include cake-font-size($avb-base-font-size);
+  @include border-radius($avb-border-radius);
+  position: relative;
+  display: inline-block;
+  min-height: $avb-height;
+  padding: $padding-y $avb-padding-x;
+  line-height: $avb-line-height;
+  color: $avb-color;
+  text-align: left;
+  background-color: $avb-bg-color;
+
+  @include media-breakpoint-up(lg) {
+    padding: $padding-y-lg $avb-padding-x;
+  }
+
+  &-success,
+  &-attention,
+  &-danger {
+    padding-left: $avb-padding-x + $avb-indicator-size + $avb-padding-x;
+
+    &::before {
+      @include border-radius(50%);
+      position: absolute;
+      top: ($avb-height - $avb-indicator-size) / 2;
+      left: $avb-padding-x;
+      display: block;
+      width: $avb-indicator-size;
+      height: $avb-indicator-size;
+      content: "";
+    }
+  }
+
+  &-success {
+    background-color: $avb-bg-color-success;
+    &::before {
+      background-color: $avb-indicator-bg-color-success;
+    }
+  }
+
+  &-attention {
+    background-color: $avb-bg-color-attention;
+    &::before {
+      background-color: $avb-indicator-bg-color-attention;
+    }
+  }
+
+  &-danger {
+    background-color: $avb-bg-color-danger;
+    &::before {
+      background-color: $avb-indicator-bg-color-danger;
+    }
+  }
+}

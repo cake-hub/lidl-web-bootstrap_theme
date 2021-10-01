@@ -1,5 +1,12 @@
 # Change log
 
+## [6.3.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.3.0) - 2021-10-01
+
+### Fixed
+
+* `SCSS`: "Button" | fixed font-size for md and smaller to `1rem` (16px)
+
+
 ## [5.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.1.0) - 2021-03-22
 
 ### Changed

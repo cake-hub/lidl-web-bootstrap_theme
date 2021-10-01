@@ -283,7 +283,7 @@ $input-btn-focus-color:             rgba($component-active-bg, .5);
 
 // Buttons
 
-$btn-font-size:               calculateRem(16px);
+$btn-font-size:               $font-size-base;
 $btn-font-weight:             $font-weight-bold;
 $btn-disabled-opacity:        .16;
 $btn-padding-tb-diff:         0;

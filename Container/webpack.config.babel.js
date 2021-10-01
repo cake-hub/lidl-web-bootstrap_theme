@@ -184,6 +184,10 @@ export default {
                         source: './js/toTop.js',
                         destination: path.resolve (__dirname, './docs/Components/To top/examples')
                     },
+                    {
+                        source: './js/cakeDOM.js',
+                        destination: path.resolve (__dirname, './docs/Getting started/JavaScript/examples')
+                    },
                 ],
             }
         }),

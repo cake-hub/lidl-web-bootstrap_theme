@@ -1,5 +1,12 @@
 # Change log
 
+## [6.3.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.3.0) - 2021-10-01
+
+### Highlights
+
+* `Added`: **Availability Badge**-Component
+
+
 ## [6.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.1.0) - 2021-07-22
 
 ### Added
