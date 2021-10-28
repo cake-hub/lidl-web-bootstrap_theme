@@ -17,7 +17,7 @@ Indicate the current page’s location within a navigational hierarchy that auto
         "<html>":{
             "src": "examples/BreadcrumbDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -37,7 +37,7 @@ $breadcrumb-divider: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3
 It's also possible to use a **URI embedded SVG icon**:
 
 ```scss
-$breadcrumb-divider: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M24.6 0l-5.2 3 15.2 27-15.2 27 5.2 3 16-28.5v-3z'/%3E%3C/svg%3E");
+$breadcrumb-divider: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 16' xml:space='preserve' fill='%23353b42'%3E%3Cpath d='M.8 16h.1V3.1H.2C.2 3 .1 3 .1 3V15.8h.7z'/%3E%3C/svg%3E");
 ```
 
 Another option is to use the function **`svg-load`** to load a svg file, which will be placed inline into the css at comilation of the scss:
@@ -56,6 +56,6 @@ $breadcrumb-divider: none;
 
 ## Accessibility
 
-Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
+Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element.
 
 For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).

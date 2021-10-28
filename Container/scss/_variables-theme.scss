@@ -8,6 +8,7 @@
 
 // Remove "wrong" theme-colors
 $theme-colors: map-remove($theme-colors, "light", "dark", "secondary");
+$icon-discrepancy: calculateRem(2px); // -(icon-height - font-size) / 2
 
 
 // #########################
@@ -101,12 +102,18 @@ $badge-addon-font-size:              calculateRem(10px);
 // Breadcrumb
 
 $breadcrumb-item-margin-x:            $spacer;
+$breadcrumb-item-margin-y:            $breadcrumb-margin-bottom;
 $breadcrumb-item-space-new-line:      .25rem;
 
-$breadcrumb-link-color:               cake-color("gray", "darker");
-$breadcrumb-link-text-decoration:     none;
+$breadcrumb-icon-color:               cake-color("gray", "darker");
 
-$breadcrumb-icon-margin-top:          -$breadcrumb-item-space-new-line;
+$breadcrumb-link-color:               cake-color("primary");
+$breadcrumb-link-hover-active-color:  cake-color("primary", "darker");
+$breadcrumb-link-text-decoration:     underline;
+
+$breadcrumb-divider-width:            calculateRem(1px);
+
+$breadcrumb-icon-margin-top:          $icon-discrepancy;
 
 
 // Button
@@ -322,7 +329,7 @@ $header-navigation-back-border-color:         cake-color("gray", "lighter");
 $header-navigation-back-border-width:         $border-width;
 $header-navigation-back-padding-x:            $spacer;
 $header-navigation-back-padding-y:            calculateRem(12px);
-$header-navigation-back-icon-discrepancy:     calculateRem(-2px); // -(icon-height - font-size) / 2
+$header-navigation-back-icon-discrepancy:     -$icon-discrepancy;
 
 $header-navigation-link-line-height:              1.2;
 $header-navigation-link-padding-x:                1rem;

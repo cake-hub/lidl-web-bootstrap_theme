@@ -1,37 +1,74 @@
 .breadcrumb {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
+  row-gap: $breadcrumb-item-space-new-line;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-  margin-top: -$breadcrumb-item-space-new-line;
-  margin-bottom: $breadcrumb-margin-bottom;
+  margin-top: $breadcrumb-item-margin-y;
+  margin-bottom: $breadcrumb-item-margin-y;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include border-radius($breadcrumb-border-radius);
   @include cake-font-size($font-size-sm);
 }
 
 .breadcrumb-item {
-  margin-top: $breadcrumb-item-space-new-line;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
     margin-left: $breadcrumb-item-margin-x;
 
     &::before {
+      position: relative;
+      top: $breadcrumb-icon-margin-top;
       display: inline-block; // Suppress underlining of the separator in modern browsers
-      width: .5rem;
+      width: $breadcrumb-divider-width;
       margin-right: $breadcrumb-item-margin-x;
       color: $breadcrumb-divider-color;
       content: $breadcrumb-divider;
     }
   }
 
-  a {
-    color: $breadcrumb-link-color;
-    text-decoration: $breadcrumb-link-text-decoration;
+  // Make last breadcrumb item overflow, if too less space available
+  &:last-child {
+    min-width: 0;
+    overflow: hidden;
+
+    > a {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
-  .icon {
-    margin-top: $breadcrumb-icon-margin-top;
+  &:first-child {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      color: $breadcrumb-icon-color;
+    }
+  }
+
+  a {
+    &,
+    &:visited {
+      display: inline-flex;
+      color: $breadcrumb-link-color;
+      text-decoration: $breadcrumb-link-text-decoration;
+    }
+
+    &:hover,
+    &:active {
+      color: $breadcrumb-link-hover-active-color;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
   }
 
   // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
@@ -47,8 +84,45 @@
   + .breadcrumb-item:hover::before {
     text-decoration: none;
   }
+}
 
-  &.active {
-    color: $breadcrumb-active-color;
+// Hide all items expect the 2nd and last one
+@include media-breakpoint-down(md) {
+  .breadcrumb {
+    .breadcrumb-item {
+      display: none;
+
+      &:nth-child(2),
+      &:last-child {
+        display: inline-flex;
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        width: .5rem;
+
+        a,
+        a:hover,
+        a:visited {
+          visibility: hidden;
+
+          &::before {
+            text-decoration: $breadcrumb-link-text-decoration;
+            visibility: visible;
+            content: "…";
+          }
+        }
+        a:active {
+          &::before {
+            text-decoration: none;
+          }
+        }
+
+
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 }

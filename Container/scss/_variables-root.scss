@@ -452,8 +452,7 @@ $breadcrumb-padding-x:              0;
 $breadcrumb-bg:                     transparent;
 
 $breadcrumb-divider-color:          cake-color("gray", "darker");
-$breadcrumb-active-color:           cake-color("gray", "darker");
-$breadcrumb-divider:                svg-load($navigation-icon-path + "arrow-right.svg", fill=$breadcrumb-divider-color);
+$breadcrumb-divider:                svg-load($scss-icon-path + "pipe.svg", fill=$breadcrumb-divider-color);
 
 
 // Carousel
