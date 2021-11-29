@@ -1,5 +1,11 @@
 # Change log
 
+## [6.4.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.4.1) - 2021-11-29
+
+### Changed
+
+* `Assets`: "Breadcrumb" | updated SCSS-only icon `./icons/_scssOnly/pipe.svg` to match pipe of design specification and remove messy corners
+
 ## [6.4.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.4.0) - 2021-10-28
 
 ### Added
