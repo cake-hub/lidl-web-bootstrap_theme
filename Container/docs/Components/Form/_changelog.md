@@ -1,5 +1,12 @@
 # Change log
 
+## [6.4.2](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.4.2) - 2022-01-24
+
+### Fixed
+
+* `SCSS`: "Form" | fixed on focus invisibility in chrome on inputs with icon
+
+
 ## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
 
 ### Added

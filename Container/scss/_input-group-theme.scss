@@ -2,6 +2,8 @@
   > .input-group-input-icon{
     // Use static position because svgs break on chrome.
     position: static;
+    // fix invisibility glitch in chrome on focused inputs with z-index + not absolute (https://www.py4u.net/discuss/1880590)
+    transform: translateZ(0);
 
     // override zero border of group elements because of the following svg
     &.form-control {
