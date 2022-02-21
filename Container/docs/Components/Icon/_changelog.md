@@ -1,5 +1,12 @@
 # Change log
 
+## [6.5.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.1) - 2022-02-21
+
+### Removed
+
+* `Assets`: "Icon" | removed redundant `store locator pin/group-store-default.svg`
+
+
 ## [6.5.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.0) - 2022-02-21
 
 ### Added
