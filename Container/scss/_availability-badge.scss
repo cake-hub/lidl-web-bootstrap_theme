@@ -8,50 +8,58 @@
   display: inline-block;
   min-height: $avb-height;
   padding: $padding-y $avb-padding-x;
+  padding-left: $avb-padding-x;
   line-height: $avb-line-height;
   color: $avb-color;
   text-align: left;
   background-color: $avb-bg-color;
 
-  @include media-breakpoint-up(lg) {
-    padding: $padding-y-lg $avb-padding-x;
+  &.av-badge-dot {
+    padding-left: $avb-padding-x + $avb-indicator-size + $avb-padding-x;
   }
 
-  &-success,
-  &-attention,
-  &-danger {
-    padding-left: $avb-padding-x + $avb-indicator-size + $avb-padding-x;
+  @include media-breakpoint-up(lg) {
+    padding-top: $padding-y-lg;
+    padding-bottom: $padding-y-lg;
+  }
 
-    &::before {
-      @include border-radius(50%);
-      position: absolute;
-      top: ($avb-height - $avb-indicator-size) / 2;
-      left: $avb-padding-x;
-      display: block;
-      width: $avb-indicator-size;
-      height: $avb-indicator-size;
-      content: "";
-    }
+  &.av-badge-dot::before {
+    @include border-radius(50%);
+    position: absolute;
+    top: ($avb-height - $avb-indicator-size) / 2;
+    left: $avb-padding-x;
+    display: block;
+    width: $avb-indicator-size;
+    height: $avb-indicator-size;
+    content: "";
+    background-color: $avb-indicator-bg-color;
   }
 
   &-success {
+    @extend .av-badge-dot;
     background-color: $avb-bg-color-success;
-    &::before {
-      background-color: $avb-indicator-bg-color-success;
+    &.av-badge-dot::before {
+      // stylelint-disable-next-line declaration-no-important
+      background-color: $avb-indicator-bg-color-success !important;
     }
   }
 
   &-attention {
+    @extend .av-badge-dot;
     background-color: $avb-bg-color-attention;
-    &::before {
-      background-color: $avb-indicator-bg-color-attention;
+
+    &.av-badge-dot::before {
+      // stylelint-disable-next-line declaration-no-important
+      background-color: $avb-indicator-bg-color-attention !important;
     }
   }
 
   &-danger {
+    @extend .av-badge-dot;
     background-color: $avb-bg-color-danger;
     &::before {
-      background-color: $avb-indicator-bg-color-danger;
+      // stylelint-disable-next-line declaration-no-important
+      background-color: $avb-indicator-bg-color-danger !important;
     }
   }
 }

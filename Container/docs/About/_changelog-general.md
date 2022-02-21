@@ -1,5 +1,12 @@
 # Change log
 
+## [6.5.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.0) - 2022-02-21
+
+### Highlights
+
+* `Added`: "Rating" | Added new (star-)rating component
+
+
 ## [6.3.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.3.0) - 2021-10-01
 
 ### Highlights

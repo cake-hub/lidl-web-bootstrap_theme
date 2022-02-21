@@ -1,5 +1,28 @@
 # Change log
 
+## [6.5.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.0) - 2022-02-21
+
+### Added
+
+* `Assets`: "Icon" | added new `store locator pin` icons
+  * `store locator pin/available-store-default.svg`
+  * `store locator pin/available-store-selected.svg`
+  * `store locator pin/group-store-default.svg`
+  * `store locator pin/group.svg`
+  * `store locator pin/low-stock-store-default.svg`
+  * `store locator pin/low-stock-store-selected.svg`
+  * `store locator pin/my-store-default.svg`
+  * `store locator pin/my-store-selected.svg`
+  * `store locator pin/no-data-available-store-default.svg`
+  * `store locator pin/no-data-available-store-selected.svg`
+  * `store locator pin/sold-out-store-default.svg`
+  * `store locator pin/sold-out-store-selected.svg`
+
+### Changed
+
+* `Assets`: "Icon" | updated all icons via our Design from the Brand Portal
+
+
 ## [6.1.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.1.0) - 2021-07-22
 
 ### Changed

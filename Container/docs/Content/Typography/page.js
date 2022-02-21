@@ -12,11 +12,11 @@ const TypographyHeadlines = () => (
 
 const TypographyDisplayHeadlines = () => (
     <React.Fragment>
-        <div class="display-1">Display 1</div>
-        <div class="display-2">Display 2</div>
-        <div class="display-3">Display 3</div>
-        <div class="display-4">Display 4</div>
-        <div class="display-5">Display 5</div>
+        <div className="display-1">Display 1</div>
+        <div className="display-2">Display 2</div>
+        <div className="display-3">Display 3</div>
+        <div className="display-4">Display 4</div>
+        <div className="display-5">Display 5</div>
     </React.Fragment>
 );
 

@@ -28,7 +28,8 @@ a.product-tile-card {
 }
 
 .product-tile-card-body {
+  padding: $product-tile-padding;
   @include media-breakpoint-up(sm) {
-    padding: 1rem;
+    padding: $product-tile-padding-sm;
   }
 }

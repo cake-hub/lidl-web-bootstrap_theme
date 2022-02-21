@@ -1,5 +1,12 @@
 # Change log
 
+## [6.5.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.0) - 2022-02-21
+
+### Removed
+
+* `DOC`: "Ribbon" | Removed mentions and example of product tile in the documentation
+
+
 ## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
 
 ### Fixed

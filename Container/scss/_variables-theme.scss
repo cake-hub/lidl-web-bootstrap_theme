@@ -67,6 +67,7 @@ $alert-close-focus-box-shadow:        $input-btn-focus-box-shadow;
 $avb-height: calculateRem(24px);
 $avb-color: cake-color("gray", "darker");
 $avb-bg-color: cake-color("gray", "lighter");
+$avb-indicator-bg-color: cake-color("gray");
 $avb-border-radius: calculateRem(12px);
 $avb-padding-x: $spacer;
 $avb-line-height: 1.2;
@@ -420,6 +421,20 @@ $pricebox-highlight-font-size-lg:         calculateRem(18px);
 // Product tile
 
 $product-tile-shadow:                     $box-shadow;
+$product-tile-padding:                    .5rem;
+$product-tile-padding-sm:                 1rem;
+
+
+// Rating
+
+$rating-height:                           1rem;
+$rating-icon:                             svg-load($status-icon-path + "star-solid.svg", fill=cake-color("gray", "light"));
+$rating-icon-hover:                       svg-load($status-icon-path + "star-solid.svg", fill=cake-color("gray", "lighter"));
+$rating-icon-filled-hover:                svg-load($status-icon-path + "star-solid.svg", fill=$mark-dark);
+$rating-icon-selected:                    svg-load($status-icon-path + "star-solid.svg", fill=$mark-darker);
+$rating-icon-size:                        $rating-height;
+$rating-link-color:                       cake-color("primary");
+$rating-link-hover-color:                 cake-color("primary", "darker");
 
 
 // Ribbon

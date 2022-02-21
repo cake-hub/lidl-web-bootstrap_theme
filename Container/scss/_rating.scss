@@ -1,0 +1,98 @@
+.rating {
+  display: inline-block;
+  height: $rating-height;
+  line-height: $rating-height;
+}
+
+.rating-hoverable:hover {
+  .rating-indicators {
+    cursor: pointer;
+
+    .rating-empty {
+      .rating-icon {
+        background-image: $rating-icon-hover;
+      }
+    }
+    .rating-filled {
+      .rating-icon {
+        background-image: $rating-icon-filled-hover;
+      }
+    }
+
+  }
+
+  .rating-details {
+    color: $rating-link-hover-color;
+  }
+}
+
+.rating-interactive {
+  .rating-indicators {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-within,
+    &:active {
+      .rating-filled {
+        display: none;
+      }
+      .rating-icon {
+        background-image: $rating-icon-filled-hover;
+      }
+
+      .rating-icon:hover ~ .rating-icon,
+      .rating-icon:active ~ .rating-icon,
+      .rating-icon:focus ~ .rating-icon {
+        background-image: $rating-icon-hover;
+      }
+    }
+  }
+
+  &:hover {
+    .rating-details {
+      color: $rating-link-hover-color;
+    }
+  }
+}
+
+.rating-indicators {
+  position: relative;
+}
+
+.rating-empty,
+.rating-filled,
+.rating-indicators {
+  display: inline-block;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.rating-filled {
+  position: absolute;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  text-align: left;
+
+  .rating-icon {
+    background-image: $rating-icon-selected;
+  }
+}
+
+.rating-icon {
+  display: inline-block;
+  height: $rating-icon-size;
+  background-color: initial;
+  background-image: $rating-icon;
+  background-repeat: no-repeat;
+  background-size: $rating-icon-size;
+}
+
+.rating-details {
+  display: inline-block;
+  margin-left: 4px;
+  line-height: $rating-height;
+  color: $rating-link-color;
+  text-decoration: none;
+  vertical-align: top;
+}

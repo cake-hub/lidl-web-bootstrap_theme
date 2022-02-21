@@ -4,7 +4,7 @@ Please ensure to comply with the corporate identity.
 
 # Ribbon
 
-Ribbons can be used to add unique selling prepositions or other informations. The ribbons can be used inside product tiles, teasers or images.
+Ribbons can be used to add unique selling prepositions or other informations. The ribbons can be used inside teasers or images.
 
 ## Ribbon colors
 
@@ -69,7 +69,7 @@ Also the ribbon should not exceed the `50%` of the parents `width`. *Nevertheles
 
 As an alternative you can also use images inside a ribbon. When using images make sure to add the class `.img-fluid` to the image element to prevent the image from exceeding the parents `width`. This class will add `max-width: 100%` and `height: auto` to the image element.
 
-## Ribbon example on product tile and teaser
+## Ribbon example on teaser
 
 <ContentRack
     fields='
@@ -87,7 +87,7 @@ As an alternative you can also use images inside a ribbon. When using images mak
 
 ![RibbonExample](examples/RibbonExample.html)
 
-This is an example how the ribbon is used on a product tile or teaser. It overlap the component on the right side.
+This is an example how the ribbon is used on a teaser. It overlap the component on the right side.
 
 > ### Wrapper element position
 >
