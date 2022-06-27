@@ -1,5 +1,12 @@
 # Change log
 
+## [6.6.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.6.0) - 2022-06-27
+
+### Highlights
+
+* `Added`: "Skeleton" | Added new skeleton utitlity for loading contents
+
+
 ## [6.5.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.5.0) - 2022-02-21
 
 ### Highlights

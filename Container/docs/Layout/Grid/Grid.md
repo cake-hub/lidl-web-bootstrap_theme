@@ -58,7 +58,7 @@ See how aspects of the CAKE grid system work across multiple devices with a hand
             <th></th>
             <th class="text-center">
                 Extra small<br>
-                <small>&lt;600px</small>
+                <small>&ge;360px</small>
             </th>
             <th class="text-center">
                 Small<br>
@@ -77,7 +77,7 @@ See how aspects of the CAKE grid system work across multiple devices with a hand
         <tbody>
             <tr>
             <th class="text-nowrap" scope="row">Max container width</th>
-            <td>None (auto)</td>
+            <td>360px</td>
             <td>600px</td>
             <td>960px</td>
             <td>1280px</td>
@@ -727,7 +727,8 @@ Moving beyond the columns themselves, you may also customize the number of grid 
 
 ```scss
 $grid-breakpoints: (
-    xs: 0,
+    xxs: 0,
+    xs: 360px,
     sm: 480px,
     md: 768px,
     lg: 1024px

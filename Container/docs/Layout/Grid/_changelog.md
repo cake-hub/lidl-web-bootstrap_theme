@@ -1,5 +1,12 @@
 # Change Log
 
+## [6.6.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.6.0) - 2022-06-27
+
+### Highlights
+
+* `SCSS`: "Grid" | Updated smallest breakpoint XS to `360px`
+
+
 ## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
 
 ### Fixed

@@ -144,7 +144,8 @@ $paragraph-margin-bottom:   $spacer * 4;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: 0,
+  xxs: 0, // enable base classes from viewport 0 -> 359px (eg. .col, .float-right)
+  xs: 360px,
   sm: 600px,
   md: 960px,
   lg: 1280px
@@ -156,6 +157,7 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
+  xs: 360px,
   sm: 600px,
   md: 960px,
   lg: 1280px,

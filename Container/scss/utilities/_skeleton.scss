@@ -1,0 +1,47 @@
+.skeleton {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: progress;
+  background-color: $skeleton-background-color;
+
+  // sizes
+  &.slim {
+    min-height: $skeleton-size-slim;
+  }
+  &.medium {
+    min-height: $skeleton-size-medium;
+  }
+  &.thick {
+    min-height: $skeleton-size-thick;
+  }
+
+  // animation
+  &.shimmer {
+    background-image: linear-gradient(90deg, transparent 25%, $white 50%, transparent 75%);
+    background-size: 200% 200%;
+    animation: skeleton-shimmer $skeleton-animation-duration linear infinite;
+  }
+
+  // ratios
+  &.skeleton-4-to-3 {
+    // padding-bottom: 75%;
+    aspect-ratio: 4 / 3;
+  }
+  &.skeleton-16-to-9 {
+    // padding-bottom: 56.25%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+// animation
+@keyframes skeleton-shimmer {
+  0% {
+    background-position-x: 200%;
+  }
+  50% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}

@@ -462,6 +462,15 @@ $section-head-min-height:                   calculateRem(24px);
 $section-head-min-height-lg:                calculateRem(32px);
 
 
+// Skeleton
+
+$skeleton-background-color:                 cake-color("gray", "lighter");
+$skeleton-size-slim:                        $spacer;
+$skeleton-size-medium:                      $spacer * 2;
+$skeleton-size-thick:                       $spacer * 3;
+$skeleton-animation-duration:               2s;
+
+
 // Tab
 
 $tab-background-color:                cake-color("gray", "lightest");
