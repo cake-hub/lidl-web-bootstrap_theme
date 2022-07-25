@@ -179,7 +179,38 @@ select.form-control {
 }
 
 textarea.form-control {
-  height: auto;
+  height: $input-textarea-height;
+  padding: $input-textarea-padding-y;
+  line-height: $line-height-base;
+  resize: none;
+
+  @include media-breakpoint-up(md) {
+    height: $input-textarea-height-at-lg;
+    padding: $input-textarea-padding-y-at-lg;
+  }
+
+  &::-webkit-resizer {
+    width: $input-textarea-grab-size;
+    height: $input-textarea-grab-size;
+    background: transparent;
+    background-image: svg-load($scss-icon-path + "textarea_grab.svg", fill=$input-border-color);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: $input-textarea-grab-size;
+  }
+}
+textarea.form-control.resizable {
+  flex: 0 0 auto;
+  width: 100%;
+  resize: both;
+}
+textarea.form-control.resizable-vertical {
+  resize: vertical;
+}
+textarea.form-control.resizable-horizontal {
+  flex: 0 0 auto;
+  width: 100%;
+  resize: horizontal;
 }
 
 // Form groups

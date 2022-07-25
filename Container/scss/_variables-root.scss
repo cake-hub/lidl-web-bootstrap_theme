@@ -307,7 +307,7 @@ $input-disabled-color:                  cake-color("gray", "base");
 $input-disabled-border-color:           cake-color("gray", "light");
 
 $input-color:                           $primary;
-$input-border-color:                    $gray;
+$input-border-color:                    cake-color("gray");
 $input-border-width:                    $input-btn-border-width;
 
 $input-icon-size:                       calculateRem(24px);
@@ -324,6 +324,12 @@ $input-height-inner-quarter:            calculateRem(16px);
 
 $input-height:                          $input-btn-height;
 $input-height-at-lg:                    $input-btn-height-at-lg;
+
+$input-textarea-height:                 calculateRem(120px);
+$input-textarea-height-at-lg:           calculateRem(135px);
+$input-textarea-grab-size:              calculateRem(12px);
+$input-textarea-padding-y:              $spacer;
+$input-textarea-padding-y-at-lg:        calculateRem(10px);
 
 $form-grid-gutter-width:                1rem;
 

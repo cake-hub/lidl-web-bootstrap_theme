@@ -186,7 +186,6 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
 
 ![CheckoutRequiredValidated](examples/CheckoutRequiredValidated.html)
 
-
 ### Default (stacked)
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.custom-control`.
@@ -258,40 +257,6 @@ Custom `<select>` menus need only a custom class, `.custom-select` to trigger th
 </select>
 ```
 
-## Disabled forms
-
-Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
-
-## Validation
-
-Provide valuable, actionable feedback to your users with HTML5 form validation–available in all our supported browsers. Choose from the browser default validation feedback, or implement custom messages with our built-in classes.
-
-> We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
-
-### How it works
-
-Here’s how form validation works with CAKE:
-
-* HTML form validation is applied via CSS’s two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-* CAKE scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-* To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
-* As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for server side validation. They do not require a `.was-validated` parent class.
-* Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-* All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-* Feedback messages may utilize the browser defaults (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-* You may provide custom validity messages with `setCustomValidity` in JavaScript.
-* With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
-
-### Custom styles
-
-For custom CAKE form validation messages, you’ll need to add the novalidate boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
-
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
-
-### Server side
-
-We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
-
 ## Input
 
 ### Text
@@ -308,7 +273,7 @@ We recommend using client-side validation, but in case you require server-side v
             "selector": "#showbox"
         }
     '
- />
+/>
 
 ![InputText](examples/InputText.html)
 
@@ -326,7 +291,7 @@ We recommend using client-side validation, but in case you require server-side v
             "selector": "#showbox"
         }
     '
- />
+/>
 
 ![InputLabelSubed](examples/InputLabelSubed.html)
 
@@ -344,7 +309,7 @@ We recommend using client-side validation, but in case you require server-side v
             "selector": "#showbox"
         }
     '
- />
+/>
 
 ![InputDisabled](examples/InputDisabled.html)
 
@@ -362,7 +327,7 @@ We recommend using client-side validation, but in case you require server-side v
             "selector": "#showbox"
         }
     '
- />
+/>
 
 ![InputInvalid](examples/InputInvalid.html)
 
@@ -380,161 +345,103 @@ We recommend using client-side validation, but in case you require server-side v
             "selector": "#showbox"
         }
     '
- />
+/>
 
 ![InputValid](examples/InputValid.html)
 
+## Text area
 
-## Input group
-
-Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
-
-### Input with icon inside
-
-Inputs are wrapped inside a `.input-group` class, which enables possibility to add further content inside the displayed input.
-
-```html
-<label class="input-label" for="IwPS1xcy1hq">Label for Input</label>
-<div class="input-group">
-    <input class="form-control" type="text" id="IwPS1xcy1hq" placeholder="Input!"/>
-</div>
-```
-
-### Example with icon
-
-This can be used to, for example wrap icons inside an input field.
-
-### Input with icon
+### Default
 
 <ContentRack
     fields='
         "preview": {
-            "src": "examples/InputIcon.html",
+            "src": "examples/TextareaText.html",
             "type": "link"
         },
         "<html>":{
-            "src": "examples/InputIcon.html",
+            "src": "examples/TextareaText.html",
             "type": "content",
             "selector": "#showbox"
         }
     '
  />
 
-![InputIcon](examples/InputIcon.html)
+![TextareaText](examples/TextareaText.html)
 
-### Input disabled with icon
+### Label with sub text
 
 <ContentRack
     fields='
         "preview": {
-            "src": "examples/InputDisabledWithIcon.html",
+            "src": "examples/TextareaLabelSubed.html",
             "type": "link"
         },
         "<html>":{
-            "src": "examples/InputDisabledWithIcon.html",
+            "src": "examples/TextareaLabelSubed.html",
             "type": "content",
             "selector": "#showbox"
         }
     '
  />
 
-![InputDisabledWithIcon](examples/InputDisabledWithIcon.html)
+![TextareaLabelSubed](examples/TextareaLabelSubed.html)
 
-
-### Customizing
-
-Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is looped over to generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color and icon. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.
-
-Please note that we do not recommend customizing these values without also modifying the `form-validation-state` mixin.
-
-```scss
-// Sass map from `_variables.scss`
-// Override this and recompile your Sass to generate different states
-$form-validation-states: map-merge(
-  (
-    "valid": (
-      "color": $form-feedback-valid-color,
-      "icon": $form-feedback-icon-valid
-    ),
-    "invalid": (
-      "color": $form-feedback-invalid-color,
-      "icon": $form-feedback-icon-invalid
-    )
-  ),
-  $form-validation-states
-);
-
-// Loop from `_forms.scss`
-// Any modifications to the above Sass map will be reflected in your compiled
-// CSS via this loop.
-@each $state, $data in $form-validation-states {
-  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
-}
-```
-
-### Password toggle
-
-Additionaly to the standard inputs we provide a special field for password inputs. This password inputfield will show an additional button to toggle the input form `type="password"` to `type="text"` and back. To toggle between these two types use the icon on the right side that is wrapped inside a button. To do so, you have to add a button with the classes `.inputfield-icon` and `.input-group-inside` applied to it.
-
-Javascript is required (`js/form.js`) to be able to use the toggle functionality. This functionality changes the input type from password to text. When using our JavaScript plugin `form.js` you have to add the `data-controller="inputfield/password"` to the input element and the toggle-button with `data-controller="inputfield/password/toggle"` as attribute. Our JavaScript will automatically add the toggle functionality to this input group. If the toggle-button should be hidden, when the user has JavaScript disabled, you can simply add the class `.d-none` to the toggle-button. If now JavaScript is enabled on the users device, the `.d-none` class will be automatically removed and therefore the toggle-button will be shown.
-
-### Password input
+### Disabled
 
 <ContentRack
     fields='
         "preview": {
-            "src": "examples/InputPasswordToggle.html",
+            "src": "examples/TextareaDisabled.html",
             "type": "link"
         },
         "<html>":{
-            "src": "examples/InputPasswordToggle.html",
+            "src": "examples/TextareaDisabled.html",
             "type": "content",
             "selector": "#showbox"
-        },
-        "JS":{
-            "src": "examples/form.js",
-            "type": "content"
         }
     '
  />
 
-![InputPasswordToggle](examples/InputPasswordToggle.html)
+![TextareaDisabled](examples/TextareaDisabled.html)
 
-#### Javascript
+### Invalid
 
-The password toggle does only work with javascript. If javascript is disabled, the password field works as usual but without toggle functionality. You can import our javascript bundle `cake.js` to automatically use this feature. You only must ensure that the `data-controllers` explained above are set up.
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/TextareaInvalid.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/TextareaInvalid.html",
+            "type": "content",
+            "selector": "#showbox"
+        }
+    '
+ />
 
-##### Initialization
+![TextareaInvalid](examples/TextareaInvalid.html)
 
-To initialize the javascript with default configuration you could simply run the following code:
+### Resizing
 
-```javascript
-document.addEventListener ('DOMContentLoaded', () => {
-    window.cake.form ();
-});
-```
+By default, our textareas are not resizable by the user. However, to allow the user to change the size for project-specific requirements, we offer three modifier classes: `.resizable`, `.resizable-horizontal` and `.resizable-vertical`. You can see how these talking classes work in the following example.
 
-##### Customization
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/TextareaResizing.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/TextareaResizing.html",
+            "type": "content",
+            "selector": "#showbox"
+        }
+    '
+ />
 
-To customize the default behavior you can only embedd the `form.js` file into your mockups. Then you can initialize the functionality by calling:
-
-```javascript
-document.addEventListener ('DOMContentLoaded', () => {
-    window.cake.form (options = {
-        passwordInputElements: [],
-        passwordInputQuerySelector: '[data-controller="inputfield/password"]',
-        passwordToggleElements: [],
-        passwordToggleQuerySelector: '[data-controller="inputfield/password/toggle"]'
-    });
-});
-```
-
-* `passwordInputElements [Array]` – provide the specific `input[type=password]` element with password toggle (optional)
-* `passwordInputQuerySelector [String]` – provide a query-selector to select all `input[type=password]` with password toggle (optional, default: `[data-controller="inputfield/password"]`)
-* `passwordToggleElements [Array]` – provide the specific password toggle button (optional)
-* `passwordToggleQuerySelector [String]` – provide a query-selector to select all password toggle buttons (optional, default: `[data-controller="inputfield/password/toggle"]`)
-
-If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` option gets ignored. If you do not provide any `options.[...]Elements` always the `options.[...]QuerySelector` is used!
+![TextareaResizing](examples/TextareaResizing.html)
 
 ## Select
 
@@ -699,3 +606,185 @@ If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` o
  />
 
 ![SelectSuccess](examples/SelectSuccess.html)
+
+## Disabled forms
+
+Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
+
+## Validation
+
+Provide valuable, actionable feedback to your users with HTML5 form validation–available in all our supported browsers. Choose from the browser default validation feedback, or implement custom messages with our built-in classes.
+
+> We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
+
+### How it works
+
+Here’s how form validation works with CAKE:
+
+* HTML form validation is applied via CSS’s two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
+* CAKE scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
+* To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
+* As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for server side validation. They do not require a `.was-validated` parent class.
+* Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
+* All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
+* Feedback messages may utilize the browser defaults (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
+* You may provide custom validity messages with `setCustomValidity` in JavaScript.
+* With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+
+### Custom styles
+
+For custom CAKE form validation messages, you’ll need to add the novalidate boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
+
+### Server side
+
+We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+
+## Input group
+
+Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
+
+### Input with icon inside
+
+Inputs are wrapped inside a `.input-group` class, which enables possibility to add further content inside the displayed input.
+
+```html
+<label class="input-label" for="IwPS1xcy1hq">Label for Input</label>
+<div class="input-group">
+    <input class="form-control" type="text" id="IwPS1xcy1hq" placeholder="Input!"/>
+</div>
+```
+
+### Example with icon
+
+This can be used to, for example wrap icons inside an input field.
+
+### Input with icon
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/InputIcon.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/InputIcon.html",
+            "type": "content",
+            "selector": "#showbox"
+        }
+    '
+/>
+
+![InputIcon](examples/InputIcon.html)
+
+### Input disabled with icon
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/InputDisabledWithIcon.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/InputDisabledWithIcon.html",
+            "type": "content",
+            "selector": "#showbox"
+        }
+    '
+/>
+
+![InputDisabledWithIcon](examples/InputDisabledWithIcon.html)
+
+### Customizing
+
+Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is looped over to generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color and icon. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.
+
+Please note that we do not recommend customizing these values without also modifying the `form-validation-state` mixin.
+
+```scss
+// Sass map from `_variables.scss`
+// Override this and recompile your Sass to generate different states
+$form-validation-states: map-merge(
+  (
+    "valid": (
+      "color": $form-feedback-valid-color,
+      "icon": $form-feedback-icon-valid
+    ),
+    "invalid": (
+      "color": $form-feedback-invalid-color,
+      "icon": $form-feedback-icon-invalid
+    )
+  ),
+  $form-validation-states
+);
+
+// Loop from `_forms.scss`
+// Any modifications to the above Sass map will be reflected in your compiled
+// CSS via this loop.
+@each $state, $data in $form-validation-states {
+  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+}
+```
+
+### Password toggle
+
+Additionaly to the standard inputs we provide a special field for password inputs. This password inputfield will show an additional button to toggle the input form `type="password"` to `type="text"` and back. To toggle between these two types use the icon on the right side that is wrapped inside a button. To do so, you have to add a button with the classes `.inputfield-icon` and `.input-group-inside` applied to it.
+
+Javascript is required (`js/form.js`) to be able to use the toggle functionality. This functionality changes the input type from password to text. When using our JavaScript plugin `form.js` you have to add the `data-controller="inputfield/password"` to the input element and the toggle-button with `data-controller="inputfield/password/toggle"` as attribute. Our JavaScript will automatically add the toggle functionality to this input group. If the toggle-button should be hidden, when the user has JavaScript disabled, you can simply add the class `.d-none` to the toggle-button. If now JavaScript is enabled on the users device, the `.d-none` class will be automatically removed and therefore the toggle-button will be shown.
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/InputPasswordToggle.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/InputPasswordToggle.html",
+            "type": "content",
+            "selector": "#showbox"
+        },
+        "JS":{
+            "src": "examples/form.js",
+            "type": "content"
+        }
+    '
+ />
+
+![InputPasswordToggle](examples/InputPasswordToggle.html)
+
+#### Javascript
+
+The password toggle does only work with javascript. If javascript is disabled, the password field works as usual but without toggle functionality. You can import our javascript bundle `cake.js` to automatically use this feature. You only must ensure that the `data-controllers` explained above are set up.
+
+##### Initialization
+
+To initialize the javascript with default configuration you could simply run the following code:
+
+```javascript
+document.addEventListener ('DOMContentLoaded', () => {
+    window.cake.form ();
+});
+```
+
+##### Customization
+
+To customize the default behavior you can only embedd the `form.js` file into your mockups. Then you can initialize the functionality by calling:
+
+```javascript
+document.addEventListener ('DOMContentLoaded', () => {
+    window.cake.form (options = {
+        passwordInputElements: [],
+        passwordInputQuerySelector: '[data-controller="inputfield/password"]',
+        passwordToggleElements: [],
+        passwordToggleQuerySelector: '[data-controller="inputfield/password/toggle"]'
+    });
+});
+```
+
+* `passwordInputElements [Array]` – provide the specific `input[type=password]` element with password toggle (optional)
+* `passwordInputQuerySelector [String]` – provide a query-selector to select all `input[type=password]` with password toggle (optional, default: `[data-controller="inputfield/password"]`)
+* `passwordToggleElements [Array]` – provide the specific password toggle button (optional)
+* `passwordToggleQuerySelector [String]` – provide a query-selector to select all password toggle buttons (optional, default: `[data-controller="inputfield/password/toggle"]`)
+
+If you do provide the `options.[...]Elements` the `options.[...]QuerySelector` option gets ignored. If you do not provide any `options.[...]Elements` always the `options.[...]QuerySelector` is used!

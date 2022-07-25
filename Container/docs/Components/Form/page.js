@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "@Develop/Components/Form/select.html";
 import Input from "@Develop/Components/Form/input.html";
+import Textarea from "@Develop/Components/Form/textarea.html";
 import Radio from "@Develop/Components/Form/radio.html";
 import Checkbox from "@Develop/Components/Form/checkbox.html";
 import Button from "@Develop/Components/Button/button.html";
@@ -95,13 +96,13 @@ const SelectSuccess = () => (
 
 const InputText = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input placeholder="Default Input" />
+        <Input placeholder="Placeholder" />
     </div>
 );
 
 const InputLabelSubed = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input c_labelSub="(optional)" />
+        <Input defaultValue="Default" c_labelSub="(optional)" />
     </div>
 );
 
@@ -117,13 +118,13 @@ const InputIcon = () => (
 
 const InputDisabled = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input disabled defaultValue="I'm disabled" />
+        <Input disabled defaultValue="Disabled" />
     </div>
 );
 
 const InputDisabledWithIcon = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input disabled defaultValue="I'm disabled" className="input-group-input-icon">
+        <Input disabled defaultValue="Disabled" className="input-group-input-icon">
             <span className="input-group-inside inputfield-icon">
                 <Icon name="placeholder" title="Placeholder" />
             </span>
@@ -133,13 +134,13 @@ const InputDisabledWithIcon = () => (
 
 const InputInvalid = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input defaultValue="Error state" className="is-invalid" />
+        <Input defaultValue="Error" className="is-invalid" />
     </div>
 );
 
 const InputValid = () => (
     <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
-        <Input defaultValue="Success state" className="is-valid" />
+        <Input defaultValue="Success" className="is-valid" />
     </div>
 );
 
@@ -151,6 +152,39 @@ const InputPasswordToggle = () => (
                 <Icon name="eye-open" title="Hide password" className="inputfield-icon-password-visible" />
             </Button>
         </Input>
+    </div>
+);
+
+const TextareaText = () => (
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Textarea placeholder="Placeholder" />
+    </div>
+);
+
+const TextareaLabelSubed = () => (
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Textarea defaultValue="Default" c_labelSub="(optional)" />
+    </div>
+);
+
+const TextareaDisabled = () => (
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Textarea disabled defaultValue="Disabled" />
+    </div>
+);
+
+const TextareaInvalid = () => (
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Textarea defaultValue="Error" className="is-invalid" />
+    </div>
+);
+
+const TextareaResizing = () => (
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Textarea c_labelText="Text area without resizing" className="mb-2" />
+        <Textarea c_labelText="Text area with horizontal and vertical resizing" className="resizable mb-2" />
+        <Textarea c_labelText="Text area with vertical resizing" className="resizable-vertical mb-2" />
+        <Textarea c_labelText="Text area with horizontal resizing" className="resizable-horizontal" />
     </div>
 );
 
@@ -227,10 +261,12 @@ export default {
     RadioDisabledChecked,
     RadioError,
     RadioRequiredValidated,
+
     CheckboxDefault,
     CheckboxDisabledChecked,
     CheckboxError,
     CheckoutRequiredValidated,
+
     InputText,
     InputLabelSubed,
     InputDisabled,
@@ -239,6 +275,13 @@ export default {
     InputInvalid,
     InputValid,
     InputPasswordToggle,
+
+    TextareaText,
+    TextareaLabelSubed,
+    TextareaDisabled,
+    TextareaInvalid,
+    TextareaResizing,
+
     SelectDefault,
     SelectSr,
     SelectHiddenOption,

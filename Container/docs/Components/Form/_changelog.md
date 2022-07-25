@@ -1,5 +1,16 @@
 # Change log
 
+## [6.7.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.7.0) - 2022-07-25
+
+### Added
+
+* `SCSS`, `Doc`: "Form" | added stylings and documentation for textarea elements
+
+### Changed
+
+* `Doc`: "Form" | restructured the content of form documentation to improve readability
+
+
 ## [6.4.2](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.4.2) - 2022-01-24
 
 ### Fixed
