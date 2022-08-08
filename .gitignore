@@ -23,9 +23,9 @@ Container/.npm
 
 # Dist folder
 #Container/dist/
-#Container/docs/About/Change log.md
-#Container/docs/**/examples
-#Container/docs/_assets
+Container/docs/About/Change log.md
+Container/docs/**/examples
+Container/docs/_assets
 
 # tmp files/folders
 Container/tmp/

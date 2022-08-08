@@ -328,6 +328,7 @@ $input-height-at-lg:                    $input-btn-height-at-lg;
 $input-textarea-height:                 calculateRem(120px);
 $input-textarea-height-at-lg:           calculateRem(135px);
 $input-textarea-grab-size:              calculateRem(12px);
+$input-textarea-padding-x:              calc(#{$spacer * 2} - #{$input-border-width});
 $input-textarea-padding-y:              $spacer;
 $input-textarea-padding-y-at-lg:        calculateRem(10px);
 

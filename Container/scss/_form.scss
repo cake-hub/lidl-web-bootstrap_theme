@@ -180,13 +180,13 @@ select.form-control {
 
 textarea.form-control {
   height: $input-textarea-height;
-  padding: $input-textarea-padding-y;
+  padding: $input-textarea-padding-y $input-textarea-padding-x;
   line-height: $line-height-base;
   resize: none;
 
   @include media-breakpoint-up(md) {
     height: $input-textarea-height-at-lg;
-    padding: $input-textarea-padding-y-at-lg;
+    padding: $input-textarea-padding-y-at-lg $input-textarea-padding-x;
   }
 
   &::-webkit-resizer {

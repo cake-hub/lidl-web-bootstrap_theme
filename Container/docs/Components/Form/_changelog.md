@@ -1,5 +1,12 @@
 # Change log
 
+## [6.7.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.7.1) - 2022-08-08
+
+### Fixed
+
+* `SCSS`, `Doc`: "Form" | fixed wrong horizontal paddings of textarea elements
+
+
 ## [6.7.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.7.0) - 2022-07-25
 
 ### Added
