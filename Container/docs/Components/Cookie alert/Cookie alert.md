@@ -150,3 +150,22 @@ You can enter the content for our component as usual via the [CookieBot console]
 > This had to be solved this way, because CookieBot unfortunately does not allow any further individual text fields.
 
 ![Setting up the cookiebot content](assets/cookiebot/content.png)
+
+## OneTrust
+
+This are the styles and js for the OneTrust theme. Please note that JavaScript is needed for the correct button positioning.
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/CookieAlertOneTrust.html",
+            "type": "link"
+        },
+        "JS":{
+            "src": "examples/cookieAlertOneTrust.js",
+            "type": "content"
+        }
+    '
+ />
+
+![CookieAlertCSS](examples/CookieAlertOneTrustCSS.html)

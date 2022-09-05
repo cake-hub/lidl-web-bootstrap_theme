@@ -1,0 +1,680 @@
+/* stylelint-disable selector-max-id, stylelint(selector-max-compound-selectors, selector-max-compound-selectors, selector-max-combinators, selector-no-qualifying-type, declaration-no-important */
+
+@mixin onetrust-button-style {
+  display: inline-block;
+  @include cake-button-size-fixed-height($btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius, $btn-height, $btn-border-width);
+  @include media-breakpoint-up(lg) {
+    @include cake-button-size-fixed-height($btn-padding-x, $btn-font-size-at-lg, $btn-line-height, $btn-border-radius, $btn-height-at-lg, $btn-border-width);
+  }
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    @include box-shadow(none);
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+
+  &:not(.btn-link) {
+    text-decoration: none;
+  }
+}
+
+@mixin onetrust-button-primary-style {
+  @include cake-button-variant($primary, $primary, $disabled-color: $btn-color-disabled, $disabled-background: $btn-background-disabled);
+}
+
+@mixin onetrust-button-secondary-style {
+  @include cake-button-outline-variant($primary, $disabled-color: $btn-color-disabled, $disabled-border: $btn-border-disabled);
+}
+
+@mixin onetrust-custom-control-input-style($label-class) {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:not(:disabled):not(:invalid):not(.is-invalid):checked ~ #{$label-class}::before {
+    color: $custom-control-indicator-checked-color;
+    border-color: $custom-control-indicator-checked-border-color;
+    @include box-shadow($custom-control-indicator-checked-box-shadow);
+  }
+
+  &:not(:disabled):not(:invalid):not(.is-invalid):checked ~ #{$label-class} {
+    color: $custom-control-indicator-checked-color;
+  }
+
+  &:focus ~ #{$label-class}::before {
+    // the mixin is not used here to make sure there is feedback
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $custom-control-indicator-focus-box-shadow;
+    }
+  }
+
+  &:focus:not(:checked) ~ #{$label-class}::before {
+    border-color: $custom-control-indicator-focus-border-color;
+  }
+
+  &:not(:disabled):active ~ #{$label-class}::before {
+    color: $custom-control-indicator-active-color;
+    background-color: $custom-control-indicator-active-bg;
+    border-color: $custom-control-indicator-active-border-color;
+    @include box-shadow($custom-control-indicator-active-box-shadow);
+  }
+
+  &:not(:disabled):not(:invalid):not(.is-invalid) {
+    &:focus ~ #{$label-class},
+    &:hover ~ #{$label-class} {
+      color: $custom-control-indicator-border-color-hover;
+
+      &::before {
+        border-color: $custom-control-indicator-border-color-hover;
+      }
+    }
+  }
+
+  &:disabled {
+    ~ #{$label-class} {
+      color: $custom-control-label-disabled-color;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $custom-control-indicator-disabled-bg;
+        border-color: $custom-control-indicator-disabled-border-color;
+      }
+    }
+  }
+}
+
+@mixin onetrust-custom-control-label-style {
+  position: relative;
+  margin-bottom: 0;
+  font-weight: $font-weight-normal;
+  vertical-align: top;
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    position: absolute;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    pointer-events: none;
+    content: "";
+    background-color: $custom-control-indicator-bg;
+    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
+    @include box-shadow($custom-control-indicator-box-shadow);
+
+    @include media-breakpoint-up(lg) {
+      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
+    }
+  }
+
+  // Foreground (icon)
+  &::after {
+    position: absolute;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    content: "";
+    background: no-repeat 50% / #{$custom-control-indicator-bg-size};
+
+    @include media-breakpoint-up(lg) {
+      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
+    }
+  }
+}
+
+@mixin onetrust-custom-control-label-disabled-style() {
+  cursor: not-allowed;
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    @include box-shadow($custom-control-indicator-box-shadow);
+    @include border-radius($custom-checkbox-indicator-border-radius);
+    position: absolute;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    pointer-events: none;
+    content: "";
+    background-color: $custom-control-indicator-checked-disabled-bg;
+    border: $custom-control-indicator-disabled-border-color solid $custom-control-indicator-border-width;
+
+    @include media-breakpoint-up(lg) {
+      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
+    }
+  }
+
+  // Foreground (icon)
+  &::after {
+    position: absolute;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    color: $custom-control-label-disabled-color;
+    content: "";
+    background: no-repeat 50% / #{$custom-control-indicator-bg-size};
+    background-image: $custom-checkbox-indicator-icon-checked-disabled;
+
+    @include media-breakpoint-up(lg) {
+      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
+    }
+  }
+}
+
+@mixin onetrust-custom-checkbox-style($custom-control-input, $custom-control-label) {
+  #{$custom-control-label}::before {
+    @include border-radius($custom-checkbox-indicator-border-radius);
+  }
+
+  #{$custom-control-input}:checked ~ #{$custom-control-label} {
+    &::after {
+      background-image: $custom-checkbox-indicator-icon-checked;
+    }
+  }
+
+  #{$custom-control-input}.is-invalid:checked ~ #{$custom-control-label} {
+    &::after {
+      background-image: $custom-checkbox-indicator-icon-checked-danger;
+    }
+  }
+
+  #{$custom-control-input}:indeterminate ~ #{$custom-control-label} {
+    &::before {
+      border-color: $custom-checkbox-indicator-indeterminate-border-color;
+      @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
+      @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
+    }
+    &::after {
+      background-image: $custom-checkbox-indicator-icon-indeterminate;
+    }
+  }
+
+  #{$custom-control-input}:disabled {
+    &:checked ~ #{$custom-control-label}::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+    &:checked ~ #{$custom-control-label}::after {
+      background-image: $custom-checkbox-indicator-icon-checked-disabled;
+    }
+    &:indeterminate ~ #{$custom-control-label}::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+  }
+}
+
+@mixin onetrust-heading-style() {
+  @include cake-font-size($h5-font-size);
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+#onetrust-consent-sdk {
+
+  // .ot-btn-container button,
+  // .ot-sdk-button,
+  #onetrust-banner-sdk #onetrust-accept-btn-handler,
+  #onetrust-banner-sdk #onetrust-pc-btn-handler,
+  #onetrust-banner-sdk #onetrust-reject-all-handler,
+  #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler):not([aria-expanded]):not(.ot-link-btn),
+  //#onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn,
+  #onetrust-pc-sdk button.ot-pc-refuse-all-handler,
+  #onetrust-pc-sdk button.save-preference-btn-handler,
+  #onetrust-pc-sdk #accept-recommended-btn-handler {
+    @include onetrust-button-style();
+    @include onetrust-button-secondary-style();
+    @include cake-font-size($btn-font-size);
+    min-width: auto;
+    letter-spacing: inherit;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  #onetrust-banner-sdk #onetrust-accept-btn-handler,
+  #onetrust-pc-sdk .save-preference-btn-handler {
+    @include onetrust-button-primary-style();
+  }
+
+  #onetrust-banner-sdk,
+  #onetrust-pc-sdk {
+    a {
+      color: cake-color("primary") !important;
+    }
+  }
+
+  // ########
+  // # Main #
+  // ########
+
+  #onetrust-banner-sdk {
+    box-shadow: $box-shadow-strong;
+
+    //*:focus,
+    &:focus {
+      outline: 0 none;
+    }
+
+    .ot-sdk-row {
+      padding: 1rem;
+    }
+
+    #onetrust-policy {
+      margin-top: 0;
+    }
+
+    #onetrust-policy-title {
+      @include onetrust-heading-style();
+      padding: 0;
+      margin: 0 0 .5rem;
+    }
+
+    #onetrust-policy-text,
+    .ot-b-addl-desc,
+    .ot-dpd-desc,
+    .ot-gv-list-handler {
+      @include cake-font-size($font-size-sm);
+      line-height: 1.4;
+    }
+
+    .ot-b-addl-desc {
+      margin: 0 0 .5rem;
+    }
+
+    #onetrust-policy-text,
+    .ot-dpd-container {
+      margin: 0 0 1rem;
+    }
+
+    #onetrust-policy-text {
+      a {
+        margin-left: 0;
+        font-weight: 400;
+      }
+    }
+
+    .ot-dpd-title {
+      @include onetrust-heading-style();
+      padding: 0;
+      margin: 0 0 .5rem;
+      font-weight: $font-weight-normal;
+    }
+
+    #onetrust-button-group-parent {
+      padding: 0;
+    }
+
+    #onetrust-button-group {
+      .banner-actions-container {
+        display: flex;
+        flex-direction: column;
+        float: none;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+
+    #onetrust-reject-all-handler,
+    #onetrust-pc-btn-handler,
+    #onetrust-accept-btn-handler {
+      float: none;
+      max-width: 100%;
+    }
+
+    #onetrust-reject-all-handler,
+    #onetrust-pc-btn-handler {
+      margin-bottom: .5rem;
+    }
+
+    #onetrust-accept-btn-handler {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      #onetrust-pc-btn-handler {
+        order: -1;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      #onetrust-button-group {
+        .banner-actions-container {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+      }
+      #onetrust-reject-all-handler,
+      #onetrust-pc-btn-handler {
+        margin-right: .5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ###########
+  // # Options #
+  // ###########
+
+  #onetrust-pc-sdk {
+    $header-height: 2.5rem;
+    $footer-button-gatter: 1rem;
+
+    .ot-pc-header {
+      height: $header-height;
+      padding: 0;
+    }
+
+    .ot-pc-logo {
+      display: none;
+    }
+
+    #close-pc-btn-handler {
+      top: 0;
+      width: $header-height;
+      height: $header-height;
+      margin: 0;
+    }
+
+    #ot-pc-title {
+      @include onetrust-heading-style();
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    #ot-pc-desc {
+      @include cake-font-size($font-size-sm);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .ot-cat-grp {
+      margin-top: 0;
+    }
+
+    #ot-category-title {
+      @include onetrust-heading-style();
+      padding-bottom: 0;
+      margin-bottom: 1rem;
+    }
+
+    .ot-pc-header,
+    .ot-pc-footer,
+    .ot-accordion-layout.ot-cat-item {
+      border-color: cake-color("gray", "lighter");
+    }
+
+    // accordion layout
+    .ot-accordion-layout {
+      h4 ~ .ot-always-active {
+        @include onetrust-custom-control-label-disabled-style();
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        flex: 0 0 auto;
+        float: none;
+        width: $custom-control-indicator-size;
+        height: $custom-control-indicator-size;
+        color: transparent;
+        transform: initial;
+
+        &::before,
+        &::after {
+          left: 0;
+        }
+      }
+
+      &.ot-cat-item:first-of-type {
+        margin-top: 0;
+      }
+
+      .ot-subgrp-cntr,
+      .ot-acc-hdr {
+        width: calc(100% - 2rem);
+        padding: .5rem 1rem;
+      }
+
+      .ot-acc-hdr {
+        display: flex;
+        align-items: center;
+      }
+
+      .ot-cat-header {
+        @include cake-font-size($font-size-base);
+        flex: 1 1 auto;
+        width: auto;
+        max-width: 100%;
+        line-height: 1.4;
+      }
+
+      .ot-acc-grpdesc {
+        @include cake-font-size($font-size-sm);
+        width: auto;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      // sub accordion layout
+      .ot-subgrp-cntr {
+        display: block;
+        width: calc(100% - 2rem);
+        padding: .5rem 1rem;
+      }
+
+      .ot-subgrp {
+        padding-right: 0;
+        margin-left: 25px;
+      }
+
+      .ot-subgrp-desc {
+        @include cake-font-size($font-size-sm);
+        margin-top: .5rem;
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
+    }
+
+    .ot-plus-minus {
+      top: calculateRem(-1px);
+      flex: 0 0 auto;
+    }
+
+    .ot-cat-item,
+    .ot-acc-cntr,
+    li {
+      & > button[aria-expanded="true"] ~ .ot-acc-grpcntr {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .ot-tgl-cntr {
+      width: calc(1.5rem + 2px); // plus border witdh
+    }
+
+    .ot-switch-nob {
+      display: none;
+    }
+
+    #ot-pc-content {
+      $scrollbar-margin-right: calculateRem(3px);
+
+      top: calc(#{$header-height} + 1px);
+      bottom: calculateRem(73px);
+      z-index: 0;
+      width: auto;
+      padding-right: 1rem - $scrollbar-margin-right;
+      padding-bottom: 1rem;
+      margin: 0 $scrollbar-margin-right 0 1rem;
+
+      .category-switch-handler,
+      .cookie-subgroup-handler { // .custom-control-input
+        @include onetrust-custom-control-input-style(".ot-switch");
+      }
+
+      .ot-switch { // .custom-control-label
+        @include onetrust-custom-control-label-style();
+        width: $custom-control-indicator-size;
+        height: $custom-control-indicator-size;
+        vertical-align: inherit;
+
+        &::before,
+        &::after {
+          left: 0;
+        }
+      }
+
+      .ot-tgl { // .custom-checkbox (without .custom-control)
+        @include onetrust-custom-checkbox-style(".category-switch-handler", ".ot-switch");
+        @include onetrust-custom-checkbox-style(".cookie-subgroup-handler", ".ot-switch");
+        position: relative;
+        top: 0;
+        right: 0;
+        flex: 0 0 auto;
+        float: none;
+        width: $custom-control-indicator-size;
+        height: $custom-control-indicator-size;
+        transform: none;
+
+        input:focus + .ot-switch {
+          outline: 0;
+        }
+      }
+    }
+
+    &.ot-ftr-stacked #ot-pc-content {
+      bottom: 0;
+      padding-bottom: calculateRem(146px);
+    }
+
+    .ot-acc-grpcntr.ot-acc-txt,
+    .ot-acc-txt .ot-subgrp-tgl .ot-switch.ot-toggle {
+      background-color: cake-color("gray", "background");
+    }
+
+    .ot-pc-footer {
+      background-color: $white;
+    }
+
+    &:not(.ot-ftr-stacked) .ot-pc-footer button {
+      width: auto !important;
+      max-width: calc(50% - #{$footer-button-gatter});
+    }
+
+    .ot-btn-container {
+      width: calc(100% - #{$footer-button-gatter * 2});
+      padding: $footer-button-gatter;
+      margin: #{$footer-button-gatter * (-1)} 0 0 #{$footer-button-gatter * (-1)};
+    }
+
+    .ot-pc-refuse-all-handler,
+    .save-preference-btn-handler,
+    #accept-recommended-btn-handler {
+      margin: $footer-button-gatter 0 0 $footer-button-gatter;
+    }
+
+    @include media-breakpoint-up(lg) {
+      #ot-pc-content {
+        bottom: calculateRem(81px);
+      }
+    }
+  }
+}
+
+button.save-preference-btn-handler,
+button.ot-pc-refuse-all-handler {
+  color: cake-color("primary") !important;
+  background-color: $white !important;
+  border-color: cake-color("primary") !important;
+}
+
+#accept-recommended-btn-handler,
+button.ot-pc-refuse-all-handler,
+button.save-preference-btn-handler {
+  &:hover,
+  &:focus {
+    color: $white !important;
+    background-color: cake-color("primary", "darker") !important;
+    border-color: cake-color("primary", "darker") !important;
+  }
+}
+
+button.ot-pc-refuse-all-handler {
+  display: none !important;
+}
+
+#accept-recommended-btn-handler {
+  display: inline-block !important;
+}
+
+// #########
+// # Logos #
+// #########
+
+#onetrust-pc-sdk .ot-pc-footer-logo {
+  display: none;
+}
+#onetrust-pc-sdk .ot-pc-logo {
+  display: none;
+}
+
+// v1 changes stashed here (discard button in the left corner)
+// #onetrust-consent-sdk {
+//   #onetrust-banner-sdk {
+//     @include media-breakpoint-up(sm) { // @media (min-width: 425px)
+//       #onetrust-button-group {
+//         position: relative;
+//       }
+//       #onetrust-reject-all-handler {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//       }
+//     }
+//   }
+// }

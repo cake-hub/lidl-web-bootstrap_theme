@@ -11,6 +11,7 @@ import { minify } from "html-minifier";
 import config from "@root/config";
 import { rawMarkup } from "@root/helper";
 import CookieAlert from "@Develop/Components/Cookie alert/cookieAlert.html";
+import { OneTrust } from "@Develop/Components/Cookie alert/OneTrust.html";
 
 const CookieAlertExample = () => (
     <React.Fragment>
@@ -97,9 +98,80 @@ const CookieAlertCSS = () => {
     );
 };
 
+const CookieAlertOneTrustTemplate = (cssFileName = null) => {
+    const styles = cssFileName ? OneTrustCSS(cssFileName, false) : null;
+
+    return (
+        <React.Fragment>
+            <Helmet>
+                <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="688b250d-2690-400d-af88-2c66c3bf1f75-test"></script>
+                <script type="text/javascript">
+                    {"function OptanonWrapper() { }"}
+                </script>
+                <script type="text/javascript" charset="UTF-8" src="cookieAlertOneTrust.js" defer></script>
+                {/* <link rel="stylesheet" type="text/css" href="../../../_assets/css/{cssFileName}"></link> */}
+                <style id="onetrust-costume-css">{ styles }</style>
+                <script type="text/javascript" defer>
+                    {"let intervalId = setInterval(() => {const oneTrustCss = document.querySelector('#onetrust-style'); const oneTrustCostumeCss = document.querySelector('#onetrust-costume-css'); if(oneTrustCss != null) {oneTrustCss.after(oneTrustCostumeCss); console.log('css moved'); clearInterval(intervalId)}},17);"}
+                </script>
+            </Helmet>
+        </React.Fragment>
+    );
+};
+
+const CookieAlertOneTrust = () => {
+    return CookieAlertOneTrustTemplate();
+};
+
+const CookieAlertOneTrustv2 = () => { // old example, new Link need to be sent after vacation season
+    return CookieAlertOneTrustTemplate('cake-onetrust.css');
+};
+
+const CookieAlertOneTrustDev = () => {
+    return CookieAlertOneTrustTemplate('cake-onetrust.css');
+};
+
+const OneTrustCSS = (fileName ,isForShowroom = true) => {
+    const cookieAlertCSSFilePath = path.join (config.rootPath, '/dist/css/' + fileName);
+    const cssContent = fs.readFileSync (cookieAlertCSSFilePath, { encoding: "utf8" });
+    const html4Purify = <OneTrust />;
+
+    const transformCss4OneTrust = (css) => {
+        css = purify (
+            rawMarkup ( html4Purify, null, ".html" ),
+            css, {
+                minify: true,
+            }
+        );
+        //Remove css comments, because they are not supported by Cookiebot
+        css = stripCssComments (
+            css,
+            {
+                preserve: false,
+            }
+        );
+        return css.trim ();
+    }
+
+    if(isForShowroom) {
+        return PreviewCookieBotSource (
+            transformCss4OneTrust (cssContent)
+        );
+    }
+    return transformCss4OneTrust (cssContent);
+};
+
+const CookieAlertOneTrustCSS = () => {
+    return OneTrustCSS('cake-onetrust.css', true);
+};
+
 export default {
     CookieAlertExample,
     CookieAlertJavaScript,
     CookieAlertHTML,
     CookieAlertCSS,
+    CookieAlertOneTrust,
+    CookieAlertOneTrustv2,
+    CookieAlertOneTrustDev,
+    CookieAlertOneTrustCSS,
 };

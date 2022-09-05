@@ -19,6 +19,8 @@ export const htmlTemplateExample = ( reactDom, helmetData, filePath ) => {
             ${ helmetData.title.toString () }
             ${ helmetData.meta.toString () }
             <link rel="stylesheet" type="text/css" href="${themeAssetPath}css/cake.css">
+            ${ helmetData.link.toString () }
+            ${ helmetData.style.toString () }
         </head>
 
         <body>

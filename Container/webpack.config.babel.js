@@ -161,6 +161,10 @@ export default {
                         destination: path.resolve (__dirname, './docs/Components/Cookie alert/examples')
                     },
                     {
+                        source: './js/cookieAlertOneTrust.js',
+                        destination: path.resolve (__dirname, './docs/Components/Cookie alert/examples')
+                    },
+                    {
                         source: './js/form.js',
                         destination: path.resolve (__dirname, './docs/Components/Form/examples')
                     },

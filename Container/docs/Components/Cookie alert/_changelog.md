@@ -1,5 +1,12 @@
 # Change log
 
+## [6.8.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.8.0) - 2022-09-05
+
+### Added
+
+* `SCSS`, `JS`, `Doc`: "Cookie alert" | added theme for OneTrust
+
+
 ## [6.3.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.3.0) - 2021-10-01
 
 ### Changed
