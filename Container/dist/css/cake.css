@@ -1979,7 +1979,7 @@ select.form-control:focus::-ms-value {
 }
 
 label {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .col-form-label {
@@ -2082,17 +2082,14 @@ textarea.form-control::-webkit-resizer {
   background-position: top left;
   background-size: 0.75rem;
 }
-
 textarea.form-control.resizable {
   flex: 0 0 auto;
   width: 100%;
   resize: both;
 }
-
 textarea.form-control.resizable-vertical {
   resize: vertical;
 }
-
 textarea.form-control.resizable-horizontal {
   flex: 0 0 auto;
   width: 100%;

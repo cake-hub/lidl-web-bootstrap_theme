@@ -1,57 +1,12 @@
 // stylelint-disable selector-no-qualifying-type
+@import "./button.mixins";
 
 //
 // Base styles
 //
 
 .btn {
-  display: inline-block;
-  @include cake-button-size-fixed-height($btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius, $btn-height, $btn-border-width);
-  @include media-breakpoint-up(lg) {
-    @include cake-button-size-fixed-height($btn-padding-x, $btn-font-size-at-lg, $btn-line-height, $btn-border-radius, $btn-height-at-lg, $btn-border-width);
-  }
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  color: $body-color;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
-  @include transition($btn-transition);
-
-  // Share hover and focus styles
-  @include hover {
-    color: $body-color;
-    text-decoration: none;
-  }
-
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: $btn-focus-box-shadow;
-  }
-
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    @include box-shadow(none);
-    cursor: not-allowed;
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    @include box-shadow($btn-active-box-shadow);
-
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
-  }
-
-  &:not(.btn-link) {
-    text-decoration: none;
-  }
+  @include cs-btn();
 }
 
 // Future-proof disabling of clicks on `<a>` elements

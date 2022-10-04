@@ -1,5 +1,12 @@
 # Change log
 
+## [6.9.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.9.0) - 2022-10-04
+
+### Added
+
+* `Added`: **Medallia** documentation for integrating surveys
+
+
 ## [6.6.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.6.0) - 2022-06-27
 
 ### Highlights

@@ -75,6 +75,7 @@ $gray-900: cake-color("gray", "darkest");
 $expression-icon-path:      "./assets/icons/expression/";
 $interaction-icon-path:     "./assets/icons/interaction/";
 $navigation-icon-path:      "./assets/icons/navigation/";
+$smiley-icon-path:          "./assets/icons/smiley/";
 $status-icon-path:          "./assets/icons/status/";
 $scss-icon-path:            "./assets/icons/_scssOnly/";
 
@@ -271,18 +272,20 @@ $table-accent-bg:             cake-color("gray", "lightest");
 
 // Buttons + Forms
 
-$input-btn-font-family:             null;
-$input-btn-font-size:               $font-size-base;
+$input-btn-font-family:               null;
+$input-btn-font-size:                 $font-size-base;
 
-$input-btn-border-width:            $border-width;
-$input-btn-padding-y:               .75rem;
-$input-btn-padding-x:               1rem - calculateRem($input-btn-border-width);
-$input-btn-line-height:             1.2;
-$input-btn-height:                  calculateRem(40px);
-$input-btn-height-at-lg:            calculateRem(48px);
+$input-btn-border-width:              $border-width;
+$input-btn-padding-y:                 .75rem;
+$input-btn-padding-x:                 1rem - calculateRem($input-btn-border-width);
+$input-btn-line-height:               1.2;
+$input-btn-height:                    calculateRem(40px);
+$input-btn-height-at-lg:              calculateRem(48px);
 
-$input-btn-focus-width:             calculateRem(3px);
-$input-btn-focus-color:             rgba($component-active-bg, .5);
+$input-btn-focus-width:               calculateRem(3px);
+$input-btn-focus-color:               rgba($component-active-bg, .5);
+
+$input-btn-form-label-font-weight:    $font-weight-bold;
 
 
 // Buttons
@@ -331,6 +334,7 @@ $input-textarea-grab-size:              calculateRem(12px);
 $input-textarea-padding-x:              calc(#{$spacer * 2} - #{$input-border-width});
 $input-textarea-padding-y:              $spacer;
 $input-textarea-padding-y-at-lg:        calculateRem(10px);
+$input-textarea-grab-icon:              svg-load($scss-icon-path + "textarea_grab.svg", fill=$input-border-color);
 
 $form-grid-gutter-width:                1rem;
 

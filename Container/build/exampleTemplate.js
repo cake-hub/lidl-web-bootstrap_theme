@@ -18,6 +18,8 @@ export const htmlTemplateExample = ( reactDom, helmetData, filePath ) => {
             <meta name="viewport" content="width=device-width, initial-scale=1">
             ${ helmetData.title.toString () }
             ${ helmetData.meta.toString () }
+            ${ helmetData.link.toString () }
+            ${ helmetData.style.toString () }
             <link rel="stylesheet" type="text/css" href="${themeAssetPath}css/cake.css">
             ${ helmetData.link.toString () }
             ${ helmetData.style.toString () }

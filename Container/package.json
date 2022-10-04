@@ -1,6 +1,6 @@
 {
   "name": "@cake-hub/lidl-web-bootstrap_theme",
-  "version": "6.8.0",
+  "version": "6.9.0",
   "description": "Bootstrap-Theme for Lidl",
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "lint-all": "npm run lint-scss && npm run lint-md",
     "lint-scss": "stylelint ./scss",
     "lint-md": "markdownlint ./docs/**/*md",
-    "server": "http-server ./docs -p 2021"
+    "server": "http-server ./docs -p 2021 --cors"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

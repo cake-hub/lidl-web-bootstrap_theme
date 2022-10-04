@@ -1,0 +1,212 @@
+// stylelint-disable declaration-no-important,selector-max-compound-selectors,selector-type-no-unknown,selector-class-pattern,selector-no-qualifying-type,selector-max-combinators,selector-max-class,property-blacklist,selector-max-id,selector-max-type
+
+@import "~bootstrap/scss/functions";
+@import "./functions-theme";
+@import "./variables-root";
+@import "~bootstrap/scss/variables";
+@import "./variables-theme";
+@import "./variables-medallia";
+
+@import "~bootstrap/scss/mixins";
+@import "./mixins-theme";
+@import "~bootstrap/scss/root";
+@import "./reboot";
+@import "./typography-font-face";
+@import "./typography";
+
+@import "./button.mixins";
+
+body {
+  @extend .html-style;
+  @extend .body-style;
+  background: none transparent !important;
+}
+
+.neb-invite-container {
+  background: $white !important;
+  border-bottom: 1px solid cake-color("gray", "light");
+  border-radius: $border-radius;
+
+  //****************************//
+  //*** Mobile invitation ******//
+  //****************************//
+  .web-mobile-invitation {
+    @extend .body-style;
+    height: 100% !important;
+    background: none transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    > div {
+      height: 100%;
+    }
+
+    .mobile-invite-close-btn {
+      top: .5rem !important;
+      right: .5rem !important;
+    }
+
+    // mobile button
+    .provide-feedback-button {
+      position: absolute !important;
+      right: 0;
+      bottom: $spacer;
+      left: 0;
+      padding-top: $spacer;
+      margin-right: 0 !important;
+      text-align: center !important;
+      background: $white;
+
+
+      #kplProvideButton {
+        width: auto !important;
+        max-width: initial !important;
+        height: auto !important;
+        overflow: hidden;
+      }
+    }
+
+    // text content
+    .invitation-container {
+      height: 100%;
+
+      .invitation-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% - #{2 * $spacer + $input-btn-height});
+        padding-top: $spacer;
+        padding-right: $spacer * 4 !important;
+        padding-left: $spacer * 4 !important;
+        margin-bottom: $spacer;
+        color: inherit;
+        text-align: center;
+
+
+        .invitation-title {
+          margin-bottom: 0 !important;
+          font-size: $font-size-base !important;
+          font-weight: $font-weight-bold;
+        }
+        .invitation-body {
+          display: none; // hide description on mobile
+        }
+      }
+    }
+  }
+
+  // dialog wrapper
+  .invitationDesignMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none transparent !important;
+
+    .kpl-invitation-content {
+      height: auto !important;
+      overflow-y: initial !important;
+    }
+  }
+
+  // closing button "X"
+  .xDix,
+  .mobile-invite-close-btn {
+    @include form-control-focus();
+
+    position: absolute;
+    top: $spacer * 2 !important;
+    right: $spacer * 2 !important;
+    width: $spacer * 2;
+    height: $spacer * 2;
+    color: transparent !important;
+    background-color: transparent !important;
+    background-image: svg-load($navigation-icon-path + "cross.svg", fill=cake-color("gray", "darker")) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+
+    &:hover,
+    &:focus {
+      opacity: .75;
+    }
+  }
+
+  // hide image container
+  .imageContainer {
+    display: none;
+  }
+
+  // content / text
+  .invitationHeadlineParent {
+    display: initial;
+    margin-top: 0 !important;
+    margin-bottom: $spacer * 4 !important;
+
+    .invitationContentText {
+      padding-right: $spacer * 2;
+      padding-left: $spacer * 2;
+
+      > p > span {
+        > span:first-child {
+          margin-bottom: $heading-h1-margin-bottom !important;
+          font-size: $h1-font-size + $font-grow !important;
+        }
+
+        > span:last-child {
+          font-size: $font-size-base + $font-grow !important;
+        }
+      }
+    }
+  }
+
+  // both buttons
+  .btn,
+  #kplProvideButton {
+    @include form-control-focus();
+
+    min-width: initial;
+    min-height: initial;
+  }
+
+  // primary button
+  .btn.btn-primary,
+  .btn:not(.btn-default),
+  #kplProvideButton {
+    @include cs-btn();
+    @include cake-button-variant(cake-color("primary"), cake-color("primary"), $disabled-color: $btn-color-disabled, $disabled-background: $btn-background-disabled);
+
+    color: $white;
+    background-color: cake-color("primary") !important;
+    border: $border-width solid cake-color("primary") !important;
+
+    &:hover,
+    &:focus {
+      background-color: cake-color("primary", "darker") !important;
+      border-color: cake-color("primary", "darker") !important;
+      opacity: 1 !important;
+    }
+  }
+
+  // secondary button
+  .btn.btn-default {
+    @include cs-btn();
+    @include cake-button-outline-variant($primary, $disabled-color: $btn-color-disabled, $disabled-border: $btn-border-disabled);
+
+    color: cake-color("primary") !important;
+    background: transparent !important;
+    border: $border-width solid cake-color("primary") !important;
+
+    &:hover,
+    &:focus {
+      color: $white !important;
+      background-color: cake-color("primary", "darker") !important;
+      border-color: cake-color("primary", "darker") !important;
+      opacity: 1 !important;
+    }
+  }
+
+  // hide "powered by medallia"
+  .footerCls {
+    display: none;
+  }
+
+}

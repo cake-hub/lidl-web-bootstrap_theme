@@ -1,0 +1,111 @@
+//********************************************************//
+//*** Form control (general) *****************************//
+//********************************************************//
+
+@mixin cs-form-control($invalid-class: ".is-invalid") {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  @include cake-dynamic-padding-y-for-fixed-height($input-padding-x, $input-font-size, $input-line-height, $input-height, $input-border-width);
+  @include media-breakpoint-up(lg) {
+    height: $input-height-at-lg;
+    @include cake-dynamic-padding-y-for-fixed-height($input-padding-x, $input-font-size-at-lg, $input-line-height, $input-height-at-lg, $input-border-width);
+  }
+  font-family: $input-font-family;
+  font-weight: $input-font-weight;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($input-border-radius, 0);
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &:hover:not(:disabled):not(:invalid):not(#{$invalid-class}) {
+    border-color: $primary;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    color: $input-disabled-color;
+    cursor: not-allowed;
+    background-color: $input-disabled-bg;
+    border-color: $input-disabled-border-color;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  // bugfix - oldBrowser - IE11 remove native password-toggle icon from input[type=password]
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+}
+
+@mixin cs-form-label() {
+  font-weight: $input-btn-form-label-font-weight;
+}
+
+
+//********************************************************//
+//*** Form textarea **************************************//
+//********************************************************//
+
+@mixin cs-form-textarea() {
+  height: $input-textarea-height;
+  padding: $input-textarea-padding-y $input-textarea-padding-x;
+  line-height: $line-height-base;
+  resize: none;
+
+  @include media-breakpoint-up(md) {
+    height: $input-textarea-height-at-lg;
+    padding: $input-textarea-padding-y-at-lg $input-textarea-padding-x;
+  }
+
+  &::-webkit-resizer {
+    width: $input-textarea-grab-size;
+    height: $input-textarea-grab-size;
+    background: transparent;
+    background-image: $input-textarea-grab-icon;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: $input-textarea-grab-size;
+  }
+}
+
+@mixin cs-form-textarea--resizable() {
+  flex: 0 0 auto;
+  width: 100%;
+  resize: both;
+}
+@mixin cs-form-textarea--resizable-vertical() {
+  resize: vertical;
+}
+@mixin cs-form-textarea--resizable-horizontal() {
+  flex: 0 0 auto;
+  width: 100%;
+  resize: horizontal;
+}

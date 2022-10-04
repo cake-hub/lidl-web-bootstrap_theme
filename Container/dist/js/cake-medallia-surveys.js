@@ -81,30 +81,39 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 395);
+/******/ 	return __webpack_require__(__webpack_require__.s = 393);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 395:
+/***/ 393:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var fixOneTrustButtonsIntervalId = setInterval(function () {
-  var onetrustConsentSdk = document.querySelector('#onetrust-consent-sdk');
+window.addEventListener("DOMContentLoaded", function () {
+  var eventNameOnLoaded = "cake-medallia.OnSurveyLoaded";
+  var eventNameOnSubmitted = "cake-medallia.OnSurveySubmitted";
+  window.addEventListener('neb_OnsiteLoaded', function () {
+    var eventOnLoaded = new CustomEvent(eventNameOnLoaded, {});
+    document.dispatchEvent(eventOnLoaded);
 
-  if (onetrustConsentSdk) {
-    var onetrustPcBtnHandler = onetrustConsentSdk.querySelector('#onetrust-pc-btn-handler');
-    var onetrustAcceptBtnHandler = onetrustConsentSdk.querySelector('#onetrust-accept-btn-handler');
-    onetrustAcceptBtnHandler.before(onetrustPcBtnHandler);
-    var acceptRecommendedBtnHandler = onetrustConsentSdk.querySelector('#accept-recommended-btn-handler');
-    var savePreferenceBtnHandler = onetrustConsentSdk.querySelector('#onetrust-pc-sdk button.save-preference-btn-handler');
-    savePreferenceBtnHandler.after(acceptRecommendedBtnHandler);
-    clearInterval(fixOneTrustButtonsIntervalId);
-  }
-}, 17);
+    var isSurveySubmittedMethod = function isSurveySubmittedMethod() {
+      var isSurveySubmitted = localStorage.getItem("md_isSurveySubmittedInSession");
+
+      if (!isSurveySubmitted) {
+        setTimeout(isSurveySubmittedMethod, 200);
+        return;
+      }
+
+      var eventOnSubmitted = new CustomEvent(eventNameOnSubmitted, {});
+      document.dispatchEvent(eventOnSubmitted);
+    };
+
+    setTimeout(isSurveySubmittedMethod, 200);
+  });
+});
 
 /***/ })
 

@@ -149,6 +149,10 @@ export default {
                         destination: path.resolve (__dirname, './docs/_assets/images/examples')
                     },
                     {
+                        source: './js/cake-medallia-surveys.js',
+                        destination: path.resolve (__dirname, './docs/Customization/Medallia/examples')
+                    },
+                    {
                         source: './js/accordion.js',
                         destination: path.resolve (__dirname, './docs/Components/Accordion/examples')
                     },

@@ -1,3 +1,5 @@
+@import "./custom-form.mixins";
+
 // Embedded icons from Open Iconic.
 // Released under MIT and copyright 2014 Waybury.
 // https://useiconic.com/open
@@ -8,11 +10,7 @@
 // Base class takes care of all the key behavioral aspects.
 
 .custom-control {
-  position: relative;
-  display: block;
-  min-height: $font-size-base * $line-height-base;
-  padding-left: $custom-control-gutter + $custom-control-indicator-size;
-  margin-bottom: .5rem;
+  @include cs-custom-form-custom-control();
 }
 
 .custom-control-inline {
@@ -33,7 +31,7 @@
   }
 
   &:not(:disabled):not(:invalid):not(.is-invalid):checked ~ .custom-control-label {
-    color: $custom-control-indicator-checked-color;
+    @include cs-custom-form-custom-control-label-active();
   }
 
   &:focus ~ .custom-control-label::before {
@@ -84,45 +82,19 @@
 //
 // Build the custom controls out of pseudo-elements.
 
+
+
 .custom-control-label {
-  position: relative;
-  margin-bottom: 0;
-  font-weight: $font-weight-normal;
-  vertical-align: top;
+  @include cs-custom-form-custom-control-label();
 
   // Background-color and (when enabled) gradient
   &::before {
-    position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
-    left: -($custom-control-gutter + $custom-control-indicator-size);
-    display: block;
-    width: $custom-control-indicator-size;
-    height: $custom-control-indicator-size;
-    pointer-events: none;
-    content: "";
-    background-color: $custom-control-indicator-bg;
-    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
-    @include box-shadow($custom-control-indicator-box-shadow);
-
-    @include media-breakpoint-up(lg) {
-      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
-    }
+    @include cs-custom-form-custom-control-label-indicator-scaffold();
   }
 
   // Foreground (icon)
   &::after {
-    position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
-    left: -($custom-control-gutter + $custom-control-indicator-size);
-    display: block;
-    width: $custom-control-indicator-size;
-    height: $custom-control-indicator-size;
-    content: "";
-    background: no-repeat 50% / #{$custom-control-indicator-bg-size};
-
-    @include media-breakpoint-up(lg) {
-      top: ((($font-size-base + $font-grow) * $line-height-base - $custom-control-indicator-size) / 2);
-    }
+    @include cs-custom-form-custom-control-label-indicator-content();
   }
 }
 
@@ -133,41 +105,39 @@
 
 .custom-checkbox {
   .custom-control-label::before {
-    @include border-radius($custom-checkbox-indicator-border-radius);
+    @include cs-custom-form-custom-control-label-indicator-scaffold-checkbox();
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-checkbox-indicator-icon-checked;
+      @include cs-custom-form-custom-control-label-indicator-content-checkbox-checked();
     }
   }
 
   .custom-control-input.is-invalid:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-checkbox-indicator-icon-checked-danger;
+      @include cs-custom-form-custom-control-label-indicator-content-checkbox-invalid();
     }
   }
 
   .custom-control-input:indeterminate ~ .custom-control-label {
     &::before {
-      border-color: $custom-checkbox-indicator-indeterminate-border-color;
-      @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
-      @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
+      @include cs-custom-form-custom-control-label-indicator-scaffold-checkbox-indeterminate();
     }
     &::after {
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
+      @include cs-custom-form-custom-control-label-indicator-content-checkbox-indeterminate();
     }
   }
 
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+      @include cs-custom-form-custom-control-label-indicator-scaffold-checkbox-disabled();
     }
     &:checked ~ .custom-control-label::after {
-      background-image: $custom-checkbox-indicator-icon-checked-disabled;
+      @include cs-custom-form-custom-control-label-indicator-content-checkbox-disabled();
     }
     &:indeterminate ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+      @include cs-custom-form-custom-control-label-indicator-scaffold-checkbox-disabled();
     }
   }
 }
@@ -178,28 +148,27 @@
 
 .custom-radio {
   .custom-control-label::before {
-    // stylelint-disable-next-line property-blacklist
-    border-radius: $custom-radio-indicator-border-radius;
+    @include cs-custom-form-custom-control-label-indicator-scaffold-radio();
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-radio-indicator-icon-checked;
+      @include cs-custom-form-custom-control-label-indicator-content-radio-checked();
     }
   }
 
   .custom-control-input.is-invalid:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-radio-indicator-icon-checked-danger;
+      @include cs-custom-form-custom-control-label-indicator-content-radio-invalid();
     }
   }
 
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+      @include cs-custom-form-custom-control-label-indicator-scaffold-radio-disabled();
     }
     &:checked ~ .custom-control-label::after {
-      background-image: $custom-radio-indicator-icon-checked-disabled;
+      @include cs-custom-form-custom-control-label-indicator-content-radio-disabled();
     }
   }
 }

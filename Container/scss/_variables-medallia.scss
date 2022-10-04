@@ -1,0 +1,14 @@
+// stylelint-disable scss/dollar-variable-default
+
+// 2x padding of wrapper element + 2x container margin + 15px buffer
+$breakpoint-subtraction: (2 * 32px) + (2 * 8px) + 15px;
+$grid-breakpoints: (
+  xxs: map-get($grid-breakpoints, xxs), // enable base classes from viewport 0 -> 359px (eg. .col, .float-right)
+  xs: map-get($grid-breakpoints, xs) - $breakpoint-subtraction,
+  sm: map-get($grid-breakpoints, sm) - $breakpoint-subtraction,
+  md: map-get($grid-breakpoints, md) - $breakpoint-subtraction,
+  lg: map-get($grid-breakpoints, lg) - $breakpoint-subtraction
+);
+
+// Adjust the font-path to use official cdn's path
+$font-path: "https://www.lidl.de/cdn/assets/fonts/1.0.0/";
