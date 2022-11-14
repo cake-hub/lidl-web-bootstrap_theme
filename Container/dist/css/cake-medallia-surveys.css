@@ -588,6 +588,23 @@ body {
   height: auto !important;
   max-height: initial !important;
 }
+#liveForm h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+@media (min-width: 1185px) {
+  #liveForm h6 {
+    font-size: 1.125rem;
+  }
+}
+#liveForm i, #liveForm em {
+  font-style: normal;
+}
+#liveForm u {
+  text-decoration: none;
+}
 #liveForm .kpl_builder.dig-embedded-live {
   width: 100% !important;
 }
@@ -653,8 +670,16 @@ body {
 }
 #liveForm .cake-medallia-survey--centered .neb-textArea,
 #liveForm .cake-medallia-survey--centered .neb-radio,
-#liveForm .cake-medallia-survey--centered .neb-checkbox {
+#liveForm .cake-medallia-survey--centered .neb-checkbox,
+#liveForm .cake-medallia-survey--centered .neb-textInput,
+#liveForm .cake-medallia-survey--centered .neb-emailInput,
+#liveForm .cake-medallia-survey--centered .neb-select {
   max-width: 29.125rem !important;
+  text-align: left !important;
+}
+#liveForm .cake-medallia-survey--centered .neb-content ol,
+#liveForm .cake-medallia-survey--centered .neb-content ul {
+  margin: auto !important;
   text-align: left !important;
 }
 #liveForm .cake-medallia-survey--centered .neb-form-footer-buttons {
@@ -878,6 +903,62 @@ body {
   margin-bottom: 1rem !important;
   color: inherit !important;
 }
+#liveForm .live-form-content .fb-form-object .neb-component.neb-web-component.neb-sectionBreak {
+  margin-bottom: 0 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-component.neb-web-component.neb-sectionBreak .neb-website-sectionBreak > div > div {
+  height: 1px !important;
+  border-width: 1px !important;
+  border-bottom-color: #e3e4e6 !important;
+  border-bottom-style: solid !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p {
+  line-height: 1.4;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p * {
+  font-family: LidlFontCondPro, Calibri, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  color: #353b42 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p ol,
+#liveForm .live-form-content .fb-form-object .neb-content > p ul {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  margin-bottom: 2rem !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p a,
+#liveForm .live-form-content .fb-form-object .neb-content > p a > * {
+  color: #0050aa !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p a:hover,
+#liveForm .live-form-content .fb-form-object .neb-content > p a > *:hover {
+  color: #003674 !important;
+  text-decoration: underline !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p a:active,
+#liveForm .live-form-content .fb-form-object .neb-content > p a > *:active {
+  color: #003674 !important;
+  text-decoration: none !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-content > p p:last-child {
+  margin-bottom: 0 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-component .neb-website-image img:not(.cake-medallia-survey--unstyled) {
+  max-width: 29.125rem !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-rating-value.on-focus {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  border: none !important;
+  border-radius: initial !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-rating-value.on-focus:last-child {
+  margin-right: 0 !important;
+}
 #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.bars span.neb-rating-value {
   display: none;
   width: 24px;
@@ -1007,6 +1088,9 @@ body {
 #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.smilies span.neb-rating-value .rating-label.five:hover, #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.smilies span.neb-rating-value .rating-label.five.on.selected {
   cursor: pointer;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='%230050aa'%3E%3Cpath d='M30,0A30,30,0,1,1,0,30,30,30,0,0,1,30,0ZM46.25,28.42H13.75a1.12,1.12,0,0,0-1.12,1.12c0,9.71,7.95,18,17.66,17.82A17.38,17.38,0,0,0,47.37,30v-.46A1.13,1.13,0,0,0,46.25,28.42Zm-2.13,3.16a14.21,14.21,0,0,1-28.25,0ZM21.58,17.37a3.16,3.16,0,1,0,3.16,3.16A3.15,3.15,0,0,0,21.58,17.37Zm16.84,0a3.16,3.16,0,1,0,3.16,3.16A3.16,3.16,0,0,0,38.42,17.37Z' transform='translate(0 0)'/%3E%3C/svg%3E");
+}
+#liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.numbers {
+  display: block !important;
 }
 #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.numbers form {
   height: 24px;
@@ -1302,6 +1386,269 @@ body {
 #liveForm .live-form-content .fb-form-object .neb-textArea.has-error .neb-content textarea.form-control {
   color: #e60a14 !important;
   border: 1px solid #e60a14 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .control-label,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .control-label,
+#liveForm .live-form-content .fb-form-object .neb-select .control-label {
+  margin-bottom: 0.5rem !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: calc(0.65625rem - 1px) 0.9375rem calc(0.65625rem - 1px) 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  font-weight: 400;
+  color: #0050aa;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #4e5761;
+  border-radius: 0.125rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 0.125rem;
+  width: 100%;
+  height: 2.5rem !important;
+  font-family: LidlFontCondPro, Calibri, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 1rem !important;
+  border-radius: 0.125rem !important;
+  transition: initial;
+}
+@media (min-width: 1185px) {
+  #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select {
+    height: 3rem;
+    padding: calc(0.8125rem - 1px) 0.9375rem calc(0.8125rem - 1px) 0.9375rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select {
+    transition: none;
+  }
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:hover:not(:disabled):not(:invalid):not(.is-invalid),
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:hover:not(:disabled):not(:invalid):not(.is-invalid),
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:hover:not(:disabled):not(:invalid):not(.is-invalid),
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:hover:not(:disabled):not(:invalid):not(.is-invalid),
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input:hover:not(:disabled):not(:invalid):not(.is-invalid),
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select:hover:not(:disabled):not(:invalid):not(.is-invalid) {
+  border-color: #0050aa;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select:focus {
+  color: #353b42;
+  background-color: #fff;
+  border-color: #0050aa;
+  outline: 0;
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-select .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-select .neb-content select:-ms-input-placeholder {
+  color: #4e5761;
+  opacity: 1;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select::placeholder {
+  color: #4e5761;
+  opacity: 1;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:disabled, #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input[readonly],
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:disabled,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select[readonly],
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:disabled,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input[readonly],
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:disabled,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select[readonly],
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input:disabled,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input[readonly],
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select:disabled,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select[readonly] {
+  color: #4e5761;
+  cursor: not-allowed;
+  background-color: #f8f8f9;
+  border-color: #c6c9cc;
+  opacity: 1;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input::-ms-clear, #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input::-ms-reveal,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select::-ms-clear,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select::-ms-reveal,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input::-ms-clear,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input::-ms-reveal,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select::-ms-clear,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select::-ms-reveal,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input::-ms-clear,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input::-ms-reveal,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select::-ms-clear,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select::-ms-reveal {
+  display: none;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select:focus {
+  color: #353b42;
+  background-color: #fff;
+  border-color: #0050aa;
+  outline: 0;
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
+}
+@media (min-width: 1185px) {
+  #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select {
+    height: 3rem !important;
+    font-size: 1.125rem !important;
+  }
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input:focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select:focus {
+  background-color: #fff !important;
+  border-color: #0050aa !important;
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5) !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-select .neb-content input:-ms-input-placeholder, #liveForm .live-form-content .fb-form-object .neb-select .neb-content select:-ms-input-placeholder {
+  color: #4e5761 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content input::placeholder,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select::placeholder {
+  color: #4e5761 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput.has-error .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-textInput.has-error .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-emailInput.has-error .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-emailInput.has-error .neb-content select,
+#liveForm .live-form-content .fb-form-object .neb-select.has-error .neb-content input,
+#liveForm .live-form-content .fb-form-object .neb-select.has-error .neb-content select {
+  color: #e60a14 !important;
+  border: 1px solid #e60a14 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content::after,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content::after,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content::after {
+  display: none !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select ,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select ,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select  {
+  display: inline-block;
+  width: 100%;
+  height: 2.5rem;
+  padding: calc(0.65625rem - 1px) 0.9375rem calc(0.65625rem - 1px) 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  padding-right: 3.4375rem;
+  font-weight: 400;
+  color: #0050aa;
+  vertical-align: middle;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg enable-background='new 0 0 60 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg' fill='%23353b42'%3E%3Cpath d='m57.55 20.83c-.77-1.15-2.32-1.46-3.47-.69l-24.08 16.06-24.09-16.06c-1.15-.77-2.7-.46-3.47.69-.15.23-.09.54.14.69l26.31 17.54c.67.45 1.55.45 2.22 0l26.31-17.54c.23-.15.29-.46.13-.69z'/%3E%3C/svg%3E") no-repeat right 0.9375rem center/1.5rem 1.5rem;
+  background-color: #fff;
+  border: 1px solid #4e5761;
+  border-radius: 0.125rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg enable-background='new 0 0 60 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg' fill='%23353b42'%3E%3Cpath d='m57.55 20.83c-.77-1.15-2.32-1.46-3.47-.69l-24.08 16.06-24.09-16.06c-1.15-.77-2.7-.46-3.47.69-.15.23-.09.54.14.69l26.31 17.54c.67.45 1.55.45 2.22 0l26.31-17.54c.23-.15.29-.46.13-.69z'/%3E%3C/svg%3E") no-repeat right 0.9375rem center/1.5rem 1.5rem !important;
+}
+@media (min-width: 1185px) {
+  #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select ,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select ,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select  {
+    height: 3rem;
+    padding: calc(0.8125rem - 1px) 0.9375rem calc(0.8125rem - 1px) 0.9375rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select :focus,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select :focus,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select :focus {
+  border-color: #0050aa;
+  outline: 0;
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select :focus::-ms-value,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select :focus::-ms-value,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select :focus::-ms-value {
+  color: #0050aa;
+  background-color: #fff;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select :not(:disabled):not(.is-invalid):hover,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select :not(:disabled):not(.is-invalid):hover,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select :not(:disabled):not(.is-invalid):hover {
+  border-color: #0050aa;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select [multiple], #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select [size]:not([size="1"]),
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select [multiple],
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select [size]:not([size="1"]),
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select [multiple],
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select [size]:not([size="1"]) {
+  height: auto;
+  padding-right: 0.9375rem;
+  background-image: none;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select :disabled,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select :disabled,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select :disabled {
+  color: #4e5761;
+  cursor: not-allowed;
+  background-color: #f8f8f9;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg enable-background='new 0 0 60 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg' fill='%234e5761'%3E%3Cpath d='m57.55 20.83c-.77-1.15-2.32-1.46-3.47-.69l-24.08 16.06-24.09-16.06c-1.15-.77-2.7-.46-3.47.69-.15.23-.09.54.14.69l26.31 17.54c.67.45 1.55.45 2.22 0l26.31-17.54c.23-.15.29-.46.13-.69z'/%3E%3C/svg%3E");
+  border-color: #c6c9cc;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select ::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select ::-ms-expand,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select ::-ms-expand {
+  display: none;
+}
+#liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select :disabled,
+#liveForm .live-form-content .fb-form-object .neb-emailInput .neb-content select :disabled,
+#liveForm .live-form-content .fb-form-object .neb-select .neb-content select :disabled {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg enable-background='new 0 0 60 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg' fill='%234e5761'%3E%3Cpath d='m57.55 20.83c-.77-1.15-2.32-1.46-3.47-.69l-24.08 16.06-24.09-16.06c-1.15-.77-2.7-.46-3.47.69-.15.23-.09.54.14.69l26.31 17.54c.67.45 1.55.45 2.22 0l26.31-17.54c.23-.15.29-.46.13-.69z'/%3E%3C/svg%3E") !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-radio md-radio-group div.radio {
   position: relative;

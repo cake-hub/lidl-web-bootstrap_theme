@@ -1,0 +1,21 @@
+// stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
+
+
+//
+// Links
+//
+
+@mixin cs-reboot-links() {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &:active {
+    color: $link-active-color;
+    text-decoration: $link-active-decoration;
+  }
+}

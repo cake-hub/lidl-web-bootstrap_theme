@@ -1,17 +1,10 @@
 # Change log
 
-## [6.8.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.8.0) - 2022-09-05
-
-### Added
-
-* `SCSS`, `JS`, `Doc`: "Cookie alert" | added theme for OneTrust
-
-
-## [6.3.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.3.0) - 2021-10-01
+## [6.10.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.10.0) - 2022-11-14
 
 ### Changed
 
-* `JS`, `Doc`: "Cookie alert" | updated JavaScript to add close functionality and improve reliability
+* `Doc`: "Cookie alert" | moved CookieBot theme and OneTrust theme to `Customization`
 
 
 ## [6.2.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.2.0) - 2021-08-19
@@ -19,13 +12,6 @@
 ### Added
 
 * `Doc`: "Cookie alert" | added javaScript file content as "JS" tab
-
-
-## [5.0.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v5.0.0) - 2021-01-28
-
-### Changed
-
-* `Doc`: "Cookie alert" | Updated description of cookiebot usage when cake-bundle is used
 
 
 ## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25

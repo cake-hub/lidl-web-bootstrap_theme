@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@Develop/Components/Button/button.html";
-import { pseudoRandomHashGenerator } from "../../../helper";
+import { pseudoRandomHashGenerator } from "@root/helper";
 
 const CookieAlert = ( { className="",
                     children,

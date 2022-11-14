@@ -7,6 +7,13 @@
 * `Added`: **Medallia** documentation for integrating surveys
 
 
+## [6.8.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.8.0) - 2022-09-05
+
+### Added
+
+* `SCSS`, `JS`, `Doc`: "Customization" | added theme for OneTrust
+
+
 ## [6.6.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.6.0) - 2022-06-27
 
 ### Highlights

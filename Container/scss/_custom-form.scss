@@ -224,70 +224,7 @@
 //
 
 .custom-select {
-  display: inline-block;
-  width: 100%;
-  height: $custom-select-height;
-  @include cake-dynamic-padding-y-for-fixed-height($custom-select-padding-x, $custom-select-font-size, $custom-select-line-height, $custom-select-height, $custom-select-border-width);
-  @include media-breakpoint-up(lg) {
-    height: $custom-select-height-at-lg;
-    @include cake-dynamic-padding-y-for-fixed-height($custom-select-padding-x, $custom-select-font-size-at-lg, $custom-select-line-height, $custom-select-height-at-lg, $custom-select-border-width);
-  }
-  padding-right: (($custom-select-padding-x * 2) + calculateRem($input-btn-border-width) + $custom-select-indicator-padding);
-  font-family: $custom-select-font-family;
-  font-weight: $custom-select-font-weight;
-  color: $custom-select-color;
-  vertical-align: middle;
-  background: $custom-select-background;
-  background-color: $custom-select-bg;
-  border: $custom-select-border-width solid $custom-select-border-color;
-  @include border-radius($custom-select-border-radius, 0);
-  @include box-shadow($custom-select-box-shadow);
-  appearance: none;
-
-
-  &:focus {
-    border-color: $custom-select-focus-border-color;
-    outline: 0;
-    @if $enable-shadows {
-      box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
-    } @else {
-      box-shadow: $custom-select-focus-box-shadow;
-    }
-
-    &::-ms-value {
-      // For visual consistency with other platforms/browsers,
-      // suppress the default white text on blue background highlight given to
-      // the selected option text when the (still closed) <select> receives focus
-      // in IE and (under certain conditions) Edge.
-      // See https://github.com/twbs/bootstrap/issues/19398.
-      color: $input-color;
-      background-color: $input-bg;
-    }
-  }
-
-  &:not(:disabled):not(.is-invalid):hover {
-    border-color: $custom-select-hover-border-color;
-  }
-
-  &[multiple],
-  &[size]:not([size="1"]) {
-    height: auto;
-    padding-right: $custom-select-padding-x;
-    background-image: none;
-  }
-
-  &:disabled {
-    color: $custom-select-disabled-color;
-    cursor: not-allowed;
-    background-color: $custom-select-disabled-bg;
-    background-image: $custom-select-disabled-indicator;
-    border-color: $custom-select-disabled-border-color;
-  }
-
-  // Hides the default caret in IE11
-  &::-ms-expand {
-    display: none;
-  }
+  @include cs-custom-form-custom-select();
 }
 
 // bugfix - oldBrowser - Firefox 60,65,… does display a dotted line on focus around the text

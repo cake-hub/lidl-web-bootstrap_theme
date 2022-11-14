@@ -31,17 +31,27 @@ We provide stylings for many of the form fields in that list. In the following i
 
 ![form_fields](./images/form_fields.png)
 
-* Text area
+* Text input
+* Text area (multiline)
+* Dropdown
 * Radio buttons
 * Checkboxes
 * Rating (Thumbs, Numbers, Stars, Smilies)
 * NPS
+* Email
+* Text (with it's text-styles)
+* Image
+* Section break
 
 You can simply add the fields you need, set up the correct values and logic that you survey requires. The only sepcial field is the "Rating" field. Here you can select the rating "Format".
 
 ![rating_formats](./images/rating_formats.png)
 
 > __Note:__ The last option "Rating bars" is used to display the thumbs rating. This is because medallia natively does not offer a thumb rating. Therefore, if you want to offer such a thumb rating, just use the last option.
+
+> __Note:__ Please __don't__ use `italic` or `underline` text styles, also try to avoid headline level 6 (`h6`). This things do not match the CAKE standards.
+
+> __Note:__ Images fill the full width of the form up to a maximum width. If the image is to be larger than the maximum width, you can set the "Custom CSS Class" `cake-medallia-survey--unstyled` in the image element.
 
 > __Note:__ In the form editor the elements will have the "native" medallia styling. But you can see the LIDL stylings applied to the elements by clicking on "Preview" in the top right corner.
 

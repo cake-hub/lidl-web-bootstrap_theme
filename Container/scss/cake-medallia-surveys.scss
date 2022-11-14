@@ -33,6 +33,19 @@ body {
   height: auto !important;
   max-height: initial !important;
 
+  h6 {
+    @include cs-typography-headings();
+    @include cake-font-size($h5-font-size);
+  }
+
+  i, em {
+    font-style: normal;
+  }
+
+  u {
+    text-decoration: none;
+  }
+
   // embedded surveys
   .kpl_builder.dig-embedded-live {
     width: 100% !important;
@@ -116,9 +129,20 @@ body {
 
     .neb-textArea,
     .neb-radio,
-    .neb-checkbox {
+    .neb-checkbox,
+    .neb-textInput,
+    .neb-emailInput,
+    .neb-select {
       max-width: $form-elements-max-width !important;
       text-align: left !important;
+    }
+
+    .neb-content {
+      ol,
+      ul {
+        margin: auto !important;
+        text-align: left !important;
+      }
     }
 
     .neb-form-footer-buttons {
@@ -207,7 +231,7 @@ body {
     }
 
     //****************************//
-    //*** Thank you Feedback ***//
+    //*** Thank you Feedback *****//
     //****************************//
 
     .kpl-thank-you .kpl-thankYouHolder {
@@ -302,6 +326,86 @@ body {
           @include cs-form-label();
           margin-bottom: $spacer * 2 !important;
           color: inherit !important;
+        }
+      }
+
+      //****************************//
+      //*** Section break **********//
+      //****************************//
+
+      .neb-component.neb-web-component.neb-sectionBreak {
+        $sectionBreakHeight: 1px;
+
+        margin-bottom: 0 !important;
+        .neb-website-sectionBreak > div > div {
+          height: $sectionBreakHeight !important;
+          border-width: $sectionBreakHeight !important;
+          border-bottom-color: cake-color("gray", "lighter") !important;
+          border-bottom-style: solid !important;
+        }
+      }
+
+      //****************************//
+      //*** Text *******************//
+      //****************************//
+
+      .neb-content > p {
+        line-height: $line-height-base;
+
+        // set correct font & color
+        * {
+          font-family: $font-family-sans-serif !important;
+          color: cake-color("gray", "darker") !important;
+        }
+
+        // fix list styling
+        ol,
+        ul {
+          width: fit-content !important;
+          margin-bottom: $spacer * 4 !important;
+        }
+
+        // fix link styling
+        a,
+        a > * {
+          color: $link-color !important;
+          text-decoration: $link-decoration !important;
+          background-color: transparent !important; // Remove the gray background on active links in IE 10.
+
+          @include hover {
+            color: $link-hover-color !important;
+            text-decoration: $link-hover-decoration !important;
+          }
+          &:active {
+            color: $link-active-color !important;
+            text-decoration: $link-active-decoration !important;
+          }
+        }
+
+        // fix too much space at the end
+        p:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      //****************************//
+      //*** Image *******************//
+      //****************************//
+
+      .neb-component .neb-website-image img:not(.cake-medallia-survey--unstyled) {
+        max-width: $form-elements-max-width !important;
+      }
+
+      // Fix wrong "on-hover" focus stylings for rating modules
+      .neb-rating-value.on-focus {
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        border: none !important;
+        border-radius: initial !important;
+        &:last-child {
+          margin-right: 0 !important;
         }
       }
 
@@ -472,6 +576,7 @@ body {
         $numbers-rating-size: 24px;
         $numbers-rating-size-md: 32px;
         $numbers-rating-border-width: 1px;
+        display: block !important;
 
         form {
           height: $numbers-rating-size;
@@ -729,6 +834,71 @@ body {
         }
       }
 
+      //***********************************//
+      //*** Text input / Email / Select ***//
+      //***********************************//
+
+      .neb-textInput,
+      .neb-emailInput,
+      .neb-select {
+        .control-label {
+          margin-bottom: $spacer !important;
+        }
+
+        .neb-content input,
+        .neb-content select {
+          @include cs-form-control();
+          @include form-control-focus();
+          @include border-radius($input-border-radius, 0);
+          width: 100%;
+          height: $input-btn-height !important;
+          font-family: $font-family-sans-serif !important;
+          font-size: $input-font-size !important;
+          border-radius: $input-border-radius !important;
+          transition: initial;
+
+          @include media-breakpoint-up(lg) {
+            height: $input-btn-height-at-lg !important;
+            font-size: $input-font-size-at-lg !important;
+          }
+
+          &:focus {
+            background-color: $input-bg !important;
+            border-color: $primary !important;
+            box-shadow: $input-focus-box-shadow !important;
+          }
+
+          // Placeholder
+          &::placeholder {
+            color: $input-placeholder-color !important;
+          }
+        }
+
+        &.has-error {
+          .neb-content {
+            input,
+            select {
+              color: cake-color("danger") !important;
+              border: 1px solid cake-color("danger") !important;
+            }
+          }
+        }
+
+        .neb-content {
+          &::after {
+            display: none !important;
+          }
+
+          select {
+            @include cs-custom-form-custom-select();
+            background: $custom-select-background !important;
+
+            &:disabled {
+              background-image: $custom-select-disabled-indicator !important;
+            }
+          }
+        }
+      }
 
       //****************************//
       //*** Radio elements *********//
