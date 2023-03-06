@@ -156,6 +156,33 @@ body {
     }
   }
 
+  // additional utility classes for surveys
+  .cake-medallia-survey--spacing-top {
+    margin-top: $spacer !important;
+  }
+  .cake-medallia-survey--spacing-right {
+    margin-right: $spacer !important;
+  }
+  .cake-medallia-survey--spacing-bottom {
+    margin-bottom: $spacer !important;
+  }
+  .cake-medallia-survey--spacing-left {
+    margin-left: $spacer !important;
+  }
+  .cake-medallia-survey--spacing-x {
+    @extend .cake-medallia-survey--spacing-right;
+    @extend .cake-medallia-survey--spacing-left;
+  }
+  .cake-medallia-survey--spacing-y {
+    @extend .cake-medallia-survey--spacing-top;
+    @extend .cake-medallia-survey--spacing-bottom;
+  }
+  .cake-medallia-survey--spacing {
+    @extend .cake-medallia-survey--spacing-x;
+    @extend .cake-medallia-survey--spacing-y;
+  }
+
+  // style footer buttons
   .neb-form-footer-buttons {
     padding-right: 0;
     padding-left: 0;
@@ -393,7 +420,14 @@ body {
       //****************************//
 
       .neb-component .neb-website-image img:not(.cake-medallia-survey--unstyled) {
+        width: auto !important;
         max-width: $form-elements-max-width !important;
+        height: auto !important;
+        max-height: calcRem(800px);
+      }
+      .neb-image.cake-medallia-survey--no-max-dimension img:not(.cake-medallia-survey--unstyled) {
+        max-width: none !important;
+        max-height: none !important;
       }
 
       // Fix wrong "on-hover" focus stylings for rating modules
@@ -652,12 +686,17 @@ body {
         $nps-breakpoint: sm;
         $nps-wrapper-width-sm: ($nps-label-size-sm * 6) + (5 * $nps-label-margin-right-sm);
 
+        width: auto !important;
+
         @include media-breakpoint-down($nps-breakpoint) {
           position: relative;
         }
 
         .edge-labels {
           @include cake-font-size ($font-size-sm);
+          position: initial !important;
+          width: 100% !important;
+          margin-top: 5px !important;
           line-height: $line-height-base;
           color: cake-color("gray");
 
@@ -714,21 +753,21 @@ body {
               }
 
               &:not(:last-child) {
-                margin-right: $nps-label-margin-right;
+                margin-right: $nps-label-margin-right !important;
               }
 
               @include media-breakpoint-down($nps-breakpoint) {
                 &:not(:last-child) {
-                  margin-right: $nps-label-margin-right-sm;
+                  margin-right: $nps-label-margin-right-sm !important;
                 }
                 &:first-child {
-                  margin-bottom: 1rem;
+                  margin-bottom: 1rem !important;
                 }
                 &:nth-child(n + 7) {
                   order: 1;
                 }
                 &:nth-child(6) {
-                  margin-right: 0;
+                  margin-right: 0 !important;
                 }
               }
 
@@ -805,6 +844,7 @@ body {
           @include border-radius($input-border-radius, 0);
           width: 100%;
           padding: $input-textarea-padding-y $input-textarea-padding-x !important;
+          font-family: $font-family-sans-serif !important;
           font-size: $input-font-size !important;
           border-radius: $input-border-radius !important;
           transition: initial;
@@ -892,6 +932,7 @@ body {
           select {
             @include cs-custom-form-custom-select();
             background: $custom-select-background !important;
+            appearance: none !important;
 
             &:disabled {
               background-image: $custom-select-disabled-indicator !important;
@@ -996,6 +1037,8 @@ body {
             ._md-container {
               width: $custom-control-indicator-size;
               height: $custom-control-indicator-size;
+              overflow: visible !important;
+              outline: none !important;
 
               &::before {
                 display: none;

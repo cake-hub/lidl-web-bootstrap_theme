@@ -55,6 +55,19 @@ You can simply add the fields you need, set up the correct values and logic that
 
 > __Note:__ In the form editor the elements will have the "native" medallia styling. But you can see the LIDL stylings applied to the elements by clicking on "Preview" in the top right corner.
 
+### Utilities (modifier classes)
+
+We provide a few options to further customize the look of your survey. Use one of the following classes and add it to the Custom CSS Class field of the form element you want to customize.
+
+* `cake-medallia-survey--centered`: By default, the survey form is left-aligned. If you want to have a centered display, use this class and insert it into the corresponding field of the respective page under "Page Settings".
+* `cake-medallia-survey--unstyled`: Images are always displayed with a maximum width of `466px` and a maximum height of `800px`. If you want to use the original styling of medallia itself, apply this class to the image element you want to edit.
+* `cake-medallia-survey--no-max-dimension`: If you only want to remove the setting of the maximum height and width of images, use this class on image elements.
+* `cake-medallia-survey--spacing`: You can also apply spacing to any element of a survey to set spacing of `8px` on **all sides** of the element.
+* `cake-medallia-survey--spacing-(top|right|bottom|left)`: You can apply one of these four classes to any element of a survey to set a spacing of `8px` on the **respective side** of the element.
+* `cake-medallia-survey--spacing-(x|y)`: You can also apply **horizontal (x) or vertical (y) spacing** to any element of a survey to set spacing of `8px` on both sides of the element.
+
+### Live example
+
 Finally your survey could look like in our example
 
 <ContentRack

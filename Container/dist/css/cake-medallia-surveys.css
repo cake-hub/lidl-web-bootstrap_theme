@@ -690,6 +690,18 @@ body {
   float: none;
   width: 100%;
 }
+#liveForm .cake-medallia-survey--spacing-top, #liveForm .cake-medallia-survey--spacing-y, #liveForm .cake-medallia-survey--spacing {
+  margin-top: 0.5rem !important;
+}
+#liveForm .cake-medallia-survey--spacing-right, #liveForm .cake-medallia-survey--spacing-x, #liveForm .cake-medallia-survey--spacing {
+  margin-right: 0.5rem !important;
+}
+#liveForm .cake-medallia-survey--spacing-bottom, #liveForm .cake-medallia-survey--spacing-y, #liveForm .cake-medallia-survey--spacing {
+  margin-bottom: 0.5rem !important;
+}
+#liveForm .cake-medallia-survey--spacing-left, #liveForm .cake-medallia-survey--spacing-x, #liveForm .cake-medallia-survey--spacing {
+  margin-left: 0.5rem !important;
+}
 #liveForm .neb-form-footer-buttons {
   padding-right: 0;
   padding-left: 0;
@@ -946,7 +958,14 @@ body {
   margin-bottom: 0 !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-component .neb-website-image img:not(.cake-medallia-survey--unstyled) {
+  width: auto !important;
   max-width: 29.125rem !important;
+  height: auto !important;
+  max-height: calcRem(800px);
+}
+#liveForm .live-form-content .fb-form-object .neb-image.cake-medallia-survey--no-max-dimension img:not(.cake-medallia-survey--unstyled) {
+  max-width: none !important;
+  max-height: none !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-rating-value.on-focus {
   padding: 0 !important;
@@ -1145,6 +1164,9 @@ body {
 #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.numbers span.neb-rating-value .rating-label.hover span.native-display-value-in-rating, #liveForm .live-form-content .fb-form-object neb-rating[neb-format=ratingViewType] .neb-rating.numbers span.neb-rating-value .rating-label.on span.native-display-value-in-rating {
   color: #fff;
 }
+#liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating {
+  width: auto !important;
+}
 @media (max-width: 864.98px) {
   #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating {
     position: relative;
@@ -1152,6 +1174,9 @@ body {
 }
 #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating .edge-labels {
   font-size: 0.75rem;
+  position: initial !important;
+  width: 100% !important;
+  margin-top: 5px !important;
   line-height: 1.4;
   color: #4e5761;
 }
@@ -1211,20 +1236,20 @@ body {
   }
 }
 #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem !important;
 }
 @media (max-width: 864.98px) {
   #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 1rem !important;
   }
   #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value:first-child {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
   #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value:nth-child(n+7) {
     order: 1;
   }
   #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value:nth-child(6) {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 }
 #liveForm .live-form-content .fb-form-object .neb-nps .neb-content neb-rating .neb-rating form span[role=radiogroup] .neb-rating-value .rating-label {
@@ -1295,6 +1320,7 @@ body {
   border-radius: 0.125rem;
   width: 100%;
   padding: 0.5rem calc(1rem - 1px) !important;
+  font-family: LidlFontCondPro, Calibri, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   font-size: 1rem !important;
   border-radius: 0.125rem !important;
   transition: initial;
@@ -1593,6 +1619,7 @@ body {
      -moz-appearance: none;
           appearance: none;
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg enable-background='new 0 0 60 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg' fill='%23353b42'%3E%3Cpath d='m57.55 20.83c-.77-1.15-2.32-1.46-3.47-.69l-24.08 16.06-24.09-16.06c-1.15-.77-2.7-.46-3.47.69-.15.23-.09.54.14.69l26.31 17.54c.67.45 1.55.45 2.22 0l26.31-17.54c.23-.15.29-.46.13-.69z'/%3E%3C/svg%3E") no-repeat right 0.9375rem center/1.5rem 1.5rem !important;
+  appearance: none !important;
 }
 @media (min-width: 1185px) {
   #liveForm .live-form-content .fb-form-object .neb-textInput .neb-content select ,
@@ -1775,6 +1802,8 @@ body {
 #liveForm .live-form-content .fb-form-object .neb-checkbox .checkbox md-checkbox ._md-container {
   width: 1.5rem;
   height: 1.5rem;
+  overflow: visible !important;
+  outline: none !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-checkbox .checkbox md-checkbox ._md-container::before {
   display: none;
