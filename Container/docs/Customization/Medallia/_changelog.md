@@ -1,5 +1,11 @@
 # Change Log
 
+## [6.12.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.12.0) - 2023-03-16
+
+### Added
+
+* `CSS`, `Doc`: "Customization - Medallia" | added new utility class `cake-medallia-survey--reduced-spacing`
+
 ## [6.11.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.11.0) - 2023-03-06
 
 ### Added

@@ -338,7 +338,10 @@ body {
 
       // Default component & label styling
       .neb-component {
-        margin-bottom: $spacer * 2;
+        margin-bottom: 0 !important;
+        &:not(.cake-medallia-survey--reduced-spacing) {
+          margin-bottom: $spacer * 2 !important;
+        }
 
         &.has-error {
           color: inherit !important;
@@ -375,13 +378,16 @@ body {
       //****************************//
       //*** Text *******************//
       //****************************//
-
-      .neb-content > p {
-        line-height: $line-height-base;
+      .neb-content {
+        // remove bottom spacing from all p elements
+        p {
+          margin-bottom: 0 !important;
+        }
 
         // set correct font & color
         * {
           font-family: $font-family-sans-serif !important;
+          line-height: $line-height-base;
           color: cake-color("gray", "darker") !important;
         }
 
@@ -407,11 +413,6 @@ body {
             color: $link-active-color !important;
             text-decoration: $link-active-decoration !important;
           }
-        }
-
-        // fix too much space at the end
-        p:last-child {
-          margin-bottom: 0 !important;
         }
       }
 

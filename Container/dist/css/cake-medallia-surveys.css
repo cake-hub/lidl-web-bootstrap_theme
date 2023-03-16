@@ -900,7 +900,10 @@ body {
   padding-bottom: 1rem !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-component {
-  margin-bottom: 1rem;
+  margin-bottom: 0 !important;
+}
+#liveForm .live-form-content .fb-form-object .neb-component:not(.cake-medallia-survey--reduced-spacing) {
+  margin-bottom: 1rem !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-component.has-error {
   color: inherit !important;
@@ -924,38 +927,36 @@ body {
   border-bottom-color: #e3e4e6 !important;
   border-bottom-style: solid !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p {
-  line-height: 1.4;
+#liveForm .live-form-content .fb-form-object .neb-content p {
+  margin-bottom: 0 !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p * {
+#liveForm .live-form-content .fb-form-object .neb-content * {
   font-family: LidlFontCondPro, Calibri, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  line-height: 1.4;
   color: #353b42 !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p ol,
-#liveForm .live-form-content .fb-form-object .neb-content > p ul {
+#liveForm .live-form-content .fb-form-object .neb-content ol,
+#liveForm .live-form-content .fb-form-object .neb-content ul {
   width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
   margin-bottom: 2rem !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p a,
-#liveForm .live-form-content .fb-form-object .neb-content > p a > * {
+#liveForm .live-form-content .fb-form-object .neb-content a,
+#liveForm .live-form-content .fb-form-object .neb-content a > * {
   color: #0050aa !important;
   text-decoration: underline !important;
   background-color: transparent !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p a:hover,
-#liveForm .live-form-content .fb-form-object .neb-content > p a > *:hover {
+#liveForm .live-form-content .fb-form-object .neb-content a:hover,
+#liveForm .live-form-content .fb-form-object .neb-content a > *:hover {
   color: #003674 !important;
   text-decoration: underline !important;
 }
-#liveForm .live-form-content .fb-form-object .neb-content > p a:active,
-#liveForm .live-form-content .fb-form-object .neb-content > p a > *:active {
+#liveForm .live-form-content .fb-form-object .neb-content a:active,
+#liveForm .live-form-content .fb-form-object .neb-content a > *:active {
   color: #003674 !important;
   text-decoration: none !important;
-}
-#liveForm .live-form-content .fb-form-object .neb-content > p p:last-child {
-  margin-bottom: 0 !important;
 }
 #liveForm .live-form-content .fb-form-object .neb-component .neb-website-image img:not(.cake-medallia-survey--unstyled) {
   width: auto !important;

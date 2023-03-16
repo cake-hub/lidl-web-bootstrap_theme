@@ -17,7 +17,7 @@ If you want to create an embedded survey, **please read the complete documentati
 To create a new survey simply click on "New Form" on the right hand side. Give it an appropriate name and chose the language. The form will be created and you will automatically start within the form editor. Now click on "Form Settings" and set the following options:
 
 1. Set the "Navigation Buttons" dropdown by selecting "Submit" to ensure we only have a submit button in the form. The close button would be hidden anyway.
-1. In the "Form Design"-Tab you have to set the url to our custom CSS in order to apply our LIDL stylings to the form. Simply paste our CDN url into the input field "Custom CSS". `https://asset.schwarz/cdn/assets/npm/@cake-hub/lidl-web-bootstrap_theme/6.10.1/cake-medallia-surveys.min.css`
+1. In the "Form Design"-Tab you have to set the url to our custom CSS in order to apply our LIDL stylings to the form. Simply paste our CDN url into the input field "Custom CSS". `https://asset.schwarz/cdn/assets/npm/@cake-hub/lidl-web-bootstrap_theme/6.12.0/cake-medallia-surveys.min.css`
 1. Click on "Save Changes" to apply the changes to your form.
 
 After applying these settings you have set up all required configuration in order to start creating your survey. As a default the form has the left-aligned layout. If you'd like to have a centered layout, you have to set up one more option.
@@ -65,6 +65,7 @@ We provide a few options to further customize the look of your survey. Use one o
 * `cake-medallia-survey--spacing`: You can also apply spacing to any element of a survey to set spacing of `8px` on **all sides** of the element.
 * `cake-medallia-survey--spacing-(top|right|bottom|left)`: You can apply one of these four classes to any element of a survey to set a spacing of `8px` on the **respective side** of the element.
 * `cake-medallia-survey--spacing-(x|y)`: You can also apply **horizontal (x) or vertical (y) spacing** to any element of a survey to set spacing of `8px` on both sides of the element.
+* `cake-medallia-survey--reduced-spacing`: Use this class for every Medallia field that should have a **reduced distance to the bottom**. Simply insert the class under "Custom CSS Class".
 
 ### Live example
 
@@ -141,7 +142,7 @@ However, to set the right configuration to display the appropriate design, you s
 
 ![invitation_trigger_advanced](./images/invitation_trigger_advanced.png)
 
-1. Set the url to our custom CSS in order to apply our LIDL stylings to the invitation popup. Simply paste our CDN url into the input field `Use a custom CSS file`: `https://asset.schwarz/cdn/assets/npm/@cake-hub/lidl-web-bootstrap_theme/6.10.1/cake-medallia-surveys-invitation.min.css`
+1. Set the url to our custom CSS in order to apply our LIDL stylings to the invitation popup. Simply paste our CDN url into the input field `Use a custom CSS file`: `https://asset.schwarz/cdn/assets/npm/@cake-hub/lidl-web-bootstrap_theme/6.12.0/cake-medallia-surveys-invitation.min.css`
 1. Set a width of `700px` through the `Invitation width (px)` field.
 1. You also need to set the height of the Invitation dialog with the `Invitation height (px)` field. However, the height depends on the length of the content. For a one-line text we recommend a height of `260px` and for two-line content `300px`. However, always check the final result and adjust these values if necessary. Also, always pay attention to the mobile display and reduce the length of the content to the most necessary, so that no content is hidden.
 
