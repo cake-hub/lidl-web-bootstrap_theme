@@ -1,10 +1,18 @@
 # Change Log
 
+## [6.12.0+doc.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.12.0+doc.1) - 2023-04-03
+
+### Deprecated
+
+* `CSS`, `Doc`: "Customization - Medallia" | Add a warning about the deprecation of the complete medallia styling of CAKE and its documentation. The documentation and corresponding styling will be removed in a future version.
+
+
 ## [6.12.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.12.0) - 2023-03-16
 
 ### Added
 
 * `CSS`, `Doc`: "Customization - Medallia" | added new utility class `cake-medallia-survey--reduced-spacing`
+
 
 ## [6.11.0](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.11.0) - 2023-03-06
 
@@ -18,6 +26,7 @@
 * `CSS`, `Doc`: "Customization - Medallia" | fixed wrong font-family in textare elements in the "lidl.de" property
 * `CSS`, `Doc`: "Customization - Medallia" | fixed broken styling of NPS elements in the "lidl.de" property
 * `CSS`, `Doc`: "Customization - Medallia" | fixed broken styling of active checkboxes in the "lidl.de" property
+
 
 ## [6.10.1](https://github.com/cake-hub/lidl-web-bootstrap_theme/tree/v6.10.1) - 2023-01-04
 

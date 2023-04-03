@@ -1,3 +1,5 @@
+<AlertWarning alertHeadline="Deprecated">Medallia's responsibilities have changed. You can find the new contact person under the following internal [link](https://storage.cake.schwarz/internal/cake-medallia-redirect.html). _(If you don't have access to this link, get in touch via our email.)_ If you have our medallia styling in use, contact the linked person to migrate your surveys. We will no longer make changes or adjustments to our stylings and this page **will be removed** in an upcoming release. Feel free to contact [cake@lidl.com](mailto:cake@lidl.com) with any questions.</AlertWarning>
+
 # Medallia surveys
 
 With medallia you can create surveys to get feedback from real users. There are different ways of implementing such surveys. Read more at [trigger types](#trigger-types).
